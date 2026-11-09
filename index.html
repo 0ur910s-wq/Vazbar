@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Βαζελομπαρτζάκια ☘️ - Μόνο Παναθηναϊκός Live RSS</title>
+  <title>Πράσινα Νέα ☘️ - Μόνο Παναθηναϊκός Live RSS</title>
 
   <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#0a7d2e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Βαζελομπαρτζάκια">
+  <meta name="apple-mobile-web-app-title" content="Πράσινα Νέα">
   <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&q=80">
   
   <link rel="manifest" href="./manifest.json">
@@ -85,14 +85,6 @@
       { key: "SDNA", name: "SDNA PAO", url: "https://www.sdna.gr/rss/223/panathinaikos", color: "#ffcc00", sport: "football" },
       { key: "Gazzetta", name: "Gazzetta PAO", url: "https://www.gazzetta.gr/feed/tags/panathinaikos", color: "#ff6b00", sport: "basket" },
       { key: "Sport24", name: "Sport24 PAO", url: "https://www.sport24.gr/feed/?tag=panathinaikos", color: "#d91e2b", sport: "football" }
-    ];
-
-    // Τηλεοπτικά
-    const TV_SCHEDULE = [
-      { id: 1, sport: "basket", title: "Παναθηναϊκός AKTOR – Paris Basketball", league: "EUROLEAGUE (Πρεμιέρα)", date: "Πέμπτη 24 Σεπτεμβρίου 2026", time: "21:15", channel: "Novasports Prime", venue: "Telekom Center Athens (ΟΑΚΑ)" },
-      { id: 2, sport: "basket", title: "Παναθηναϊκός AKTOR – ASVEL Villeurbanne", league: "EUROLEAGUE", date: "Τετάρτη 30 Σεπτεμβρίου 2026", time: "21:15", channel: "Novasports 4HD", venue: "Telekom Center Athens (ΟΑΚΑ)" },
-      { id: 3, sport: "football", title: "Ολυμπιακός – Παναθηναϊκός", league: "SUPER LEAGUE", date: "Κυριακή 11 Οκτωβρίου 2026", time: "21:00", channel: "Cosmote Sport 1HD", venue: "Στάδιο «Γεώργιος Καραϊσκάκης»" },
-      { id: 4, sport: "football", title: "Παναθηναϊκός – Ατρόμητος", league: "SUPER LEAGUE", date: "Κυριακή 18 Οκτωβρίου 2026", time: "19:30", channel: "Cosmote Sport 2HD", venue: "ΟΑΚΑ «Σπύρος Λούης»" }
     ];
 
     function getWeatherDescription(code) {
@@ -268,7 +260,7 @@
               </div>
               <div>
                 <h1 className="text-xl md:text-2xl font-black tracking-tight flex items-center gap-2">
-                  Βαζελομπαρτζάκια 🚜
+                  Πράσινα Νέα ☘️
                 </h1>
                 <p className="text-xs font-bold text-pao-green dark:text-emerald-400">
                   ΜΟΝΟ ΠΑΝΑΘΗΝΑΪΚΟΣ • LIVE RSS AGGREGATOR
@@ -332,41 +324,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          {/* 📺 ΤΗΛΕΟΠΤΙΚΕΣ ΜΕΤΑΔΟΣΕΙΣ */}
-          <section className="p-5 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10 space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-base md:text-lg font-black flex items-center gap-2">
-                📺 Σημερινές & Ερχόμενες Τηλεοπτικές Μεταδόσεις ΠΑΟ
-              </h2>
-              <span className="text-[10px] font-black px-2.5 py-1 rounded-full bg-red-600 text-white animate-pulse">
-                LIVE TV GUIDE
-              </span>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
-              {TV_SCHEDULE.map(item => (
-                <div key={item.id} className="p-3.5 rounded-xl bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/5 space-y-2">
-                  <div className="flex items-center justify-between text-[11px] font-extrabold opacity-70">
-                    <span>{item.sport === 'basket' ? '🏀 EUROLEAGUE' : '⚽ SUPER LEAGUE'}</span>
-                    <span className="text-pao-green dark:text-emerald-400">LIVE</span>
-                  </div>
-                  <div className="text-sm font-black leading-snug line-clamp-2">
-                    {item.title}
-                  </div>
-                  <div className="text-xs opacity-70 font-medium">
-                    📍 {item.venue}
-                  </div>
-                  <div className="pt-2 border-t border-black/10 dark:border-white/10 flex items-center justify-between text-xs font-black">
-                    <span className="text-amber-600 dark:text-amber-400">⏰ {item.time}</span>
-                    <span className="px-2 py-0.5 rounded bg-pao-navy text-white text-[11px]">
-                      {item.channel}
-                    </span>
-                  </div>
-                </div>
-              ))}
             </div>
           </section>
 
@@ -459,7 +416,7 @@
 
           {/* FOOTER */}
           <footer className="text-center py-6 text-xs font-bold opacity-50 space-y-1">
-            <p>☘️ Βαζελομπαρτζάκια • Μόνο Παναθηναϊκός • 2026</p>
+            <p>☘️ Πράσινα Νέα • Μόνο Παναθηναϊκός • 2026</p>
             <p>Live RSS Aggregator από τις κορυφαίες πράσινες πηγές</p>
           </footer>
 
