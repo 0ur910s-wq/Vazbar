@@ -4,16 +4,14 @@ import urllib.request
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 import feedparser
+import bs4
 
-# Headers που μιμούνται πλήρως έναν σύγχρονο Chrome browser σε Windows
+# Σωστά headers χωρίς συμπίεση για να μην μπλοκάρονται οι σελίδες
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
     "Accept-Language": "el-GR,el;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1",
-    "Cache-Control": "max-age=0"
+    "Referer": "https://www.google.com/"
 }
 
 SOURCES = [
@@ -74,7 +72,6 @@ def fetch_html_site(source):
         req = urllib.request.Request(source["url"], headers=HEADERS)
         with urllib.request.urlopen(req, timeout=15) as response:
             html = response.read().decode('utf-8', errors='ignore')
-            import bs4
             soup = bs4.BeautifulSoup(html, 'html.parser')
             
             for a_tag in soup.find_all('a', href=True)[:15]:
@@ -83,34 +80,4 @@ def fetch_html_site(source):
                 if len(title) > 25:
                     if not link.startswith('http'):
                         base_domain = "/".join(source["url"].split("/")[:3])
-                        link = base_domain + link if link.startswith('/') else base_domain + '/' + link
-                    
-                    articles.append({
-                        "title": title,
-                        "link": link,
-                        "date": datetime.now().strftime("%d/%m %H:%M"),
-                        "source": source["name"],
-                        "color": source["color"],
-                        "sport": source["sport"],
-                        "image": ""
-                    })
-        print(f"Success HTML: {source['name']}")
-    except Exception as e:
-        print(f"Error HTML {source['name']}: {e}")
-    return articles
-
-def main():
-    all_articles = []
-    for source in SOURCES:
-        if source["type"] == "rss":
-            all_articles.extend(fetch_rss_feed(source))
-        elif source["type"] == "html":
-            all_articles.extend(fetch_html_site(source))
-    
-    output_path = "news.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_articles, f, ensure_ascii=False, indent=4)
-    print(f"Saved {len(all_articles)} total articles to {output_path}")
-
-if __name__ == "__main__":
-    main()
+                        link = base_domain + link if link
