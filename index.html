@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Πράσινα Νέα ☘️ - Μόνο Παναθηναϊκός Live RSS</title>
+  <title>Πράσινα Νέα ☘️ - Μόνο Παναθηναϊκός Live</title>
 
   <!-- PWA Meta Tags -->
   <meta name="theme-color" content="#0a7d2e">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Πράσινα Νέα">
-  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=180&q=80">
-  
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="icon" type="image/png" href="./icon-192.png">
   <link rel="manifest" href="./manifest.json">
 
   <!-- Tailwind CSS CDN -->
@@ -22,12 +23,7 @@
       theme: {
         extend: {
           colors: {
-            pao: {
-              green: '#0a7d2e',
-              darkgreen: '#054719',
-              lightgreen: '#10b981',
-              navy: '#0a3d8a'
-            }
+            pao: { green: '#0a7d2e', darkgreen: '#054719', lightgreen: '#10b981', navy: '#0a3d8a' }
           }
         }
       }
@@ -46,8 +42,260 @@
 
   <div id="root"></div>
 
+  <!-- Λογική πηγών (απλή JavaScript) -->
+  <script>
+    // ===================== ΡΥΘΜΙΣΕΙΣ ΠΗΓΩΝ =====================
+    // type "rss"  → κανονικό RSS feed (μέσω rss2json, με εφεδρικό proxy)
+    // type "html" → σελίδα που διαβάζεται απευθείας (μέσω proxy) – χρησιμοποιείται για Athletiko
+    // Η σειρά μετράει: οι ειδικές σελίδες (ποδόσφαιρο/μπάσκετ) προηγούνται της γενικής ώστε να μπαίνει σωστό άθλημα.
+    const SOURCES = [
+      { key: "ath-f",  name: "Athletiko", type: "html", url: "https://www.athletiko.gr/panathinaikos-podosfairo", color: "#00a651", sport: "football" },
+      { key: "ath-b",  name: "Athletiko", type: "html", url: "https://www.athletiko.gr/panathinaikos-mpasket",    color: "#00a651", sport: "basket" },
+      { key: "ath-o",  name: "Athletiko", type: "html", url: "https://www.athletiko.gr/panathinaikos",            color: "#00a651", sport: "other" },
+      { key: "pao",    name: "pao.gr",        type: "rss", url: "https://www.pao.gr/feed/",   color: "#0a7d2e", sport: "football" },
+      { key: "paobc",  name: "paobc.gr",      type: "rss", url: "https://www.paobc.gr/feed/", color: "#0a3d8a", sport: "basket" },
+      { key: "newspao",name: "NewsPao",       type: "rss", url: "https://newspao.gr/feed/",   color: "#0a7d2e", sport: "football" },
+      { key: "trif",   name: "Trifilara",     type: "rss", url: "https://trifilara.gr/feed/", color: "#2d8a2d", sport: "football" },
+      { key: "sdna",   name: "SDNA PAO",      type: "rss", url: "https://www.sdna.gr/rss/223/panathinaikos", color: "#ffcc00", sport: "football" },
+      { key: "gazz",   name: "Gazzetta PAO",  type: "rss", url: "https://www.gazzetta.gr/feed/tags/panathinaikos", color: "#ff6b00", sport: "basket" },
+      { key: "sport24",name: "Sport24 PAO",   type: "rss", url: "https://www.sport24.gr/feed/?tag=panathinaikos", color: "#d91e2b", sport: "football" }
+    ];
+
+    const PROXIES = [
+      (u) => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u),
+      (u) => "https://corsproxy.io/?url=" + encodeURIComponent(u)
+    ];
+
+    const LS_CACHE = "pn_cache_v2";
+    const LS_TIMES = "pn_times_v1";
+    const LS_THEME = "pn_theme";
+
+    function lsGet(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+    function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+
+    // ===================== ΒΟΗΘΗΤΙΚΑ =====================
+    function clean(s) {
+      const t = document.createElement("textarea");
+      t.innerHTML = String(s || "");
+      return t.value.replace(/\s+/g, " ").trim();
+    }
+
+    function parseDate(s) {
+      if (!s) return null;
+      if (s instanceof Date) return isNaN(s) ? null : s;
+      const str = String(s).trim();
+      // Το rss2json δίνει "YYYY-MM-DD HH:MM:SS" σε UTC χωρίς ένδειξη ζώνης
+      const d = /^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(str)
+        ? new Date(str.replace(" ", "T") + "Z")
+        : new Date(str);
+      return isNaN(d) ? null : d;
+    }
+
+    function firstImg(html) {
+      const m = String(html || "").match(/<img[^>]+src=["']([^"']+)["']/i);
+      return m ? m[1] : "";
+    }
+
+    async function fetchText(url, ms) {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), ms || 9000);
+      try {
+        const r = await fetch(url, { signal: ctrl.signal });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return await r.text();
+      } finally { clearTimeout(t); }
+    }
+
+    async function fetchViaProxy(url) {
+      let lastErr = new Error("proxy");
+      for (const p of PROXIES) {
+        try {
+          const t = await fetchText(p(url));
+          if (t && t.length > 500) return t;
+        } catch (e) { lastErr = e; }
+      }
+      throw lastErr;
+    }
+
+    // ===================== RSS =====================
+    async function loadRss(src) {
+      // 1η προσπάθεια: rss2json
+      try {
+        const txt = await fetchText("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(src.url));
+        const data = JSON.parse(txt);
+        if (data.status === "ok" && Array.isArray(data.items) && data.items.length) {
+          return data.items.map((item) => ({
+            title: clean(item.title),
+            link: item.link,
+            image: (item.thumbnail) || (item.enclosure && item.enclosure.link) || firstImg(item.content || item.description),
+            pubDate: parseDate(item.pubDate)
+          }));
+        }
+      } catch (e) { /* πάμε στο εφεδρικό */ }
+
+      // 2η προσπάθεια: κατέβασμα του XML μέσω proxy
+      const xml = await fetchViaProxy(src.url);
+      const doc = new DOMParser().parseFromString(xml, "text/xml");
+      const nodes = Array.prototype.slice.call(doc.getElementsByTagName("item"));
+      if (!nodes.length) throw new Error("Κενό ή μη έγκυρο feed");
+      const tag = (el, n) => { const x = el.getElementsByTagName(n)[0]; return x ? x.textContent : ""; };
+      const attr = (el, n, a) => { const x = el.getElementsByTagName(n)[0]; return x ? (x.getAttribute(a) || "") : ""; };
+      return nodes.map((it) => ({
+        title: clean(tag(it, "title")),
+        link: (tag(it, "link") || "").trim(),
+        image: attr(it, "media:content", "url") || attr(it, "media:thumbnail", "url") || attr(it, "enclosure", "url")
+               || firstImg(tag(it, "content:encoded") || tag(it, "description")),
+        pubDate: parseDate(tag(it, "pubDate"))
+      }));
+    }
+
+    // ===================== ATHLETIKO (ανάγνωση σελίδας) =====================
+    const ATH_RE = /^https?:\/\/(www\.)?athletiko\.gr\/[^\/?#]+-\d{4,7}\/?$/;
+    const TIME_RE = /πριν\s+\d+\s+(δευτ|λεπτ|ώρ|ημέρ|εβδομ)|\d{2}\.\d{2}\.\d{4}/i;
+
+    function normLink(h) {
+      h = String(h || "").split("#")[0].split("?")[0];
+      if (h.indexOf("/") === 0) h = "https://www.athletiko.gr" + h;
+      h = h.replace(/^http:\/\//, "https://").replace("//athletiko.gr", "//www.athletiko.gr").replace(/\/$/, "");
+      return ATH_RE.test(h) ? h : "";
+    }
+
+    function countArticleLinks(box) {
+      const s = {};
+      Array.prototype.forEach.call(box.querySelectorAll("a[href]"), (a) => {
+        const h = normLink(a.getAttribute("href"));
+        if (h) s[h] = 1;
+      });
+      return Object.keys(s).length;
+    }
+
+    // Ανεβαίνει από ένα στοιχείο μέχρι να βρει "κάρτα" που ικανοποιεί το pred και περιέχει ΜΟΝΟ ένα άρθρο
+    function climb(el, pred) {
+      let box = el;
+      for (let i = 0; i < 7 && box.parentElement; i++) {
+        box = box.parentElement;
+        if (countArticleLinks(box) > 1) return null;
+        if (pred(box)) return box;
+      }
+      return null;
+    }
+
+    function pickImg(box) {
+      const imgs = box.querySelectorAll("img");
+      for (let i = 0; i < imgs.length; i++) {
+        const im = imgs[i];
+        const cands = [im.getAttribute("data-src"), im.getAttribute("data-lazy-src"), im.getAttribute("data-original"), im.getAttribute("src")];
+        const ss = im.getAttribute("srcset");
+        if (ss) cands.push(ss.split(",")[0].trim().split(" ")[0]);
+        for (let j = 0; j < cands.length; j++) {
+          let c = cands[j];
+          if (!c || /placeholder|data:image/i.test(c)) continue;
+          if (c.indexOf("//") === 0) c = "https:" + c;
+          if (/^https?:\/\//.test(c)) return c;
+        }
+      }
+      return "";
+    }
+
+    function relDate(text, now) {
+      let m = text.match(/πριν\s+(\d+)\s+(δευτ|λεπτ|ώρ|ημέρ|εβδομ)/i);
+      if (m) {
+        const n = +m[1], u = m[2].toLowerCase();
+        const ms = u.indexOf("δευτ") === 0 ? 1e3 : u.indexOf("λεπτ") === 0 ? 6e4 : u.indexOf("ώρ") === 0 ? 36e5 : u.indexOf("ημέρ") === 0 ? 864e5 : 6048e5;
+        return new Date(now - n * ms);
+      }
+      m = text.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+      if (m) return new Date(+m[3], +m[2] - 1, +m[1], 12, 0);
+      return null;
+    }
+
+    function parseAthletiko(html) {
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const now = Date.now();
+      const recs = {};
+      const list = [];
+      Array.prototype.forEach.call(doc.querySelectorAll("a[href]"), (a) => {
+        const href = normLink(a.getAttribute("href"));
+        if (!href) return;
+        let r = recs[href];
+        if (!r) { r = { link: href, title: "", el: a, order: list.length }; recs[href] = r; list.push(r); }
+        const inHeading = !!a.closest("h1,h2,h3,h4");
+        const txt = (a.textContent || "").trim();
+        const ttl = (a.getAttribute("title") || "").trim();
+        const cand = inHeading && txt ? txt : (ttl || txt);
+        if (cand && cand.charAt(0) !== "/" && cand.indexOf("http") !== 0) {
+          if (inHeading || !r.title) r.title = cand;
+        }
+        if (inHeading) r.el = a;
+      });
+
+      const times = lsGet(LS_TIMES, {});
+      const out = [];
+      list.forEach((r) => {
+        if (!r.title) return;
+        const tBox = climb(r.el, (b) => TIME_RE.test(b.textContent));
+        const iBox = climb(r.el, (b) => !!pickImg(b));
+        let date = tBox ? relDate(tBox.textContent, now) : null;
+        if (!date) date = new Date(now - (r.order + 1) * 10 * 60e3);
+        // Σταθεροποίηση: η "πριν 2 ώρες" δεν πρέπει να μετακινείται σε κάθε ανανέωση
+        if (times[r.link]) date = new Date(times[r.link]); else times[r.link] = date.toISOString();
+        out.push({ title: clean(r.title), link: r.link, image: iBox ? pickImg(iBox) : "", pubDate: date });
+      });
+      const keys = Object.keys(times);
+      if (keys.length > 600) {
+        keys.sort((a, b) => times[a] < times[b] ? -1 : 1).slice(0, keys.length - 600).forEach((k) => delete times[k]);
+      }
+      lsSet(LS_TIMES, times);
+      return out;
+    }
+
+    async function loadAthletiko(src) {
+      const html = await fetchViaProxy(src.url);
+      const items = parseAthletiko(html);
+      if (!items.length) throw new Error("Δεν βρέθηκαν άρθρα (άλλαξε η δομή της σελίδας;)");
+      return items;
+    }
+
+    // ===================== ΜΟΡΦΟΠΟΙΗΣΗ =====================
+    function fmtTime(d) {
+      if (!d) return "Πρόσφατα";
+      const now = new Date();
+      const hm = d.toLocaleTimeString("el-GR", { hour: "2-digit", minute: "2-digit" });
+      if (d.toDateString() === now.toDateString()) return hm;
+      return d.toLocaleDateString("el-GR", { day: "2-digit", month: "2-digit" }) + " " + hm;
+    }
+
+    function decorate(it, src) {
+      let d = it.pubDate;
+      const now = Date.now();
+      if (!d || d.getTime() > now + 5 * 60e3) d = new Date(now); // άκυρη ή "μελλοντική" ημερομηνία
+      return { id: src.key + "|" + it.link, title: it.title, link: it.link, image: it.image || "",
+               source: src.name, color: src.color, sport: src.sport, pubDate: d };
+    }
+
+    function mergeNews(sourceData) {
+      const all = [];
+      Object.keys(sourceData).forEach((k) => { sourceData[k].forEach((i) => all.push(i)); });
+      const byLink = {};
+      all.forEach((it) => {
+        const k = it.link.replace(/\/$/, "").toLowerCase();
+        const ex = byLink[k];
+        if (!ex || (ex.sport === "other" && it.sport !== "other")) byLink[k] = it;
+      });
+      const seen = {};
+      return Object.keys(byLink).map((k) => byLink[k])
+        .sort((a, b) => b.pubDate - a.pubDate)
+        .filter((it) => {
+          const k = it.title.toLowerCase().replace(/[^a-z0-9α-ωά-ώ]+/g, "");
+          if (!k || seen[k]) return false;
+          seen[k] = 1; return true;
+        });
+    }
+  </script>
+
+  <!-- Εφαρμογή (React) -->
   <script type="text/babel">
-    const { useState, useEffect, useMemo } = React;
+    const { useState, useEffect, useMemo, useRef } = React;
 
     // Εγγραφή Service Worker
     if ('serviceWorker' in navigator) {
@@ -76,17 +324,6 @@
       return NAMEDAYS_MAP[`${mm}-${dd}`] || "Δεν υπάρχει κάποια μεγάλη γνωστή γιορτή σήμερα";
     }
 
-    // Πηγές RSS
-    const RSS_FEEDS = [
-      { key: "pao.gr", name: "pao.gr", url: "https://www.pao.gr/feed/", color: "#0a7d2e", sport: "football" },
-      { key: "paobc.gr", name: "paobc.gr", url: "https://www.paobc.gr/feed/", color: "#0a3d8a", sport: "basket" },
-      { key: "NewsPao", name: "NewsPao", url: "https://newspao.gr/feed/", color: "#0a7d2e", sport: "football" },
-      { key: "Trifilara", name: "Trifilara", url: "https://trifilara.gr/feed/", color: "#2d8a2d", sport: "football" },
-      { key: "SDNA", name: "SDNA PAO", url: "https://www.sdna.gr/rss/223/panathinaikos", color: "#ffcc00", sport: "football" },
-      { key: "Gazzetta", name: "Gazzetta PAO", url: "https://www.gazzetta.gr/feed/tags/panathinaikos", color: "#ff6b00", sport: "basket" },
-      { key: "Sport24", name: "Sport24 PAO", url: "https://www.sport24.gr/feed/?tag=panathinaikos", color: "#d91e2b", sport: "football" }
-    ];
-
     function getWeatherDescription(code) {
       if (code === 0) return "☀️ Αίθριος";
       if (code >= 1 && code <= 3) return "⛅ Συννεφιά";
@@ -97,47 +334,90 @@
       return "🌤️ Ηλιόλουστος";
     }
 
-    function extractImage(item) {
-      if (item.thumbnail) return item.thumbnail;
-      if (item.enclosure && item.enclosure.link) return item.enclosure.link;
-      
-      const htmlContent = item.content || item.description || "";
-      const imgMatch = htmlContent.match(/<img[^>]+src=["']([^"']+)["']/i);
-      if (imgMatch && imgMatch[1]) {
-        return imgMatch[1];
+    // Ρολόι σε δικό του component, ώστε να μην ξαναζωγραφίζεται όλη η λίστα κάθε δευτερόλεπτο
+    function DateBanner() {
+      const [now, setNow] = useState(new Date());
+      useEffect(() => {
+        const t = setInterval(() => setNow(new Date()), 1000);
+        return () => clearInterval(t);
+      }, []);
+      const formattedDate = now.toLocaleDateString('el-GR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      return (
+        <section className="p-4 rounded-2xl bg-gradient-to-r from-amber-500/20 via-pao-green/20 to-emerald-500/20 border-2 border-amber-400 dark:border-amber-500/60 shadow-md">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">📅</span>
+              <div>
+                <div className="text-xs font-extrabold uppercase text-amber-700 dark:text-amber-300">ΣΗΜΕΡΙΝΗ ΗΜΕΡΟΜΗΝΙΑ</div>
+                <div className="text-sm md:text-base font-black capitalize">
+                  {formattedDate} • <span className="font-mono text-pao-green dark:text-emerald-400">{now.toLocaleTimeString('el-GR')}</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-2.5 rounded-xl bg-white/80 dark:bg-black/60 border border-amber-400/40">
+              <span className="text-2xl">🎉</span>
+              <div>
+                <div className="text-xs font-black uppercase text-amber-600 dark:text-amber-400">ΓΙΟΡΤΑΖΟΥΝ ΣΗΜΕΡΑ:</div>
+                <div className="text-sm font-extrabold text-pao-green dark:text-emerald-300">{getTodayNameDays()}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    function NewsImage({ src, alt }) {
+      const [bad, setBad] = useState(false);
+      if (!src || bad) {
+        return <div className="w-full h-full flex items-center justify-center text-5xl bg-gradient-to-br from-pao-darkgreen to-pao-green">☘️</div>;
       }
-      
-      return "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=300&q=80";
+      return (
+        <img src={src} alt={alt} loading="lazy" referrerPolicy="no-referrer"
+          className="w-full h-full object-cover hover:scale-105 transition duration-300"
+          onError={() => setBad(true)} />
+      );
+    }
+
+    function loadCachedSourceData() {
+      const c = lsGet(LS_CACHE, null);
+      const out = {};
+      if (c && c.data) {
+        Object.keys(c.data).forEach((k) => {
+          out[k] = c.data[k].map((i) => Object.assign({}, i, { pubDate: new Date(i.pubDate) }));
+        });
+      }
+      return { data: out, savedAt: c && c.savedAt ? new Date(c.savedAt) : null };
     }
 
     function App() {
-      const [isDark, setIsDark] = useState(true);
-      const [news, setNews] = useState([]);
-      const [loading, setLoading] = useState(true);
+      const cached = useMemo(loadCachedSourceData, []);
+      const [isDark, setIsDark] = useState(() => lsGet(LS_THEME, true));
+      const [sourceData, setSourceData] = useState(cached.data);
+      const [status, setStatus] = useState({});
+      const [refreshing, setRefreshing] = useState(true);
+      const [lastUpdate, setLastUpdate] = useState(cached.savedAt);
+      const [online, setOnline] = useState(navigator.onLine);
       const [filter, setFilter] = useState("all");
+      const [sourceFilter, setSourceFilter] = useState("all");
       const [searchQuery, setSearchQuery] = useState("");
+      const [limit, setLimit] = useState(36);
       const [weather, setWeather] = useState({ city: "Αθήνα", temp: "--°C", text: "🌤️ Φόρτωση..." });
-      const [currentTime, setCurrentTime] = useState(new Date());
       const [deferredPrompt, setDeferredPrompt] = useState(null);
+      const busy = useRef(false);
+      const lastRun = useRef(0);
 
       useEffect(() => {
-        window.addEventListener('beforeinstallprompt', (e) => {
-          e.preventDefault();
-          setDeferredPrompt(e);
-        });
+        const h = (e) => { e.preventDefault(); setDeferredPrompt(e); };
+        window.addEventListener('beforeinstallprompt', h);
+        return () => window.removeEventListener('beforeinstallprompt', h);
       }, []);
 
       const handleInstallApp = () => {
         if (deferredPrompt) {
           deferredPrompt.prompt();
-          deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-              console.log('Ο χρήστης εγκατέστησε το App!');
-            }
-            setDeferredPrompt(null);
-          });
+          deferredPrompt.userChoice.then(() => setDeferredPrompt(null));
         } else {
-          alert("Για να το κάνεις App στο κινητό:\n\n• Στο Chrome: Πάτα τις 3 τελείες (⋮) -> 'Δημιουργία συντόμευσης' / 'Προσθήκη στην οθόνη αφετηρίας'\n• Στο Safari (iPhone): Πάτα 'Κοινοποίηση' (Share) -> 'Προσθήκη στην οθόνη αφετηρίας'");
+          alert("Για να το κάνεις App στο κινητό:\n\n• Στο Chrome: Πάτα τις 3 τελείες (⋮) -> 'Προσθήκη στην αρχική οθόνη' / 'Εγκατάσταση εφαρμογής'\n• Στο Safari (iPhone): Πάτα 'Κοινοποίηση' (Share) -> 'Προσθήκη στην οθόνη αφετηρίας'");
         }
       };
 
@@ -149,13 +429,15 @@
       };
 
       useEffect(() => {
-        const timer = setInterval(() => setCurrentTime(new Date()), 1000);
-        return () => clearInterval(timer);
-      }, []);
+        document.documentElement.classList.toggle('dark', isDark);
+        lsSet(LS_THEME, isDark);
+      }, [isDark]);
 
       useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDark);
-      }, [isDark]);
+        const on = () => setOnline(true), off = () => setOnline(false);
+        window.addEventListener('online', on); window.addEventListener('offline', off);
+        return () => { window.removeEventListener('online', on); window.removeEventListener('offline', off); };
+      }, []);
 
       useEffect(() => {
         const fetchWeather = async (lat, lon, cityName) => {
@@ -170,10 +452,9 @@
               });
             }
           } catch (e) {
-            setWeather({ city: "Αθήνα", temp: "22°C", text: "☀️ Αίθριος" });
+            setWeather({ city: cityName, temp: "--°C", text: "" });
           }
         };
-
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(
             (pos) => fetchWeather(pos.coords.latitude, pos.coords.longitude, "Τοποθεσία σου"),
@@ -184,95 +465,110 @@
         }
       }, []);
 
-      const fetchLiveNews = async () => {
-        setLoading(true);
-        let allItems = [];
-
-        for (const feed of RSS_FEEDS) {
+      // Φόρτωση ΟΛΩΝ των πηγών παράλληλα – κάθε πηγή εμφανίζεται μόλις ετοιμαστεί
+      const refresh = async () => {
+        if (busy.current) return;
+        busy.current = true;
+        setRefreshing(true);
+        await Promise.all(SOURCES.map(async (src) => {
           try {
-            const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feed.url)}`);
-            const data = await res.json();
-
-            if (data.status === 'ok' && data.items) {
-              const fetched = data.items.map((item, idx) => ({
-                id: `${feed.key}-${idx}-${item.guid || item.link}`,
-                title: item.title,
-                link: item.link,
-                image: extractImage(item),
-                source: feed.name,
-                color: feed.color,
-                sport: feed.sport,
-                pubDate: new Date(item.pubDate),
-                time: item.pubDate ? new Date(item.pubDate).toLocaleTimeString('el-GR', { hour: '2-digit', minute: '2-digit' }) : 'Πρόσφατα'
-              }));
-              allItems = [...allItems, ...fetched];
-            }
+            const items = src.type === "html" ? await loadAthletiko(src) : await loadRss(src);
+            const decorated = items.filter((i) => i.title && i.link).map((i) => decorate(i, src));
+            setSourceData((prev) => Object.assign({}, prev, { [src.key]: decorated }));
+            setStatus((prev) => Object.assign({}, prev, { [src.key]: { ok: true, n: decorated.length } }));
           } catch (e) {
-            console.error("Error fetching " + feed.name, e);
+            // Αν αποτύχει, κρατάμε τις παλιές ειδήσεις αυτής της πηγής
+            setStatus((prev) => Object.assign({}, prev, { [src.key]: { ok: false, msg: String((e && e.message) || e) } }));
           }
-        }
-
-        allItems.sort((a, b) => b.pubDate - a.pubDate);
-
-        if (allItems.length > 0) {
-          setNews(allItems);
-        } else {
-          setNews([
-            { id: 1, title: "Παναθηναϊκός: Ολοκληρώθηκε η προετοιμασία στο Κορωπί", image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=300&q=80", source: "pao.gr", link: "https://www.pao.gr", time: "12:00", sport: "football", color: "#0a7d2e", pubDate: new Date() },
-            { id: 2, title: "Παναθηναϊκός AKTOR: Πανέτοιμο το ΟΑΚΑ για την πρεμιέρα", image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=300&q=80", source: "paobc.gr", link: "https://www.paobc.gr", time: "11:45", sport: "basket", color: "#0a3d8a", pubDate: new Date() }
-          ]);
-        }
-        setLoading(false);
+        }));
+        lastRun.current = Date.now();
+        setLastUpdate(new Date());
+        setRefreshing(false);
+        busy.current = false;
       };
 
       useEffect(() => {
-        fetchLiveNews();
-        const interval = setInterval(fetchLiveNews, 180000);
-        return () => clearInterval(interval);
+        refresh();
+        const interval = setInterval(() => { if (!document.hidden && navigator.onLine) refresh(); }, 180000);
+        const onVisible = () => { if (!document.hidden && Date.now() - lastRun.current > 120000) refresh(); };
+        const onOnline = () => refresh();
+        document.addEventListener('visibilitychange', onVisible);
+        window.addEventListener('online', onOnline);
+        return () => {
+          clearInterval(interval);
+          document.removeEventListener('visibilitychange', onVisible);
+          window.removeEventListener('online', onOnline);
+        };
+      }, []);
+
+      const news = useMemo(() => mergeNews(sourceData), [sourceData]);
+
+      // Αποθήκευση για offline / άμεση εμφάνιση στο επόμενο άνοιγμα
+      useEffect(() => {
+        if (!news.length) return;
+        const data = {};
+        Object.keys(sourceData).forEach((k) => { data[k] = sourceData[k].slice(0, 25); });
+        lsSet(LS_CACHE, { savedAt: new Date().toISOString(), data });
+      }, [sourceData]);
+
+      const counts = useMemo(() => ({
+        all: news.length,
+        football: news.filter((n) => n.sport === "football").length,
+        basket: news.filter((n) => n.sport === "basket").length,
+        other: news.filter((n) => n.sport === "other").length
+      }), [news]);
+
+      const sourceNames = useMemo(() => {
+        const seen = {}; const out = [];
+        SOURCES.forEach((s) => { if (!seen[s.name]) { seen[s.name] = 1; out.push(s.name); } });
+        return out;
       }, []);
 
       const filteredNews = useMemo(() => {
-        return news.filter(item => {
-          if (filter === "football" && item.sport !== "football") return false;
-          if (filter === "basket" && item.sport !== "basket") return false;
-          if (searchQuery.trim() !== "") {
-            return item.title.toLowerCase().includes(searchQuery.toLowerCase());
-          }
+        const q = searchQuery.trim().toLowerCase();
+        return news.filter((item) => {
+          if (filter !== "all" && item.sport !== filter) return false;
+          if (sourceFilter !== "all" && item.source !== sourceFilter) return false;
+          if (q && !item.title.toLowerCase().includes(q)) return false;
           return true;
         });
-      }, [news, filter, searchQuery]);
+      }, [news, filter, sourceFilter, searchQuery]);
 
-      const formattedDate = currentTime.toLocaleDateString('el-GR', {
-        weekday: 'long',
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
+      useEffect(() => { setLimit(36); }, [filter, sourceFilter, searchQuery]);
+
+      const sourceChips = sourceNames.map((name) => {
+        const keys = SOURCES.filter((s) => s.name === name).map((s) => s.key);
+        const sts = keys.map((k) => status[k]).filter(Boolean);
+        let state = "wait", title = "Φορτώνει...";
+        if (sts.length) {
+          const okOne = sts.find((s) => s.ok);
+          if (okOne) { state = "ok"; title = "OK"; }
+          else { state = "err"; title = sts[0].msg || "Σφάλμα"; }
+        }
+        return { name, state, title };
       });
+      const okCount = sourceChips.filter((c) => c.state === "ok").length;
+      const allFailed = !refreshing && sourceChips.length > 0 && okCount === 0 && Object.keys(status).length === SOURCES.length;
+
+      const chipCls = (active) => `px-4 py-2 rounded-xl text-xs font-black transition whitespace-nowrap ${active ? 'bg-pao-green text-white' : 'bg-black/5 dark:bg-white/5'}`;
+      const NEW_MS = 45 * 60 * 1000;
 
       return (
         <div className="max-w-7xl mx-auto px-4 py-4 space-y-5">
-          
+
           {/* HEADER BAR */}
           <header className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10 shadow-sm">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-pao-green flex items-center justify-center text-2xl shadow-lg shadow-pao-green/30">
-                ☘️
-              </div>
+              <div className="w-12 h-12 rounded-2xl bg-pao-green flex items-center justify-center text-2xl shadow-lg shadow-pao-green/30">☘️</div>
               <div>
-                <h1 className="text-xl md:text-2xl font-black tracking-tight flex items-center gap-2">
-                  Πράσινα Νέα ☘️
-                </h1>
-                <p className="text-xs font-bold text-pao-green dark:text-emerald-400">
-                  ΜΟΝΟ ΠΑΝΑΘΗΝΑΪΚΟΣ • LIVE RSS AGGREGATOR
-                </p>
+                <h1 className="text-xl md:text-2xl font-black tracking-tight">Πράσινα Νέα ☘️</h1>
+                <p className="text-xs font-bold text-pao-green dark:text-emerald-400">ΜΟΝΟ ΠΑΝΑΘΗΝΑΪΚΟΣ • LIVE ΑΠΟ {sourceNames.length} ΠΗΓΕΣ</p>
               </div>
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
-              <button 
-                onClick={handleInstallApp}
-                className="px-3 py-1.5 rounded-xl bg-pao-green/10 text-pao-green dark:text-emerald-400 border border-pao-green/20 text-xs font-black hover:bg-pao-green/20 transition flex items-center gap-1.5"
-              >
+              <button onClick={handleInstallApp}
+                className="px-3 py-1.5 rounded-xl bg-pao-green/10 text-pao-green dark:text-emerald-400 border border-pao-green/20 text-xs font-black hover:bg-pao-green/20 transition flex items-center gap-1.5">
                 <span>📱</span> Εγκατάσταση App
               </button>
 
@@ -282,142 +578,124 @@
                 <span>{weather.text}</span>
               </div>
 
-              <button 
-                onClick={fetchLiveNews}
-                className="px-3 py-1.5 rounded-xl bg-pao-green text-white text-xs font-bold hover:opacity-90 transition flex items-center gap-1"
-              >
-                🔄
+              <button onClick={refresh} disabled={refreshing} title="Ανανέωση"
+                className="px-3 py-1.5 rounded-xl bg-pao-green text-white text-xs font-bold hover:opacity-90 transition disabled:opacity-60">
+                <span className={refreshing ? "inline-block animate-spin" : "inline-block"}>🔄</span>
               </button>
 
-              <button 
-                onClick={() => setIsDark(!isDark)}
-                className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/10 flex items-center justify-center text-lg hover:scale-105 transition"
-              >
+              <button onClick={() => setIsDark(!isDark)}
+                className="w-10 h-10 rounded-xl bg-black/5 dark:bg-white/10 flex items-center justify-center text-lg hover:scale-105 transition">
                 {isDark ? '☀️' : '🌙'}
               </button>
             </div>
           </header>
 
-          {/* BANNER ΗΜΕΡΟΜΗΝΙΑΣ & ΕΟΡТОΛΟΓΙΟΥ */}
-          <section className="p-4 rounded-2xl bg-gradient-to-r from-amber-500/20 via-pao-green/20 to-emerald-500/20 border-2 border-amber-400 dark:border-amber-500/60 shadow-md">
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">📅</span>
-                <div>
-                  <div className="text-xs font-extrabold uppercase text-amber-700 dark:text-amber-300">
-                    ΣΗΜΕΡΙΝΗ ΗΜΕΡΟΜΗΝΙΑ
-                  </div>
-                  <div className="text-sm md:text-base font-black capitalize">
-                    {formattedDate} • <span className="font-mono text-pao-green dark:text-emerald-400">{currentTime.toLocaleTimeString('el-GR')}</span>
-                  </div>
-                </div>
-              </div>
+          <DateBanner />
 
-              <div className="flex items-center gap-3 p-2.5 rounded-xl bg-white/80 dark:bg-black/60 border border-amber-400/40">
-                <span className="text-2xl">🎉</span>
-                <div>
-                  <div className="text-xs font-black uppercase text-amber-600 dark:text-amber-400">
-                    ΓΙΟΡΤΑΖΟΥΝ ΣΗΜΕΡΑ:
-                  </div>
-                  <div className="text-sm font-extrabold text-pao-green dark:text-emerald-300">
-                    {getTodayNameDays()}
-                  </div>
-                </div>
-              </div>
+          {!online && (
+            <div className="p-3 rounded-2xl bg-amber-500/15 border border-amber-500/40 text-xs font-bold">
+              📴 Είσαι offline — εμφανίζονται οι τελευταίες αποθηκευμένες ειδήσεις{lastUpdate ? ` (${fmtTime(lastUpdate)})` : ""}.
             </div>
-          </section>
+          )}
 
           {/* ΦΙΛΤΡΑ & ΑΝΑΖΗΤΗΣΗ */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10">
-            <div className="flex items-center gap-2 w-full sm:w-auto overflow-x-auto pb-1 sm:pb-0">
-              <button 
-                onClick={() => setFilter("all")}
-                className={`px-4 py-2 rounded-xl text-xs font-black transition ${filter === 'all' ? 'bg-pao-green text-white' : 'bg-black/5 dark:bg-white/5'}`}
-              >
-                Όλα τα Πράσινα ☘️
-              </button>
-              <button 
-                onClick={() => setFilter("football")}
-                className={`px-4 py-2 rounded-xl text-xs font-black transition ${filter === 'football' ? 'bg-pao-green text-white' : 'bg-black/5 dark:bg-white/5'}`}
-              >
-                ⚽ Ποδόσφαιρο
-              </button>
-              <button 
-                onClick={() => setFilter("basket")}
-                className={`px-4 py-2 rounded-xl text-xs font-black transition ${filter === 'basket' ? 'bg-pao-green text-white' : 'bg-black/5 dark:bg-white/5'}`}
-              >
-                🏀 Μπάσκετ
-              </button>
-            </div>
+          <div className="space-y-3 p-3 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10">
+            <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0">
+                <button onClick={() => setFilter("all")} className={chipCls(filter === 'all')}>Όλα ☘️ ({counts.all})</button>
+                <button onClick={() => setFilter("football")} className={chipCls(filter === 'football')}>⚽ Ποδόσφαιρο ({counts.football})</button>
+                <button onClick={() => setFilter("basket")} className={chipCls(filter === 'basket')}>🏀 Μπάσκετ ({counts.basket})</button>
+                <button onClick={() => setFilter("other")} className={chipCls(filter === 'other')}>🏐 Άλλα ({counts.other})</button>
+              </div>
 
-            <input 
-              type="text" 
-              placeholder="Αναζήτηση ειδήσεων..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full sm:w-64 px-4 py-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-bold outline-none focus:border-pao-green"
-            />
+              <div className="flex items-center gap-2">
+                <select value={sourceFilter} onChange={(e) => setSourceFilter(e.target.value)}
+                  className="px-3 py-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-bold outline-none">
+                  <option value="all">Όλες οι πηγές</option>
+                  {sourceNames.map((n) => <option key={n} value={n}>{n}</option>)}
+                </select>
+                <input type="text" placeholder="Αναζήτηση ειδήσεων..." value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full sm:w-56 px-4 py-2 rounded-xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-xs font-bold outline-none focus:border-pao-green" />
+              </div>
+            </div>
           </div>
 
           {/* ΛΙΣΤΑ ΕΙΔΗΣΕΩΝ */}
           <section className="space-y-3">
-            {loading ? (
-              <div className="text-center py-12 text-sm font-bold opacity-60">
-                Αντλούνται οι τελευταίες ειδήσεις... ☘️
+            {news.length === 0 && refreshing ? (
+              <div className="text-center py-12 text-sm font-bold opacity-60">Αντλούνται οι τελευταίες ειδήσεις... ☘️</div>
+            ) : news.length === 0 && allFailed ? (
+              <div className="text-center py-12 space-y-3">
+                <div className="text-sm font-bold">Δεν μπόρεσαν να φορτωθούν ειδήσεις από καμία πηγή.</div>
+                <div className="text-xs opacity-60">Έλεγξε τη σύνδεσή σου. Ενδέχεται να έχει φτάσει το όριο χρήσης η δωρεάν υπηρεσία RSS.</div>
+                <button onClick={refresh} className="px-4 py-2 rounded-xl bg-pao-green text-white text-xs font-black">Δοκίμασε ξανά</button>
               </div>
             ) : filteredNews.length === 0 ? (
-              <div className="text-center py-12 text-sm font-bold opacity-60">
-                Δεν βρέθηκαν ειδήσεις.
-              </div>
+              <div className="text-center py-12 text-sm font-bold opacity-60">Δεν βρέθηκαν ειδήσεις.</div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredNews.map(item => (
-                  <article key={item.id} className="p-4 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10 hover:border-pao-green transition flex flex-col justify-between space-y-3">
-                    <div className="space-y-3">
-                      <div className="relative rounded-xl overflow-hidden h-40 bg-black/10">
-                        <img 
-                          src={item.image} 
-                          alt={item.title} 
-                          className="w-full h-full object-cover hover:scale-105 transition duration-300"
-                          onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=300&q=80"; }}
-                        />
-                        <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-black text-white shadow" style={{ backgroundColor: item.color }}>
-                          {item.source}
-                        </span>
-                        <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/70 text-white text-[10px] font-bold backdrop-blur">
-                          {item.time}
-                        </span>
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {filteredNews.slice(0, limit).map(item => (
+                    <article key={item.id} className="p-4 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10 hover:border-pao-green transition flex flex-col justify-between space-y-3">
+                      <div className="space-y-3">
+                        <div className="relative rounded-xl overflow-hidden h-40 bg-black/10">
+                          <NewsImage src={item.image} alt={item.title} />
+                          <span className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-black text-white shadow" style={{ backgroundColor: item.color }}>
+                            {item.source}
+                          </span>
+                          {Date.now() - item.pubDate.getTime() < NEW_MS && (
+                            <span className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-red-600 text-white text-[10px] font-black shadow">ΝΕΟ</span>
+                          )}
+                          <span className="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/70 text-white text-[10px] font-bold backdrop-blur">
+                            {fmtTime(item.pubDate)}
+                          </span>
+                        </div>
+                        <h3 className="text-sm font-extrabold leading-snug hover:text-pao-green transition">
+                          <a href={item.link} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                        </h3>
                       </div>
 
-                      <h3 className="text-sm font-extrabold leading-snug hover:text-pao-green transition">
-                        <a href={item.link} target="_blank" rel="noopener noreferrer">
-                          {item.title}
-                        </a>
-                      </h3>
-                    </div>
-
-                    <div className="pt-2 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-xs font-bold">
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-pao-green dark:text-emerald-400 hover:underline">
-                        Διάβασε →
-                      </a>
-
-                      <button 
-                        onClick={() => shareOnTwitter(item.title, item.link)}
-                        className="px-2.5 py-1 rounded-lg bg-black/5 dark:bg-white/10 hover:bg-sky-500 hover:text-white transition flex items-center gap-1 text-[11px] font-black"
-                      >
-                        <span>🐦</span> Tweet
-                      </button>
-                    </div>
-                  </article>
-                ))}
-              </div>
+                      <div className="pt-2 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-xs font-bold">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-pao-green dark:text-emerald-400 hover:underline">Διάβασε →</a>
+                        <button onClick={() => shareOnTwitter(item.title, item.link)}
+                          className="px-2.5 py-1 rounded-lg bg-black/5 dark:bg-white/10 hover:bg-sky-500 hover:text-white transition flex items-center gap-1 text-[11px] font-black">
+                          <span>🐦</span> Tweet
+                        </button>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                {filteredNews.length > limit && (
+                  <div className="text-center pt-2">
+                    <button onClick={() => setLimit(limit + 36)} className="px-5 py-2 rounded-xl bg-pao-green text-white text-xs font-black">
+                      Περισσότερα ({filteredNews.length - limit})
+                    </button>
+                  </div>
+                )}
+              </>
             )}
           </section>
 
-          {/* FOOTER */}
+          {/* ΚΑΤΑΣΤΑΣΗ ΠΗΓΩΝ */}
+          <section className="p-3 rounded-2xl bg-white dark:bg-[#111c11] border border-black/10 dark:border-white/10 space-y-2">
+            <div className="flex items-center justify-between text-[11px] font-black opacity-70">
+              <span>ΚΑΤΑΣΤΑΣΗ ΠΗΓΩΝ ({okCount}/{sourceChips.length})</span>
+              <span>{lastUpdate ? `Τελευταία ενημέρωση: ${fmtTime(lastUpdate)}` : ""}</span>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {sourceChips.map((c) => (
+                <span key={c.name} title={c.title}
+                  className={`px-2.5 py-1 rounded-full text-[11px] font-bold border ${c.state === 'ok' ? 'border-emerald-500/40 text-emerald-700 dark:text-emerald-300' : c.state === 'err' ? 'border-red-500/50 text-red-600 dark:text-red-400' : 'border-black/10 dark:border-white/10 opacity-60'}`}>
+                  {c.state === 'ok' ? '✓' : c.state === 'err' ? '✗' : '…'} {c.name}
+                </span>
+              ))}
+            </div>
+          </section>
+
           <footer className="text-center py-6 text-xs font-bold opacity-50 space-y-1">
             <p>☘️ Πράσινα Νέα • Μόνο Παναθηναϊκός • 2026</p>
-            <p>Live RSS Aggregator από τις κορυφαίες πράσινες πηγές</p>
+            <p>Live ειδήσεις από τις κορυφαίες πράσινες πηγές</p>
           </footer>
 
         </div>

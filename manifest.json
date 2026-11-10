@@ -1,20 +1,17 @@
 {
   "name": "Βαζελομπαρτζάκια ☘️",
   "short_name": "Βαζελομπαρτζάκια",
+  "description": "Μόνο Παναθηναϊκός – τελευταία νέα από τις πράσινες πηγές",
+  "lang": "el",
+  "id": "./index.html",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#070d07",
   "theme_color": "#0a7d2e",
   "icons": [
-    {
-      "src": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=192&q=80",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=512&q=80",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
