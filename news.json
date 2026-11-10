@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T09:25:14Z",
+  "updated": "2026-11-10T09:47:45Z",
   "sources": {
     "Athletiko": {
       "ok": true,
@@ -26,7 +26,7 @@
     "SDNA PAO": {
       "ok": false,
       "count": 0,
-      "msg": "All endpoints failed: https://www.sdna.gr/rss/223/panathinaikos: HTTP 503 from https://www.sdna.gr/rss/223/panathinaikos"
+      "msg": "All endpoints failed: https://www.sdna.gr/rss/223/panathinaikos: HTTP 404 from https://www.sdna.gr/rss/223/panathinaikos"
     },
     "Gazzetta PAO": {
       "ok": false,
@@ -91,6 +91,16 @@
       "image": ""
     },
     {
+      "title": "Φορτσάρουν για το στέγαστρο στο νέο γήπεδο του Παναθηναϊκού (video)",
+      "link": "https://www.athletiko.gr/fortsaroyn-ghia-to-steghastro-sto-neo-ghipedo-toy-panathinaikou-video-114787",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": "https://cdn.athletiko.gr/portal-img/default/44/gipedo-pao.jpg"
+    },
+    {
       "title": "Πρόγραμμα «φωτιά» για τον Παναθηναϊκό μετά τη διακοπή - Εννέα ματς και δύο ντέρμπι σε 29 ημέρες",
       "link": "https://www.athletiko.gr/programma-fotia-gia-ton-panathinaiko-meta-tin-diakopi-ennea-mats-kai-dyo-ntermpi-se-29-imeres-114635",
       "pubDate": null,
@@ -98,7 +108,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5434440.jpg"
     },
     {
       "title": "Πρωτοποριακή πρόταση: «Περιφερειακό πρωτάθλημα με Ελληνες κόντρα σε Σέρβους, Κροάτες και Ούγγρους»",
@@ -108,7 +118,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/43/7119204.jpg"
     },
     {
       "title": "Η «επιβράβευση» του Νίστρουπ προς τους παίκτες του Παναθηναϊκού για όσα έχουν κάνει",
@@ -118,7 +128,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/nistroypismos.jpg"
     },
     {
       "title": "Οι λόγοι που ο Νίστρουπ χαρακτήρισε τη νίκη επί του Ηρακλή ως τη σημαντικότερη μέχρι τώρα",
@@ -128,7 +138,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5434309.jpg"
     },
     {
       "title": "Στο «μικροσκόπιο» της ΔΕΑΒ η παρουσία των οπαδών του Παναθηναϊκού στο Καυτανζόγλειο",
@@ -138,7 +148,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5434346.jpg"
     },
     {
       "title": "«Η κίνηση του Λιβάι Γκαρσία που θύμισε Ντέσερς» (video)",
@@ -148,7 +158,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/43/5342428.jpg"
     },
     {
       "title": "Χωρίς Αντίνο ο Παναθηναϊκός στο ματς με τον Ατρόμητο",
@@ -158,7 +168,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/44/5328904.jpg"
     },
     {
       "title": "Τι είναι το «TransferRoom» που θα βρεθεί ο Κοτσόλης και πώς επηρεάζει τα μεταγραφικά του Παναθηναϊκού",
@@ -168,7 +178,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5427057.jpg"
     },
     {
       "title": "«Δεν βλέπω δεύτερη κίτρινη στον Αντίνο»",
@@ -178,7 +188,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/images-1.jpg"
     },
     {
       "title": "Ποια είναι η πρώτη ελληνική λέξη που έμαθε ο Νιστρουπ και ποιος προπονητής το είδωλο του",
@@ -188,7 +198,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5386233.jpg"
     },
     {
       "title": "Σε κυκλοφορία τα εισιτήρια για την αναμέτρηση του Παναθηναϊκού με τον ΟΦΗ",
@@ -198,7 +208,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/44/7128186-1.jpg"
     },
     {
       "title": "«Οι Ελληνες διαιτητές επιβεβαιώνουν ακόμα μια φορά ότι δεν κάνουν καλά τη δουλειά τους»",
@@ -208,7 +218,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/5434526.jpg"
     },
     {
       "title": "Γιατί εκτέλεσε ο Καλάμπρια το πέναλτι του Παναθηναϊκού στις καθυστερήσεις",
@@ -218,7 +228,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/calabria-panigirismos.jpg"
     },
     {
       "title": "Live το «BACK2ΜΠΑΚ» με κουβέντα για διαιτησία, τον Παναθηναϊκό στο +4 και την Εθνική ομάδα",
@@ -228,7 +238,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/40/back2back-site-3-r7J6u.jpg"
     },
     {
       "title": "Η εξήγηση για τον πανηγυρισμό του Καλάμπρια μετά το χρυσό… γκολ στο Καυτανζόγλειο",
@@ -238,17 +248,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
-      "image": ""
-    },
-    {
-      "title": "Τι λέει ο κανονισμός για την φάση του Αντίνο που διαμαρτύρεται ο Ηρακλής",
-      "link": "https://www.athletiko.gr/ti-leei-o-kanonismos-gia-tin-fasi-toy-antino-poy-diamartyretai-o-iraklis-114604",
-      "pubDate": null,
-      "date": null,
-      "source": "Athletiko",
-      "color": "#00651",
-      "sport": "football",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/calabria.jpg"
     },
     {
       "title": "Στο Ισραήλ ο Χέιζ-Ντέιβις, βλέπει το Μακάμπι - Χάποελ (video)",
@@ -258,7 +258,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/stighmiotipo-othonis-2026-11-09-221306.png"
     },
     {
       "title": "Νιώθει πολύ καλύτερα ο Ρογκαβόπουλος - Τα δεδομένα για την επιστροφή του",
@@ -268,7 +268,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/6960723.jpg"
     },
     {
       "title": "Τεράστιο πρόβλημα για την Μπαρτσελόνα ενόψει Παναθηναϊκού, χάνει το ματς ο Πάντερ - Το διάστημα απουσίας του",
@@ -278,7 +278,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/34/6830406.jpg"
     },
     {
       "title": "Το μήνυμα του Παναθηναϊκού στον Γκρεγκ Μπράουν: «Ανυπομονούμε να σε δούμε ξανά στο γήπεδο»",
@@ -288,7 +288,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158209.jpg"
     },
     {
       "title": "Ο Μπάντιο οδήγησε τον Παναθηναϊκό στη νίκη και αναδείχθηκε MVP της αγωνιστικής στη Stoiximan GBL",
@@ -298,7 +298,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158302-8FhuW.jpg"
     },
     {
       "title": "Μπάντιο: «Κάθε ματς είναι σημαντικό, χαίρομαι που βοήθησα την ομάδα»",
@@ -308,7 +308,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158337.jpg"
     },
     {
       "title": "Τραυματίστηκε ο Κέβιν Πάντερ πριν από το παιχνίδι με τον Παναθηναϊκό",
@@ -318,7 +318,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/imago1085272138h.jpg"
     },
     {
       "title": "Ομπράντοβιτς: «Στο δεύτερο ημίχρονο περιορίσαμε τα λάθη μας και κερδίσαμε»",
@@ -328,7 +328,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158342.jpg"
     },
     {
       "title": "Σακοτα «Κάθε φορά παρακαλάμε να μην συμβεί κάτι άλλο»",
@@ -338,7 +338,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158173.jpg"
     },
     {
       "title": "ΑΕΚ - Παναθηναϊκός 74-83: Τα highlights από το «διπλό» του τριφυλλιού με την υπογραφή του Μπαντιό",
@@ -348,7 +348,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158302.jpg"
     },
     {
       "title": "Η βαθμολογία της Stoiximan GBL μετά τη νίκη του Παναθηναϊκού επί της ΑΕΚ",
@@ -358,7 +358,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158248.jpg"
     },
     {
       "title": "Με Μπαντιό οδηγό ο Παναθηναϊκός πέρασε από τη Sunel Arena",
@@ -368,7 +368,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/46/7158393.jpg"
     },
     {
       "title": "Εξαλλος με τους παίκτες του ο Ομπράντοβιτς στο τάιμ-άουτ (video)",
@@ -378,7 +378,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/43/zots111111.jpg"
     },
     {
       "title": "Εκτός Γιαμπουσέλε και Σλούκας για τον Παναθηναϊκό κόντρα στην ΑΕΚ - Η «πράσινη» 12άδα",
@@ -388,7 +388,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/44/7103644.jpg"
     },
     {
       "title": "Που θα δείτε Μαρούσι - Ολυμπιακός",
@@ -398,7 +398,7 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/41/7082826.jpg"
     },
     {
       "title": "Το ποστ με νόημα του Λεσόρ: «Περπάτησα μέσα από την καταιγίδα...»",
@@ -408,7 +408,27 @@
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
-      "image": ""
+      "image": "https://cdn.athletiko.gr/portal-img/default/45/7140991.jpg"
+    },
+    {
+      "title": "Παναθηναϊκός: Δεν είναι μόνο οι νίκες, αλλά ο τρόπος που τις παίρνει",
+      "link": "https://newspao.gr/podosfairo/790523_panathinaikos-den-einai-mono-oi-nikes-alla-o-tropos-poy-tis-pairnei.html",
+      "pubDate": "2026-11-10T09:37:29Z",
+      "date": "2026-11-10T09:37:29Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/09/omadiki-panathinaikos-scaled.webp"
+    },
+    {
+      "title": "«Επικρατέστερος για την προεδρία της ΕΟΚ ο Μάνος Παπαδόπουλος»",
+      "link": "https://newspao.gr/basket/790520_epikratesteros-gia-tin-proedria-tis-eok-o-manos-papadopoylos.html",
+      "pubDate": "2026-11-10T09:26:29Z",
+      "date": "2026-11-10T09:26:29Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/04/15/manos-papadopoulos.jpg"
     },
     {
       "title": "«Για αυτό είναι πιθανό να αποχωρήσει ο Πελίστρι από τον Παναθηναϊκό»",
@@ -418,7 +438,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2025/11/26/pellistri-6.jpg"
     },
     {
       "title": "Παναθηναϊκός: Πρόβλεψη για Champions League! Σε ποιο γκρουπ δυναμικότητας βρίσκεται",
@@ -428,7 +448,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2024/04/10/champions-league.jpg"
     },
     {
       "title": "Πρόταση-βόμβα για νέα λίγκα: Παναθηναϊκός, Ολυμπιακός, ΑΕΚ, ΠΑΟΚ και ομάδες της Σερβίας",
@@ -438,7 +458,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/01/omadikiii.jpg"
     },
     {
       "title": "Παναθηναϊκός: Αυτή είναι η εντολή που έχει ο Μπάντιο από Ομπράντοβιτς",
@@ -448,7 +468,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/08/7158337-scaled.jpg"
     },
     {
       "title": "Βοτανικός: Η κρίσιμη εργασία για το στέγαστρο – Νέα εικόνα από το εργοτάξιο (vid)",
@@ -458,7 +478,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/09/c8634362-b2d6-4992-9111-76bcb68677b5.png"
     },
     {
       "title": "«Ο Καλάμπρια κάνει… θραύση και ιταλικές ομάδες παραμονεύουν – Η στάση του Παναθηναϊκού»",
@@ -468,7 +488,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/05/calabria-1-scaled.webp"
     },
     {
       "title": "«Ο Τσιριβέγια ίσως ανοίξει χώρο για έξτρα μεταγραφή στον Παναθηναϊκό»",
@@ -478,7 +498,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/01/27/tsirivella.jpg"
     },
     {
       "title": "«Διατεθειμένος για δύο μεταγραφές επιπέδου Τσάμπιονς Λιγκ ο Αλαφούζος»",
@@ -488,27 +508,7 @@
       "source": "NewsPao",
       "color": "#007d7",
       "sport": "football",
-      "image": ""
-    },
-    {
-      "title": "Λέτο: «Θα ήθελα αυτόν τον παίκτη του Παναθηναϊκού στην ομάδα μου»",
-      "link": "https://newspao.gr/podosfairo/790512_leto-tha-ithela-ayton-ton-paikti-toy-panathinaikoy-stin-omada-moy.html",
-      "pubDate": "2026-11-09T23:24:40Z",
-      "date": "2026-11-09T23:24:40Z",
-      "source": "NewsPao",
-      "color": "#007d7",
-      "sport": "football",
-      "image": ""
-    },
-    {
-      "title": "Ιακωβίδης: «Γι’ αυτό έγινα Παναθηναϊκός»",
-      "link": "https://newspao.gr/video/iakovidis-gi-039-ayto-egina-panathinaikos",
-      "pubDate": "2026-11-09T21:52:43Z",
-      "date": "2026-11-09T21:52:43Z",
-      "source": "NewsPao",
-      "color": "#007d7",
-      "sport": "football",
-      "image": ""
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/05/alafouzos.webp"
     },
     {
       "title": "«Απόδραση» στο Ισραήλ ο Χέιζ-Ντέιβις πριν το Παναθηναϊκός – Μπαρτσελόνα! (vid)",
