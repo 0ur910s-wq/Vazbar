@@ -4,6 +4,7 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
+import unicodedata
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
@@ -17,6 +18,17 @@ HEADERS = {
 }
 MAX_PER_SOURCE = 30
 MAX_TOTAL = 150
+PANATHINAIKOS_RE = re.compile(
+    r"παναθηναικ|τριφυλλ|panathinaik|(?<![a-z0-9α-ω])(?:paobc|pao|παο)(?![a-z0-9α-ω])"
+)
+
+
+def is_panathinaikos(text):
+    normalized = "".join(
+        char for char in unicodedata.normalize("NFD", str(text or "")).casefold()
+        if unicodedata.category(char) != "Mn"
+    )
+    return bool(PANATHINAIKOS_RE.search(normalized))
 
 SOURCES = [
     {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-podosfairo", "color": "#00651", "sport": "football"},
@@ -120,10 +132,19 @@ def fetch_rss_feed(source):
         raise RuntimeError(f"Feed contained no entries{detail}")
 
     articles = []
-    for entry in feed.entries[:MAX_PER_SOURCE]:
+    usable_entries = 0
+    for entry in feed.entries:
         title = entry.get("title", "").strip()
         link = entry.get("link", "").strip()
         if not title or not link:
+            continue
+        usable_entries += 1
+
+        snippets = [part.get("value", "") for part in entry.get("content", [])]
+        snippets.extend((entry.get("summary", ""), entry.get("description", "")))
+        summary = bs4.BeautifulSoup(" ".join(snippets), "html.parser").get_text(" ", strip=True)
+        tags = " ".join(tag.get("term", "") for tag in entry.get("tags", []))
+        if not is_panathinaikos(f"{title} {link} {tags} {summary}"):
             continue
 
         image_url = ""
@@ -138,8 +159,6 @@ def fetch_rss_feed(source):
             if image_url:
                 break
         if not image_url:
-            snippets = [part.get("value", "") for part in entry.get("content", [])]
-            snippets.extend((entry.get("summary", ""), entry.get("description", "")))
             image_url = image_from_html(" ".join(snippets), link)
 
         published = entry_date(entry)
@@ -148,36 +167,7 @@ def fetch_rss_feed(source):
             "link": link,
             "pubDate": published,
             "date": published,
-            "source": source["name"],
-            "color": source["color"],
-            "sport": source["sport"],
-            "image": image_url,
-        })
-
-    if not articles:
-        raise RuntimeError("Feed had no usable article entries")
-    return articles
-
-
-def fetch_html_site(source):
-    html = fetch_content(source["url"]).decode("utf-8", errors="replace")
-    soup = bs4.BeautifulSoup(html, "html.parser")
-    articles = []
-    for anchor in soup.find_all("a", href=True):
-        title = anchor.get_text(" ", strip=True)
-        if len(title) <= 25:
-            continue
-        link = urllib.parse.urljoin(source["url"], anchor["href"])
-        image_url = image_from_element(anchor, source["url"])
-        if not image_url:
-            card = anchor.find_parent("article")
-            if card:
-                image_url = image_from_element(card, source["url"])
-        articles.append({
-            "title": title,
-            "link": link,
-            "pubDate": None,
-            "date": None,
+            "summary": summary[:500],
             "source": source["name"],
             "color": source["color"],
             "sport": source["sport"],
@@ -186,7 +176,45 @@ def fetch_html_site(source):
         if len(articles) >= MAX_PER_SOURCE:
             break
 
-    if not articles:
+    if not usable_entries:
+        raise RuntimeError("Feed had no usable article entries")
+    return articles
+
+
+def fetch_html_site(source):
+    html = fetch_content(source["url"]).decode("utf-8", errors="replace")
+    soup = bs4.BeautifulSoup(html, "html.parser")
+    articles = []
+    candidate_count = 0
+    for anchor in soup.find_all("a", href=True):
+        title = anchor.get_text(" ", strip=True)
+        if len(title) <= 25:
+            continue
+        link = urllib.parse.urljoin(source["url"], anchor["href"])
+        candidate_count += 1
+        card = anchor.find_parent("article")
+        context = card.get_text(" ", strip=True) if card else title
+        if not is_panathinaikos(f"{title} {link} {context}"):
+            continue
+        image_url = image_from_element(anchor, source["url"])
+        if not image_url:
+            if card:
+                image_url = image_from_element(card, source["url"])
+        articles.append({
+            "title": title,
+            "link": link,
+            "pubDate": None,
+            "date": None,
+            "summary": context[:500],
+            "source": source["name"],
+            "color": source["color"],
+            "sport": source["sport"],
+            "image": image_url,
+        })
+        if len(articles) >= MAX_PER_SOURCE:
+            break
+
+    if not candidate_count:
         raise RuntimeError("No usable article links found on the page")
     return articles
 
@@ -229,6 +257,7 @@ def main():
             articles.extend(
                 item for item in existing_items
                 if item.get("source") == name and item.get("sport") == source["sport"]
+                and is_panathinaikos(f"{item.get('title', '')} {item.get('link', '')} {item.get('summary', '')}")
             )
 
     for status in source_status.values():
@@ -244,7 +273,9 @@ def main():
     unique_articles = []
     for item in articles:
         link = item.get("link", "").strip()
-        if not link or link in seen:
+        if not link or link in seen or not is_panathinaikos(
+            f"{item.get('title', '')} {item.get('link', '')} {item.get('summary', '')}"
+        ):
             continue
         seen.add(link)
         unique_articles.append(item)
