@@ -22,18 +22,16 @@ jobs:
         with:
           node-version: 20
 
-      - name: Fetch feeds
-        run: node .github/workflows/scripts/fetch-news.js
-
-     - name: Commit news.json
+      - name: Commit and push news.json
       run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git fetch origin main
         git pull origin main --rebase || true
         git add news.json
         if git diff --cached --quiet; then
-          echo "No changes"
+          echo "No changes to commit"
         else
-          git commit -m "Update news.json"
+          git commit -m "Auto-update news.json"
           git push origin main
         fi
