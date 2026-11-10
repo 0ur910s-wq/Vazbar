@@ -1,7 +1,7 @@
 // Πράσινα Νέα – Service Worker
 // Αποθηκεύει το "κέλυφος" της εφαρμογής ώστε να ανοίγει και χωρίς δίκτυο.
 // Οι ειδήσεις (RSS / proxies / καιρός) ΔΕΝ περνούν από εδώ – πάντα φρέσκες από το δίκτυο.
-const VERSION = 'pn-v2';
+const VERSION = 'pn-v3';
 const SHELL = ['./', './index.html', './manifest.json', './icon-192.png', './icon-512.png'];
 const CDN_HOSTS = ['cdn.tailwindcss.com', 'unpkg.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 
@@ -51,6 +51,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(req.url);
 
   if (url.origin === self.location.origin) {
+    if (url.pathname.endsWith('/news.json')) return; // πάντα φρέσκο από το δίκτυο
     if (req.mode === 'navigate') {
       event.respondWith(networkFirst(req));
     } else {
