@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T09:57:11Z",
+  "updated": "2026-11-10T10:02:15Z",
   "sources": {
     "Athletiko": {
       "ok": true,
@@ -37,6 +37,10 @@
       "ok": false,
       "count": 0,
       "msg": "All endpoints failed: https://www.sport24.gr/feed/?tag=panathinaikos: HTTP 403 from https://www.sport24.gr/feed/?tag=panathinaikos"
+    },
+    "Google News PAO": {
+      "ok": true,
+      "count": 7
     }
   },
   "items": [
@@ -45,7 +49,7 @@
       "link": "https://www.athletiko.gr/fortsaroyn-ghia-to-steghastro-sto-neo-ghipedo-toy-panathinaikou-video-114787",
       "pubDate": null,
       "date": null,
-      "summary": "Φορτσάρουν για το στέγαστρο στο νέο γήπεδο του Παναθηναϊκού (video) Οι τελευταίες εικόνες από το νέο γήπεδο του Παναθηναϊκού στον Βοτανικό που ετοιμάζεται να υποδεχθεί το εντυπωσιακό στεγαστρο. πριν 16 λεπτά",
+      "summary": "Φορτσάρουν για το στέγαστρο στο νέο γήπεδο του Παναθηναϊκού (video) Οι τελευταίες εικόνες από το νέο γήπεδο του Παναθηναϊκού στον Βοτανικό που ετοιμάζεται να υποδεχθεί το εντυπωσιακό στεγαστρο. πριν 25 λεπτά",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -155,7 +159,7 @@
       "link": "https://www.athletiko.gr/live-to-back2mpak-stis-15-00-me-ton-apoicho-toy-olympiakos-paok-kai-tis-nikes-tis-aek-kai-toy-panathinaikoy-114619",
       "pubDate": null,
       "date": null,
-      "summary": "Live το «BACK2ΜΠΑΚ» με κουβέντα για διαιτησία, τον Παναθηναϊκό στο +4 και την Εθνική ομάδα Συντονιστείτε στο YouTube του Athletiko και το ACTION24 για την εκπομπή «BACK2ΜΠΑΚ» με τον Βασίλη Μπακόπουλο και όλο το ρεπορτάζ. πριν 22 ώρες Newsroom",
+      "summary": "Live το «BACK2ΜΠΑΚ» με κουβέντα για διαιτησία, τον Παναθηναϊκό στο +4 και την Εθνική ομάδα Συντονιστείτε στο YouTube του Athletiko και το ACTION24 για την εκπομπή «BACK2ΜΠΑΚ» με τον Βασίλη Μπακόπουλο και όλο το ρεπορτάζ. πριν 23 ώρες Newsroom",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -305,6 +309,17 @@
       "image": "https://cdn.athletiko.gr/portal-img/default/41/7082826.jpg"
     },
     {
+      "title": "Παναθηναϊκός: Το σχήμα του Ομπράντοβιτς που αποκαλύπτει πολλά περισσότερα από μια καλή πεντάδα",
+      "link": "https://newspao.gr/basket/790531_panathinaikos-to-schima-toy-omprantovits-poy-apokalyptei-polla-perissotera-apo-mia-kali-pentada.html",
+      "pubDate": "2026-11-10T10:00:31Z",
+      "date": "2026-11-10T10:00:31Z",
+      "summary": "Οι αριθμοί της «αγαπημένης» πεντάδας του Ζοτς δείχνουν πώς ο Παναθηναϊκός μπορεί να αποκτήσει τον έλεγχο ενός αγώνα μέσα από την αποτελεσματικότητα και την άμυνά του. The post Παναθηναϊκός: Το σχήμα του Ομπράντοβιτς που αποκαλύπτει πολλά περισσότερα από μια καλή πεντάδα appeared first on Newspao.gr . Οι αριθμοί της «αγαπημένης» πεντάδας του Ζοτς δείχνουν πώς ο Παναθηναϊκός μπορεί να αποκτήσει τον έλεγχο ενός αγώνα μέσα από την αποτελεσματικότητα και την άμυνά του. The post Παναθηναϊκός: Το σχήμα",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/10/obradovic-scaled.jpg"
+    },
+    {
       "title": "Παναθηναϊκός: Δεν είναι μόνο οι νίκες, αλλά ο τρόπος που τις παίρνει",
       "link": "https://newspao.gr/podosfairo/790523_panathinaikos-den-einai-mono-oi-nikes-alla-o-tropos-poy-tis-pairnei.html",
       "pubDate": "2026-11-10T09:37:29Z",
@@ -402,17 +417,6 @@
       "color": "#007d7",
       "sport": "football",
       "image": "https://newspao.gr/wp-content/uploads/2026/01/27/tsirivella.jpg"
-    },
-    {
-      "title": "«Διατεθειμένος για δύο μεταγραφές επιπέδου Τσάμπιονς Λιγκ ο Αλαφούζος»",
-      "link": "https://newspao.gr/podosfairo/790498_diatetheimenos-gia-dyo-metagrafes-epipedoy-tsampions-ligk-o-alafoyzos.html",
-      "pubDate": "2026-11-10T05:03:48Z",
-      "date": "2026-11-10T05:03:48Z",
-      "summary": "Ο Γιάννης Αλαφούζος εμφανίζεται έτοιμος να διαθέσει σημαντικά ποσά για δύο μεταγραφές υψηλού επιπέδου τον Ιανουάριο, με τον Παναθηναϊκό να κοιτάζει ποδοσφαιριστές από δυνατά ευρωπαϊκά πρωταθλήματα. The post «Διατεθειμένος για δύο μεταγραφές επιπέδου Τσάμπιονς Λιγκ ο Αλαφούζος» appeared first on Newspao.gr . Ο Γιάννης Αλαφούζος εμφανίζεται έτοιμος να διαθέσει σημαντικά ποσά για δύο μεταγραφές υψηλού επιπέδου τον Ιανουάριο, με τον Παναθηναϊκό να κοιτάζει ποδοσφαιριστές από δυνατά ευρωπαϊκά πρωταθλ",
-      "source": "NewsPao",
-      "color": "#007d7",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/05/alafouzos.webp"
     },
     {
       "title": "«Απόδραση» στο Ισραήλ ο Χέιζ-Ντέιβις πριν το Παναθηναϊκός – Μπαρτσελόνα! (vid)",
@@ -522,6 +526,83 @@
       "source": "Trifilara",
       "color": "#2062d",
       "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι - Sport24",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ0M1dzdTMTN4OEhqdk5PZDMwVzFYY3YxLW1BOWUyZkF4OEpEOFpsdHg3Y2JwSG5WZ3RxemlmUl9ubTBzS3h0SUpVZzRyb00zWjM0WENjaXd0bl9IYnctQVpsNVRYTUxKSUF3MVRlMjVGLVRYeXJ6QXkxampOQUYtYi1oREx3VTY2WVFFbXVOWURaS1BScUppUWMzRWZrMm1Oa3dTS2wweXRoUdIBrwFBVV95cUxOQ19RZG1mLVl2UXlRLTBKb1Q4VlVlMzdadk9GLW5GMTYyWEJXc0tpcUx4cG5TRHI3TFExVm9QS3RpeWxhWUFFeTJJS3Flc1k5TXBNTUwtbUNaRlozMW44VTdVUWFrUjlaczhrUEtxeWNiUUQyOEJNbnBRaFphVXU0dUJUN3Bha2ptUlJqVnpRUExab2RHY3VvY0RFdXFaeGtqVWlXODB4RnlKd0hxTzY0?oc=5",
+      "pubDate": "2026-11-10T07:23:00Z",
+      "date": "2026-11-10T07:23:00Z",
+      "summary": "Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι Sport24 Παναθηναϊκός: Κοτσόλης και Γκούμας στη Λισαβώνα για το TransferRoom Gazzetta.gr Στη Λισαβόνα ο Κοτσόλης Zougla Έτοιμος για νέα «χτυπήματα» ο Παναθηναϊκός Koubanezos.gr Με Κοτσόλη και Γκούμα ο Παναθηναϊκός στο TransferRoom bwinΣΠΟΡ FM 94.6 Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι Sport24 Παναθηναϊκός: Κοτσόλης και Γκούμας στη Λισαβώνα για το TransferRoom Gazzetta.gr Στη Λισαβόνα ο Κο",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Έρευνα της ΔΕΑΒ για την παρουσία οπαδών του Παναθηναϊκού στο Καυτανζόγλειο - ProtoThema",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaGNwWms2MzZZNlRNbHhsRkM4MlNESi0xVkNfY0NoYWktNVQ2SlZGT1F3enpfd3RDcmxMODF0VzBGV0hOVHRUWWhoa3FDWTJpRWNxVTFuY0xJcFphRGU5bXhha1hkTWd4emZWVV9HMDkxZ0tBOHJJYzBsVVJscF9jZzYxcWp0VHRhbWtaeVZjaXYtd25GdnhDVE1XUmV1TVlMSkdFVFVCWk5LTXlGSmFqTXhOd0lsRGtaQmtzc2NJUXBLU2PSAcgBQVVfeXFMTUNWZk9oN19pRGpPY1dlVTFUNGREQ0hBNFZGQ2ttNEZJeWZid0F3VFdUTy1YQ3BuNE5EM3BFWkgxT3I4Vm9OMTkwTHVlc1RNNDR2bFFOSjlKQVp1S2o0MjU3d0F2M2hMeWJCckttN296RDVsNW1LSkxqOEZadTlaa3RNbVd1RHUtTW95YkM1dVl4a1N1ejBRZW14dWRjeV9MOHgzNEJZdzNjQW1FazJrNEptZXpRV0pqQUFrVFlsNW5EM3pja29BRy0?oc=5",
+      "pubDate": "2026-11-09T16:17:51Z",
+      "date": "2026-11-09T16:17:51Z",
+      "summary": "Έρευνα της ΔΕΑΒ για την παρουσία οπαδών του Παναθηναϊκού στο Καυτανζόγλειο ProtoThema Παναθηναϊκός: Έρευνα της ΔΕΑΒ για την πράσινη εξέδρα στο Καυτανζόγλειο SPORT24 Ηρακλής - Παναθηναϊκός: Έρευνα της ΔΕΑΒ και προανάκριση της Αστυνομίας για τους οπαδούς των «Πρασίνων» Gazzetta.gr Έρευνα της ΔΕΑΒ για την παρουσία φιλάθλων του Παναθηναϊκού στο Καυτανζόγλειο, παρά τη σχετική απαγόρευση – Πρόστιμο έως 500.000 ευρώ Μακεδονικό Πρακτορείο Ειδήσεων Παναθηναϊκός: Έρευνα της ΔΕΑΒ και προανάκριση της Αστυνο",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Τετραήμερο “δώρο” στους παίκτες από τον Νίστρουπ - SPORT24",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTXJILUduOEVIaExYamYzMmg1RVd1bkVvQldPVWFKeWRleG5OSjVWZk5Dc1JVRS1yOF9ZbmstZkoxeW11VUw2VkxGR2RESkgyU3hJVE9ic0FFNW9CYnh0YnZtNkdUTk11WnJyWDYteGFpV0R5dVJOakliTHpkTmtPWHZyY2RnWTBDQXNxTEZRelFaNnlpSktOLdIBngFBVV95cUxQR0ZZX2JBTTZ5Tm9KX2ZSQUVnaEtSVkZORGxZZFF2bEVCcWFjdjhKaEdnVDVMaUdsT04ycF9scklQMmZjOGFUcVRyYzN6YmZBQjJJRjNtSnlnU2pMWUJpdjh4Qjc2aXdLUnJKZW85dHVibnYxengzMnZkRktUdjhDTklKdGdkZWZ2SWZ1ZnNaYk5XSUthZVNjQmttYkdRZw?oc=5",
+      "pubDate": "2026-11-10T07:48:00Z",
+      "date": "2026-11-10T07:48:00Z",
+      "summary": "Παναθηναϊκός: Τετραήμερο “δώρο” στους παίκτες από τον Νίστρουπ SPORT24 Το «πράσινο» πρόγραμμα της εβδομάδας – Παναθηναϊκός Αθλητικός Όμιλος\" pao1908.com Παναθηναϊκός: Οι μεγάλοι στόχοι για την επανεκκίνηση bwinΣΠΟΡ FM 94.6 Παναθηναϊκός: Τετραήμερο ρεπό-επιβράβευση του Νίστρουπ μετά το σερί των οκτώ νικών Skai.gr Παναθηναϊκός: Το συμβολικό δώρο του Νίστρουπ στους παίκτες News 24/7 Παναθηναϊκός: Τετραήμερο “δώρο” στους παίκτες από τον Νίστρουπ SPORT24 Το «πράσινο» πρόγραμμα της εβδομάδας – Παναθην",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Ηρακλής – Παναθηναϊκός: To video με τους πανηγυρισμούς των «πρασίνων» στο Καυτανζόγλειο - NewsIT",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdl9PVG1kQ2h2NDJETUtjaXR1bWF4M0hjb0cweTNrdWRzRmZLRDlIMlo3WkJUWGFkLW5hTDVqVWpRWHlJY0FDTTctSHF5MVFQQjU2WElwa3dCZk5lQndvblA5d216ZUxvV2dfeVRfWVNPalU0LUtMbV9mQjV3OFh0VzRkcDl5WVBaXzVFUllzeGN5NjhmalpZNjEwNXJPNk8xUmpTc0lYQktPcDVzUG9XbW1vOEJHbDFYMGtfR3FjVDdLUdIBxwFBVV95cUxNSmhMQTI5YVZEZ2FrZlRrZGpOazFINW95YnZQUTVlcERKSkVLcHNkQmc2TWp5WDhWNGNVdHl6ZWFWN1dvYXdFLUdWY0dFeUotejk5VGxvRFZTMnc3a1hCclZnLW5HcFVTWGU0azAzWnRsV1BUMmh6Nml2eURFX0pIUldVMGRWSnRVTXVEZG9UdFNuSjZ4dlZDMUIzNjNkUi1QdC1namxnZWdGSDBYU0luUi1YX18ycl90TlY1WUlnQWh1MXFTdm9Z?oc=5",
+      "pubDate": "2026-11-09T18:57:00Z",
+      "date": "2026-11-09T18:57:00Z",
+      "summary": "Ηρακλής – Παναθηναϊκός: To video με τους πανηγυρισμούς των «πρασίνων» στο Καυτανζόγλειο NewsIT Παναθηναϊκός: Το aftermovie της εκτός έδρας νίκης κόντρα στον Ηρακλή SPORT24 Παναθηναϊκός: Ο Καλάμπρια έδωσε τη νίκη επί του Ηρακλή στο 94′ Alpha TV Παναθηναϊκός: Ομάδα και κόσμος του Παναθηναϊκού έσπασαν τις... απαγορεύσεις! Gazzetta.gr «Η νοοτροπία του νικητή» (video) Zougla Ηρακλής – Παναθηναϊκός: To video με τους πανηγυρισμούς των «πρασίνων» στο Καυτανζόγλειο NewsIT Παναθηναϊκός: Το aftermovie της ",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Ευχές για ταχεία ανάρρωση σε Μπράουν από Παναθηναϊκό και Άρη - bwinΣΠΟΡ FM 94.6",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQZUJCb2F3STB0Qk5lNlprakRrbEt6Nk1sV1U4V0lGM011V0lzTmpzNVROelcxOElyaU5adTI2SGlPSDJuYXQtTExsMWFVdVgzejVhbVNmamhIcWs4T21VbGRxNng1eW16MDhqZ1g5NmlvWldMSWVHZkstT2stZUE4eElfN3hqdXlFQXpER1I4LVF3OTMzUWlDMUFnM1VqZXlScDVaWElXeTZIN2tkZE05Zl9sbFZ5Z9IBrgFBVV95cUxPSGEzSktOSU9OMmRnd01uUVJ1enRXSWgzUXNpendhcXc1NjNsR1Jpa1hjZV8yREtxcGg3b2lnTEJKRmZMamJQdEhJUk9jRmdvR1VtSXp3emNTU0JmbExRUFZVTEhrMTlobDItWEN6cWd5RERPLWlLYi10VmRkRDBVLW0ydzRCNVlYZjJvQmUtTy0wYlM0QnhZX1hWazZtR1ROVGgyU2p0RHhKaUVFMWc?oc=5",
+      "pubDate": "2026-11-09T13:35:38Z",
+      "date": "2026-11-09T13:35:38Z",
+      "summary": "Ευχές για ταχεία ανάρρωση σε Μπράουν από Παναθηναϊκό και Άρη bwinΣΠΟΡ FM 94.6 ΑΕΚ: Τσακωμένη με την τύχη SPORT24 ΑΕΚ: Θλάση στους κοιλιακούς μύες ο Δημήτρης Φλιώνης Μακεδονικό Πρακτορείο Ειδήσεων Μπράουν: Τα περαστικά του Παναθηναϊκού Gazzetta.gr AEK: Άσχημα τα νέα για Γκρεγκ Μπράουν -Υπέστη ρήξη Αχιλλείου και χάνει τη σεζόν iefimerida.gr Ευχές για ταχεία ανάρρωση σε Μπράουν από Παναθηναϊκό και Άρη bwinΣΠΟΡ FM 94.6 ΑΕΚ: Τσακωμένη με την τύχη SPORT24 ΑΕΚ: Θλάση στους κοιλιακούς μύες ο Δημήτρης Φλ",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Superleague, η βαθμολογία: Ανοιξε την... ψαλίδα ο Παναθηναϊκός, στο +4 από τον Ολυμπιακό! - Gazzetta.gr",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbkxPUEJwa3ZxM3RZanNZZm1TRUt1NVVTTWdpRkZLMW1CR3VHNUZoNnFzeFQ5TUh0RVJ5SEZtdHVXS3dmdXBOZkdYVWNGcG5uQVNVak1HdWpvZ2s1d3pMaUxNa2gyMjB4azh0VTBTNkVMTmN4Y3QyQ2R5NU44VFV6d2htNVNRclFqSS1PVDhZa2ZCSmJobjc5SmVQMTlrMUtGMEZnNXpaZ0J5QWxqT2F1THNQUHR5SHFzbnlyQzRmS1PSAcYBQVVfeXFMTjIyeEMtdlRmSkdqM2VMUzZxQVllSU81Rl9ELUxVa1RTVVJ4QUo0TW5hTkVncE9wd1ZmV0pKUEVabEpOdk9GNGlqYU1LUXBVOVBvclVKOXVNbW5xTlhnYjFoNmhXVGNHLThIRjNqX0kyOFhkUjJYaFoycGpuQUd3S0R1ejdGeTlFV3c3ZDBGaUc0TnhYTHp3Yy1CR0lvZWVSaGk4TDR6RmJmaUFMVG5aX2o1djE2RFVCSWpyZDloNmc4dTJFWjl3?oc=5",
+      "pubDate": "2026-11-08T20:54:33Z",
+      "date": "2026-11-08T20:54:33Z",
+      "summary": "Superleague, η βαθμολογία: Ανοιξε την... ψαλίδα ο Παναθηναϊκός, στο +4 από τον Ολυμπιακό! Gazzetta.gr Football Meets Data: Έγινε πρώτο φαβορί για το πρωτάθλημα ο Παναθηναϊκός Skai.gr Super League: Η μάχη της κορυφής φουντώνει – Το πρόγραμμα των Big 4 μέχρι το τέλος του πρώτου γύρου Newsbeast Ηχηρά «καμπανάκια» για όλους, τεράστιο όφελος για τον Παναθηναϊκό Gazzetta.gr Δυο απογοητευτικοί, μια κουρασμένη, δυο κερδισμένοι POPAGANDA Superleague, η βαθμολογία: Ανοιξε την... ψαλίδα ο Παναθηναϊκός, στο",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Ο κόσμος του πιστεύει και οι αντίπαλοι ανησυχούν όλο και περισσότερο - Gazzetta.gr",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPeEtoNnpxTnpjLUhMZmRKaURVb1BFM2QyTWlmbGxqbUo2ZnBhLWNienBDbWJGWXRYZWpIQ3lKaHM1Z1VZTzVCTHRKYW1GZzRsTjVkSERrd0M1cVk4alJFdUQxSUVkbnpOUmVLRFZlY3ZfZkJNWElXYVFaZ291QlZJWjFfM3NUVXRLS0g2aElveDFLMk84ZGZfYm1UakNNbGJxdUhWWHJRTFkyRWhydzdRS0JQa1lxQkdBcUFYRlRYR2jSAcYBQVVfeXFMUDVQMjc5bERGUUhGcjZIcUdNR3NxZnJFOVgybmtTbTdDYllXbEs2dkFSVFRieWVwdkF1dktya0p0LUs0bVZhM2k0RWxKcS1FZldIdXByRDdrNEJ4eHJSc0lwUUxPbTdDdXRVdERveTcxcmp2UWlLZWlzem9rbWlvaUFLSnRKaV9CX0VjY1JIeWZFT1JkeXV2VlFQY2RXOWoyU3JLakh0bVd1eFByQlZCMEV2dEE3MDYxS3lMVmFWbW5yWEExc0N3?oc=5",
+      "pubDate": "2026-11-09T20:54:00Z",
+      "date": "2026-11-09T20:54:00Z",
+      "summary": "Παναθηναϊκός: Ο κόσμος του πιστεύει και οι αντίπαλοι ανησυχούν όλο και περισσότερο Gazzetta.gr Δεν θα ζητήσει και συγγνώμη επειδή του δίνουν αυτά που πρέπει Onsports Έτσι ήταν πιο γλυκό, ο Παναθηναϊκός που ξέρανε τελείωσε! Sportal.gr Ο Παναθηναϊκός της κλάψας «πέθανε», θα παίρνει όσα δικαιούται και όσα του στερούσαν SDNA Παναθηναϊκός: Ο κόσμος του πιστεύει και οι αντίπαλοι ανησυχούν όλο και περισσότερο Gazzetta.gr Δεν θα ζητήσει και συγγνώμη επειδή του δίνουν αυτά που πρέπει Onsports Έτσι ήταν π",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
       "image": ""
     }
   ]
