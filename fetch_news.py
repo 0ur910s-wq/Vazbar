@@ -40,6 +40,7 @@ SOURCES = [
     {"name": "SDNA PAO", "type": "rss", "url": "https://www.sdna.gr/rss/223/panathinaikos", "color": "#ffcc00", "sport": "football"},
     {"name": "Gazzetta PAO", "type": "rss", "url": "https://www.gazzetta.gr/feed/tags/panathinaikos", "color": "#ff8808", "sport": "basket"},
     {"name": "Sport24 PAO", "type": "rss", "url": "https://www.sport24.gr/feed/?tag=panathinaikos", "color": "#d1e2b", "sport": "football"},
+    {"name": "Google News PAO", "type": "rss", "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnNHZ0pIVWlnQVAB?hl=el&gl=GR&ceid=GR%3Ael", "color": "#4285f4", "sport": "other", "title_only_filter": True},
 ]
 
 
@@ -144,7 +145,8 @@ def fetch_rss_feed(source):
         snippets.extend((entry.get("summary", ""), entry.get("description", "")))
         summary = bs4.BeautifulSoup(" ".join(snippets), "html.parser").get_text(" ", strip=True)
         tags = " ".join(tag.get("term", "") for tag in entry.get("tags", []))
-        if not is_panathinaikos(f"{title} {link} {tags} {summary}"):
+        relevance_text = title if source.get("title_only_filter") else f"{title} {link} {tags} {summary}"
+        if not is_panathinaikos(relevance_text):
             continue
 
         image_url = ""
