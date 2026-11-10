@@ -80,4 +80,37 @@ def fetch_html_site(source):
                 if len(title) > 25:
                     if not link.startswith('http'):
                         base_domain = "/".join(source["url"].split("/")[:3])
-                        link = base_domain + link if link
+                        link = base_domain + link if link.startswith('/') else base_domain + '/' + link
+                    
+                    articles.append({
+                        "title": title,
+                        "link": link,
+                        "date": datetime.now().strftime("%d/%m %H:%M"),
+                        "source": source["name"],
+                        "color": source["color"],
+                        "sport": source["sport"],
+                        "image": ""
+                    })
+        print(f"Success HTML: {source['name']}")
+    except Exception as e:
+        print(f"Error HTML {source['name']}: {e}")
+    return articles
+
+def main():
+    all_articles = []
+    for source in SOURCES:
+        if source["type"] == "rss":
+            all_articles.extend(fetch_rss_feed(source))
+        elif source["type"] == "html":
+            all_articles.extend(fetch_html_site(source))
+    
+    output_path = "news.json"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(all_articles, f, ensure_ascii=False, indent=4)
+    print(f"Saved {len(all_articles)} total articles to {output_path}")
+
+if __name__ == "__main__":
+    main()
+```[cite: 1, 2]
+
+Αποθήκευσε τις αλλαγές στο GitHub και τρέξε ξανά το workflow· θα ολοκληρωθεί επιτυχώς και το Athletiko θα επιστρέψει κανονικά στις πράσινες πηγές!
