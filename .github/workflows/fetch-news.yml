@@ -23,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Fetch feeds
-        run: node scripts/fetch-news.js
+        run: node .github/workflows/scripts/fetch-news.js
 
       - name: Commit news.json
         run: |
