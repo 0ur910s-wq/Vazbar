@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -70,6 +71,48 @@ def entry_date(entry):
     return None
 
 
+def srcset_url(value):
+    candidates = []
+    for part in (value or "").split(","):
+        fields = part.strip().split()
+        if not fields:
+            continue
+        score = 0.0
+        if len(fields) > 1:
+            descriptor = fields[1].lower()
+            try:
+                score = float(descriptor[:-1]) if descriptor.endswith("x") else float(descriptor[:-1]) / 1000
+            except ValueError:
+                pass
+        candidates.append((score, fields[0]))
+    return max(candidates, default=(0, ""))[1]
+
+
+def image_from_element(element, base_url):
+    nodes = [element] + element.find_all(["img", "source"])
+    for attribute in ("data-src", "data-lazy-src", "data-original", "data-srcset", "srcset", "src"):
+        for node in nodes:
+            value = node.get(attribute)
+            if attribute in ("data-srcset", "srcset"):
+                value = srcset_url(value)
+            if value and not value.strip().lower().startswith("data:"):
+                return urllib.parse.urljoin(base_url, value.strip())
+    for node in nodes:
+        style = node.get("style", "")
+        match = re.search(r"background-image\s*:\s*url\(['\"]?([^)'\"]+)", style, re.I)
+        if match:
+            return urllib.parse.urljoin(base_url, match.group(1).strip())
+    return ""
+
+
+def image_from_html(markup, base_url):
+    if not markup:
+        return ""
+    soup = bs4.BeautifulSoup(markup, "html.parser")
+    image = soup.find(["img", "source"])
+    return image_from_element(image, base_url) if image else ""
+
+
 def fetch_rss_feed(source):
     feed = feedparser.parse(fetch_content(source["url"]))
     if not feed.entries:
@@ -84,13 +127,20 @@ def fetch_rss_feed(source):
             continue
 
         image_url = ""
-        media = entry.get("media_content") or entry.get("media_thumbnail") or []
-        if media:
-            image_url = media[0].get("url", "")
+        for group in (entry.get("media_content"), entry.get("media_thumbnail"), entry.get("enclosures")):
+            if isinstance(group, dict):
+                group = [group]
+            for media in group or []:
+                image_url = media.get("url") or media.get("href") or ""
+                if image_url:
+                    image_url = urllib.parse.urljoin(link, image_url)
+                    break
+            if image_url:
+                break
         if not image_url:
-            enclosures = entry.get("enclosures") or []
-            if enclosures:
-                image_url = enclosures[0].get("href", "")
+            snippets = [part.get("value", "") for part in entry.get("content", [])]
+            snippets.extend((entry.get("summary", ""), entry.get("description", "")))
+            image_url = image_from_html(" ".join(snippets), link)
 
         published = entry_date(entry)
         articles.append({
@@ -117,15 +167,21 @@ def fetch_html_site(source):
         title = anchor.get_text(" ", strip=True)
         if len(title) <= 25:
             continue
+        link = urllib.parse.urljoin(source["url"], anchor["href"])
+        image_url = image_from_element(anchor, source["url"])
+        if not image_url:
+            card = anchor.find_parent("article")
+            if card:
+                image_url = image_from_element(card, source["url"])
         articles.append({
             "title": title,
-            "link": urllib.parse.urljoin(source["url"], anchor["href"]),
+            "link": link,
             "pubDate": None,
             "date": None,
             "source": source["name"],
             "color": source["color"],
             "sport": source["sport"],
-            "image": "",
+            "image": image_url,
         })
         if len(articles) >= MAX_PER_SOURCE:
             break
