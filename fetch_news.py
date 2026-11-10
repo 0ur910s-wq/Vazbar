@@ -1,18 +1,21 @@
 import json
 import os
-import urllib.request
+import urllib.error
 import urllib.parse
-from datetime import datetime
+import urllib.request
+from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
-import feedparser
+
 import bs4
+import feedparser
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "User-Agent": "VazbarNews/1.0 (+https://0ur910s-wq.github.io/Vazbar/)",
+    "Accept": "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html;q=0.9, */*;q=0.8",
     "Accept-Language": "el-GR,el;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": "https://www.google.com/"
 }
+MAX_PER_SOURCE = 30
+MAX_TOTAL = 150
 
 SOURCES = [
     {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-podosfairo", "color": "#00651", "sport": "football"},
@@ -26,124 +29,185 @@ SOURCES = [
     {"name": "Sport24 PAO", "type": "rss", "url": "https://www.sport24.gr/feed/?tag=panathinaikos", "color": "#d1e2b", "sport": "football"},
 ]
 
+
+def utc_now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
 def fetch_content(target_url):
-    encoded_url = urllib.parse.quote(target_url)
-    # Δοκιμή με εναλλακτικούς proxies και απευθείας σύνδεση
-    attempts = [
-        f"https://api.allorigins.win/raw?url={encoded_url}",
-        f"https://corsproxy.io/?{encoded_url}",
-        target_url
-    ]
-    
-    for url in attempts:
-        try:
-            req = urllib.request.Request(url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=10) as response:
-                data = response.read()
-                if len(data) > 50:
-                    return data
-        except Exception:
+    """Fetch a public source directly; do not hide source errors behind third-party proxies."""
+    request = urllib.request.Request(target_url, headers=HEADERS)
+    try:
+        with urllib.request.urlopen(request, timeout=20) as response:
+            data = response.read()
+            if not data:
+                raise RuntimeError(f"Empty response from {response.geturl()}")
+            return data
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(f"HTTP {exc.code} from {exc.url}") from exc
+    except urllib.error.URLError as exc:
+        reason = getattr(exc, "reason", exc)
+        raise RuntimeError(f"Network error for {urllib.parse.urlsplit(target_url).netloc}: {reason}") from exc
+
+
+def entry_date(entry):
+    for key in ("published_parsed", "updated_parsed"):
+        parsed = entry.get(key)
+        if parsed:
+            return datetime(*parsed[:6], tzinfo=timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+    for key in ("published", "updated"):
+        value = entry.get(key)
+        if not value:
             continue
-    raise Exception("All fetch attempts failed")
+        try:
+            parsed = parsedate_to_datetime(value)
+            if parsed.tzinfo is None:
+                parsed = parsed.replace(tzinfo=timezone.utc)
+            return parsed.astimezone(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+        except (TypeError, ValueError, OverflowError):
+            continue
+    return None
+
 
 def fetch_rss_feed(source):
+    feed = feedparser.parse(fetch_content(source["url"]))
+    if not feed.entries:
+        detail = f" ({feed.bozo_exception})" if getattr(feed, "bozo", False) else ""
+        raise RuntimeError(f"Feed contained no entries{detail}")
+
     articles = []
-    try:
-        content = fetch_content(source["url"])
-        feed = feedparser.parse(content)
-        for entry in feed.entries[:5]:
-            title = entry.get("title", "").strip()
-            link = entry.get("link", "").strip()
-            if not title or not link:
-                continue
-            
-            published = entry.get("published", entry.get("updated", ""))
-            date_str = datetime.now().strftime("%d/%m %H:%M")
-            if published:
-                try:
-                    dt = parsedate_to_datetime(published)
-                    date_str = dt.strftime("%d/%m %H:%M")
-                except Exception:
-                    pass
-            
-            image_url = ""
-            if "media_content" in entry and entry.media_content:
-                image_url = entry.media_content[0].get("url", "")
-            
-            articles.append({
-                "title": title,
-                "link": link,
-                "date": date_str,
-                "source": source["name"],
-                "color": source["color"],
-                "sport": source["sport"],
-                "image": image_url
-            })
-        print(f"Success RSS: {source['name']}")
-    except Exception as e:
-        print(f"Error RSS {source['name']}: {e}")
+    for entry in feed.entries[:MAX_PER_SOURCE]:
+        title = entry.get("title", "").strip()
+        link = entry.get("link", "").strip()
+        if not title or not link:
+            continue
+
+        image_url = ""
+        media = entry.get("media_content") or entry.get("media_thumbnail") or []
+        if media:
+            image_url = media[0].get("url", "")
+        if not image_url:
+            enclosures = entry.get("enclosures") or []
+            if enclosures:
+                image_url = enclosures[0].get("href", "")
+
+        published = entry_date(entry)
+        articles.append({
+            "title": title,
+            "link": link,
+            "pubDate": published,
+            "date": published,
+            "source": source["name"],
+            "color": source["color"],
+            "sport": source["sport"],
+            "image": image_url,
+        })
+
+    if not articles:
+        raise RuntimeError("Feed had no usable article entries")
     return articles
+
 
 def fetch_html_site(source):
+    html = fetch_content(source["url"]).decode("utf-8", errors="replace")
+    soup = bs4.BeautifulSoup(html, "html.parser")
     articles = []
-    try:
-        content_bytes = fetch_content(source["url"])
-        html = content_bytes.decode('utf-8', errors='ignore')
-        soup = bs4.BeautifulSoup(html, 'html.parser')
-        
-        for a_tag in soup.find_all('a', href=True)[:15]:
-            title = a_tag.get_text().strip()
-            link = a_tag['href']
-            if len(title) > 25:
-                if not link.startswith('http'):
-                    base_domain = "/".join(source["url"].split("/")[:3])
-                    link = base_domain + link if link.startswith('/') else base_domain + '/' + link
-                
-                articles.append({
-                    "title": title,
-                    "link": link,
-                    "date": datetime.now().strftime("%d/%m %H:%M"),
-                    "source": source["name"],
-                    "color": source["color"],
-                    "sport": source["sport"],
-                    "image": ""
-                })
-        print(f"Success HTML: {source['name']}")
-    except Exception as e:
-        print(f"Error HTML {source['name']}: {e}")
+    for anchor in soup.find_all("a", href=True):
+        title = anchor.get_text(" ", strip=True)
+        if len(title) <= 25:
+            continue
+        articles.append({
+            "title": title,
+            "link": urllib.parse.urljoin(source["url"], anchor["href"]),
+            "pubDate": None,
+            "date": None,
+            "source": source["name"],
+            "color": source["color"],
+            "sport": source["sport"],
+            "image": "",
+        })
+        if len(articles) >= MAX_PER_SOURCE:
+            break
+
+    if not articles:
+        raise RuntimeError("No usable article links found on the page")
     return articles
 
+
+def load_previous_items(path):
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as file:
+            payload = json.load(file)
+        if isinstance(payload, list):
+            return payload
+        if isinstance(payload, dict) and isinstance(payload.get("items"), list):
+            return payload["items"]
+    except (OSError, json.JSONDecodeError):
+        pass
+    return []
+
+
 def main():
-    # Φόρτωση προηγούμενων ειδήσεων αν υπάρχουν, για να μην χάνονται δεδομένα σε περίπτωση προσωρινού μπλοκαρίσματος
-    existing_articles = []
-    if os.path.exists("news.json"):
-        try:
-            with open("news.json", "r", encoding="utf-8") as f:
-                existing_articles = json.load(f)
-        except Exception:
-            pass
-
-    new_articles = []
-    for source in SOURCES:
-        if source["type"] == "rss":
-            new_articles.extend(fetch_rss_feed(source))
-        elif source["type"] == "html":
-            new_articles.extend(fetch_html_site(source))
-    
-    # Αν κάποια πηγή αποτύχει προσωρινά, κρατάμε τα παλιά της άρθρα για να παραμένει πράσινη/ενεργή
-    fetched_sources = {art["source"] for art in new_articles}
-    for art in existing_articles:
-        if art["source"] not in fetched_sources and not any(a["title"] == art["title"] for a in new_articles):
-            # Διατηρούμε παλιό άρθρο αν η πηγή είχε θέμα
-            pass
-
-    # Αντ' αυτού, συνδυάζουμε τα νέα με τα παλιά ώστε να υπάρχει σταθερότητα
-    final_articles = new_articles if len(new_articles) > 0 else existing_articles
-
     output_path = "news.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(final_articles, f, ensure_ascii=False, indent=4)
-    print(f"Saved {len(final_articles)} total articles to {output_path}")
+    existing_items = load_previous_items(output_path)
+    articles = []
+    source_status = {}
+
+    for source in SOURCES:
+        name = source["name"]
+        status = source_status.setdefault(name, {"ok": False, "count": 0, "_successes": 0, "_errors": []})
+        try:
+            fetched = fetch_html_site(source) if source["type"] == "html" else fetch_rss_feed(source)
+            articles.extend(fetched)
+            status["_successes"] += 1
+            status["count"] += len(fetched)
+            print(f"OK {name} ({source['sport']}): {len(fetched)} articles")
+        except Exception as exc:
+            error = f"{source['url']}: {exc}"
+            status["_errors"].append(error)
+            print(f"ERROR {name} ({source['sport']}): {error}")
+            # Retain this source/sport's last good articles during temporary outages.
+            articles.extend(
+                item for item in existing_items
+                if item.get("source") == name and item.get("sport") == source["sport"]
+            )
+
+    for status in source_status.values():
+        status["ok"] = status.pop("_successes") > 0
+        errors = status.pop("_errors")
+        if errors:
+            status["msg"] = "Some endpoints failed: " + "; ".join(errors)
+            if not status["ok"]:
+                status["msg"] = "All endpoints failed: " + "; ".join(errors)
+
+    # Deduplicate by URL while keeping the first copy, then keep the payload bounded.
+    seen = set()
+    unique_articles = []
+    for item in articles:
+        link = item.get("link", "").strip()
+        if not link or link in seen:
+            continue
+        seen.add(link)
+        unique_articles.append(item)
+    unique_articles = unique_articles[:MAX_TOTAL]
+
+    payload = {
+        "updated": utc_now_iso(),
+        "sources": source_status,
+        "items": unique_articles,
+    }
+    with open(output_path, "w", encoding="utf-8") as file:
+        json.dump(payload, file, ensure_ascii=False, indent=2)
+        file.write("\n")
+
+    print(f"Saved {len(unique_articles)} articles to {output_path}")
+    for name, status in source_status.items():
+        label = "OK" if status["ok"] else "ERROR"
+        print(f"{label} {name}: {status['count']} articles" + (f" — {status['msg']}" if status.get("msg") and not status["ok"] else ""))
+
 
 if __name__ == "__main__":
     main()

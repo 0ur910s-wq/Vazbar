@@ -308,21 +308,30 @@
       await Promise.all(workers);
     }
 
-    // Διαβάζει το news.json που φτιάχνει αυτόματα το GitHub (με φωτογραφίες, χωρίς proxies)
+    // Διαβάζει το news.json που φτιάχνει το GitHub Actions. Υποστηρίζει και το παλιό format (array).
     async function loadServerNews() {
       const r = await fetch("./news.json?t=" + Date.now(), { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
-      const j = await r.json();
+      const raw = await r.json();
+      const legacy = Array.isArray(raw);
+      const j = legacy ? { items: raw, sources: {}, updated: null } : (raw || {});
+      const items = Array.isArray(j.items) ? j.items : [];
       const groups = {};
-      (j.items || []).forEach((i) => {
-        const d = parseDate(i.pubDate) || new Date();
+      const inferredSources = {};
+      items.forEach((i) => {
+        const d = parseDate(i.pubDate || i.date) || new Date();
         const key = "srv:" + i.source;
         (groups[key] = groups[key] || []).push({
           id: "srv|" + i.link, title: i.title, link: i.link, image: i.image || "",
           source: i.source, color: i.color, sport: i.sport, pubDate: d
         });
+        if (i.source) {
+          inferredSources[i.source] = inferredSources[i.source] || { ok: true, count: 0 };
+          inferredSources[i.source].count += 1;
+        }
       });
-      return { groups: groups, sources: j.sources || {}, updated: parseDate(j.updated) };
+      const sources = j.sources && typeof j.sources === "object" ? j.sources : inferredSources;
+      return { groups: groups, sources: sources, updated: parseDate(j.updated), legacy: legacy };
     }
   </script>
 
@@ -499,21 +508,26 @@
         }
       }, []);
 
-      // 1) Διαβάζει το news.json (έτοιμο από το GitHub)  2) Για πηγές που απέτυχαν εκεί, δοκιμάζει ζωντανά από τον browser
+      // Χρησιμοποιεί τα server-side αποτελέσματα. Ο browser δεν ξαναδοκιμάζει πηγές
+      // που έχουν ήδη status, ώστε να μην εμφανίζονται σφάλματα από δημόσιους proxies.
       const refresh = async () => {
         if (busy.current) return;
         busy.current = true;
         setRefreshing(true);
         let srvSources = {};
+        let allowLiveFallback = false;
         try {
           const srv = await loadServerNews();
           srvSources = srv.sources;
+          allowLiveFallback = !srv.legacy;
           setServerStatus(srv.sources);
           setSourceData((prev) => Object.assign({}, prev, srv.groups));
         } catch (e) {
           setServerStatus({ __file: { ok: false, msg: String((e && e.message) || e) } });
         }
-        const need = SOURCES.filter((s) => !(srvSources[s.name] && srvSources[s.name].ok));
+        const need = allowLiveFallback
+          ? SOURCES.filter((s) => !Object.prototype.hasOwnProperty.call(srvSources, s.name))
+          : [];
         await runLimited(need, 2, async (src) => {
           try {
             const items = src.type === "html" ? await loadAthletiko(src) : await loadRss(src);
