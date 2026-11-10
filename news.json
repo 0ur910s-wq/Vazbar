@@ -1,146 +1,614 @@
-[
-    {
-        "title": "Browser APIs Call APIs from your frontend",
-        "link": "https://www.athletiko.gr/solutions/development/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+{
+  "updated": "2026-11-10T09:25:14Z",
+  "sources": {
+    "Athletiko": {
+      "ok": true,
+      "count": 50
     },
-    {
-        "title": "Images Deliver originals, resize & convert",
-        "link": "https://www.athletiko.gr/products/image-conversion/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "pao.gr": {
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://www.pao.gr/feed/: HTTP 500 from https://www.pao.gr/feed/"
     },
-    {
-        "title": "RSS & Feeds Fetch feeds or convert them to JSON",
-        "link": "https://www.athletiko.gr/products/rss2json/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "paobc.gr": {
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://www.paobc.gr/feed/: HTTP 403 from https://www.paobc.gr/feed/"
     },
-    {
-        "title": "Extraction & Caching Read pages and reuse responses",
-        "link": "https://www.athletiko.gr/products/#extraction-caching",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "NewsPao": {
+      "ok": true,
+      "count": 10
     },
-    {
-        "title": "Crypto & DeFi Token images & public price feeds",
-        "link": "https://www.athletiko.gr/solutions/crypto/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "Trifilara": {
+      "ok": true,
+      "count": 10
     },
-    {
-        "title": "Gaming Assets & APIs for browser games",
-        "link": "https://www.athletiko.gr/solutions/gaming/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "SDNA PAO": {
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://www.sdna.gr/rss/223/panathinaikos: HTTP 503 from https://www.sdna.gr/rss/223/panathinaikos"
     },
-    {
-        "title": "No-Code API calls in browser embeds",
-        "link": "https://www.athletiko.gr/solutions/no-code/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
+    "Gazzetta PAO": {
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://www.gazzetta.gr/feed/tags/panathinaikos: Feed contained no entries (<unknown>:11:20: not well-formed (invalid token))"
     },
-    {
-        "title": "All solutions & integration guides →",
-        "link": "https://www.athletiko.gr/solutions/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "football",
-        "image": ""
-    },
-    {
-        "title": "Browser APIs Call APIs from your frontend",
-        "link": "https://www.athletiko.gr/solutions/development/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "Images Deliver originals, resize & convert",
-        "link": "https://www.athletiko.gr/products/image-conversion/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "RSS & Feeds Fetch feeds or convert them to JSON",
-        "link": "https://www.athletiko.gr/products/rss2json/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "Extraction & Caching Read pages and reuse responses",
-        "link": "https://www.athletiko.gr/products/#extraction-caching",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "Crypto & DeFi Token images & public price feeds",
-        "link": "https://www.athletiko.gr/solutions/crypto/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "Gaming Assets & APIs for browser games",
-        "link": "https://www.athletiko.gr/solutions/gaming/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "No-Code API calls in browser embeds",
-        "link": "https://www.athletiko.gr/solutions/no-code/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
-    },
-    {
-        "title": "All solutions & integration guides →",
-        "link": "https://www.athletiko.gr/solutions/",
-        "date": "10/11 08:36",
-        "source": "Athletiko",
-        "color": "#00651",
-        "sport": "basket",
-        "image": ""
+    "Sport24 PAO": {
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://www.sport24.gr/feed/?tag=panathinaikos: HTTP 403 from https://www.sport24.gr/feed/?tag=panathinaikos"
     }
-]
+  },
+  "items": [
+    {
+      "title": "Basketball Champions League",
+      "link": "https://www.athletiko.gr/basketball-champions-league",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Water Polo League Γυναικών",
+      "link": "https://www.athletiko.gr/waterpolo-league-ginaikon",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Water Polo Champions League",
+      "link": "https://www.athletiko.gr/water-polo-champions-league",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Water Polo Champions League Γυναικών",
+      "link": "https://www.athletiko.gr/water-polo-champions-league-ginaikon",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "> Superbet Κύπελλο Ελλάδας",
+      "link": "https://www.athletiko.gr/kypello-elladas",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Πρόγραμμα «φωτιά» για τον Παναθηναϊκό μετά τη διακοπή - Εννέα ματς και δύο ντέρμπι σε 29 ημέρες",
+      "link": "https://www.athletiko.gr/programma-fotia-gia-ton-panathinaiko-meta-tin-diakopi-ennea-mats-kai-dyo-ntermpi-se-29-imeres-114635",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Πρωτοποριακή πρόταση: «Περιφερειακό πρωτάθλημα με Ελληνες κόντρα σε Σέρβους, Κροάτες και Ούγγρους»",
+      "link": "https://www.athletiko.gr/protoporiaki-protasi-toy-paoynovits-perifereiako-protathlima-me-ellines-kontra-se-servoys-kroates-kai-oyggroys-114768",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Η «επιβράβευση» του Νίστρουπ προς τους παίκτες του Παναθηναϊκού για όσα έχουν κάνει",
+      "link": "https://www.athletiko.gr/i-epivraveysi-toy-nistroyp-pros-toys-paiktes-toy-panathinaikoy-gia-osa-echoyn-kanei-114731",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Οι λόγοι που ο Νίστρουπ χαρακτήρισε τη νίκη επί του Ηρακλή ως τη σημαντικότερη μέχρι τώρα",
+      "link": "https://www.athletiko.gr/oi-logoi-poy-o-nistroyp-charaktirise-ti-niki-epi-toy-irakli-os-ti-simantikoteri-mechri-tora-114728",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Στο «μικροσκόπιο» της ΔΕΑΒ η παρουσία των οπαδών του Παναθηναϊκού στο Καυτανζόγλειο",
+      "link": "https://www.athletiko.gr/sto-mikroskopio-tis-deav-i-paroysia-ton-opadon-toy-panathinaikoy-sto-kaytanzogleio-114715",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Η κίνηση του Λιβάι Γκαρσία που θύμισε Ντέσερς» (video)",
+      "link": "https://www.athletiko.gr/i-kinisi-toy-livai-gkarsia-poy-thymise-ntesers-video-114695",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Χωρίς Αντίνο ο Παναθηναϊκός στο ματς με τον Ατρόμητο",
+      "link": "https://www.athletiko.gr/choris-antino-o-panathinaikos-sto-mats-me-ton-atromito-114681",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Τι είναι το «TransferRoom» που θα βρεθεί ο Κοτσόλης και πώς επηρεάζει τα μεταγραφικά του Παναθηναϊκού",
+      "link": "https://www.athletiko.gr/ti-einai-to-transferroom-poy-tha-vrethei-o-kotsolis-kai-pos-epireazei-ta-metagrafika-toy-panathinaikoy-114676",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Δεν βλέπω δεύτερη κίτρινη στον Αντίνο»",
+      "link": "https://www.athletiko.gr/den-vlepo-deyteri-kitrini-ston-antino-114666",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Ποια είναι η πρώτη ελληνική λέξη που έμαθε ο Νιστρουπ και ποιος προπονητής το είδωλο του",
+      "link": "https://www.athletiko.gr/poia-inai-i-proti-elliniki-leksi-poy-emathe-o-nistroyp-kai-poios-proponitis-to-idolo-toy-114664",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Σε κυκλοφορία τα εισιτήρια για την αναμέτρηση του Παναθηναϊκού με τον ΟΦΗ",
+      "link": "https://www.athletiko.gr/se-kykloforia-ta-eisitiria-gia-tin-anametrisi-toy-panathinaikoy-me-ton-ofi-114652",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Οι Ελληνες διαιτητές επιβεβαιώνουν ακόμα μια φορά ότι δεν κάνουν καλά τη δουλειά τους»",
+      "link": "https://www.athletiko.gr/oi-ellines-diaitites-epivevaionoyn-akoma-mia-fora-oti-den-kanoyn-kala-ti-doyleia-toys-114648",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Γιατί εκτέλεσε ο Καλάμπρια το πέναλτι του Παναθηναϊκού στις καθυστερήσεις",
+      "link": "https://www.athletiko.gr/giati-ektelese-o-kalampria-to-penalti-toy-panathinaikoy-stis-kathysteriseis-114643",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Live το «BACK2ΜΠΑΚ» με κουβέντα για διαιτησία, τον Παναθηναϊκό στο +4 και την Εθνική ομάδα",
+      "link": "https://www.athletiko.gr/live-to-back2mpak-stis-15-00-me-ton-apoicho-toy-olympiakos-paok-kai-tis-nikes-tis-aek-kai-toy-panathinaikoy-114619",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Η εξήγηση για τον πανηγυρισμό του Καλάμπρια μετά το χρυσό… γκολ στο Καυτανζόγλειο",
+      "link": "https://www.athletiko.gr/i-exigisi-gia-ton-panigyrismo-toy-kalampria-meta-to-chryso-gkol-sto-kaytanzogleio-114621",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Τι λέει ο κανονισμός για την φάση του Αντίνο που διαμαρτύρεται ο Ηρακλής",
+      "link": "https://www.athletiko.gr/ti-leei-o-kanonismos-gia-tin-fasi-toy-antino-poy-diamartyretai-o-iraklis-114604",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Στο Ισραήλ ο Χέιζ-Ντέιβις, βλέπει το Μακάμπι - Χάποελ (video)",
+      "link": "https://www.athletiko.gr/sto-israil-o-cheiz-nteivis-vlepei-to-makampi-chapoel-video-114735",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Νιώθει πολύ καλύτερα ο Ρογκαβόπουλος - Τα δεδομένα για την επιστροφή του",
+      "link": "https://www.athletiko.gr/niothei-poly-kalytera-o-rogkavopoylos-ta-dedomena-gia-tin-epistrofi-toy-114734",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Τεράστιο πρόβλημα για την Μπαρτσελόνα ενόψει Παναθηναϊκού, χάνει το ματς ο Πάντερ - Το διάστημα απουσίας του",
+      "link": "https://www.athletiko.gr/terastio-provlima-gia-tin-mpartselona-enopsei-panathinaikoy-chanei-to-mats-o-panter-114697",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Το μήνυμα του Παναθηναϊκού στον Γκρεγκ Μπράουν: «Ανυπομονούμε να σε δούμε ξανά στο γήπεδο»",
+      "link": "https://www.athletiko.gr/to-minyma-toy-panathinaikoy-ston-gkregk-mpraoyn-anypomonoyme-na-se-doyme-xana-sto-gipedo-114663",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Ο Μπάντιο οδήγησε τον Παναθηναϊκό στη νίκη και αναδείχθηκε MVP της αγωνιστικής στη Stoiximan GBL",
+      "link": "https://www.athletiko.gr/o-mpantio-odigise-ton-panathinaiko-sti-niki-kai-anadeichthike-mvp-tis-agonistikis-sti-stoiximan-gbl-114601",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Μπάντιο: «Κάθε ματς είναι σημαντικό, χαίρομαι που βοήθησα την ομάδα»",
+      "link": "https://www.athletiko.gr/mpantio-kathe-mats-einai-simantiko-chairomai-poy-voithisa-tin-omada-114420",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Τραυματίστηκε ο Κέβιν Πάντερ πριν από το παιχνίδι με τον Παναθηναϊκό",
+      "link": "https://www.athletiko.gr/trayma-tistike-o-kevin-panter-prin-apo-to-paichnidi-me-ton-panathinaiko-114416",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Ομπράντοβιτς: «Στο δεύτερο ημίχρονο περιορίσαμε τα λάθη μας και κερδίσαμε»",
+      "link": "https://www.athletiko.gr/omprantovits-sto-deytero-imichrono-periorisame-ta-lathi-mas-kai-kerdisame-114415",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Σακοτα «Κάθε φορά παρακαλάμε να μην συμβεί κάτι άλλο»",
+      "link": "https://www.athletiko.gr/sakota-kathe-fora-parakalame-na-min-symvei-kati-allo-114414",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "ΑΕΚ - Παναθηναϊκός 74-83: Τα highlights από το «διπλό» του τριφυλλιού με την υπογραφή του Μπαντιό",
+      "link": "https://www.athletiko.gr/aek-panathinaikos-74-83-ta-highlights-apo-to-diplo-toy-trifyllioy-me-tin-ypografi-toy-mpantio-114408",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Η βαθμολογία της Stoiximan GBL μετά τη νίκη του Παναθηναϊκού επί της ΑΕΚ",
+      "link": "https://www.athletiko.gr/i-vathmologia-tis-stoiximan-gbl-meta-ti-niki-toy-panathinaikoy-epi-tis-aek-114400",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Με Μπαντιό οδηγό ο Παναθηναϊκός πέρασε από τη Sunel Arena",
+      "link": "https://www.athletiko.gr/me-mpantio-odigo-o-panathinaikos-perase-apo-ti-sunel-arena-114374",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Εξαλλος με τους παίκτες του ο Ομπράντοβιτς στο τάιμ-άουτ (video)",
+      "link": "https://www.athletiko.gr/exallos-me-toys-paiktes-toy-o-omprantovits-sto-taim-aoyt-video-114387",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Εκτός Γιαμπουσέλε και Σλούκας για τον Παναθηναϊκό κόντρα στην ΑΕΚ - Η «πράσινη» 12άδα",
+      "link": "https://www.athletiko.gr/ektos-giampoysele-kai-sloykas-gia-ton-panathinaiko-kontra-stin-aek-i-prasini-12ada-114369",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Που θα δείτε Μαρούσι - Ολυμπιακός",
+      "link": "https://www.athletiko.gr/poy-tha-deite-aek-panathinaikos-kai-maroysi-olympiakos-114286",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "Το ποστ με νόημα του Λεσόρ: «Περπάτησα μέσα από την καταιγίδα...»",
+      "link": "https://www.athletiko.gr/to-post-me-noima-toy-lesor-perpatisa-mesa-apo-tin-kataigida-114298",
+      "pubDate": null,
+      "date": null,
+      "source": "Athletiko",
+      "color": "#00651",
+      "sport": "basket",
+      "image": ""
+    },
+    {
+      "title": "«Για αυτό είναι πιθανό να αποχωρήσει ο Πελίστρι από τον Παναθηναϊκό»",
+      "link": "https://newspao.gr/podosfairo/790500_gia-ayto-einai-pithano-na-apochorisei-o-pelistri-apo-ton-panathinaiko.html",
+      "pubDate": "2026-11-10T08:39:12Z",
+      "date": "2026-11-10T08:39:12Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Πρόβλεψη για Champions League! Σε ποιο γκρουπ δυναμικότητας βρίσκεται",
+      "link": "https://newspao.gr/podosfairo/790459_panathinaikos-provlepsi-gia-champions-league-se-poio-gkroyp-dynamikotitas-vrisketai.html",
+      "pubDate": "2026-11-10T08:10:49Z",
+      "date": "2026-11-10T08:10:49Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Πρόταση-βόμβα για νέα λίγκα: Παναθηναϊκός, Ολυμπιακός, ΑΕΚ, ΠΑΟΚ και ομάδες της Σερβίας",
+      "link": "https://newspao.gr/podosfairo/790514_protasi-vomva-gia-nea-ligka-panathinaikos-olympiakos-aek-paok-kai-omades-tis-servias.html",
+      "pubDate": "2026-11-10T07:40:33Z",
+      "date": "2026-11-10T07:40:33Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Αυτή είναι η εντολή που έχει ο Μπάντιο από Ομπράντοβιτς",
+      "link": "https://newspao.gr/basket/790510_panathinaikos-ayti-einai-i-entoli-poy-echei-o-mpantio-apo-omprantovits.html",
+      "pubDate": "2026-11-10T07:00:50Z",
+      "date": "2026-11-10T07:00:50Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Βοτανικός: Η κρίσιμη εργασία για το στέγαστρο – Νέα εικόνα από το εργοτάξιο (vid)",
+      "link": "https://newspao.gr/podosfairo/790507_votanikos-i-krisimi-ergasia-gia-to-stegastro-nea-eikona-apo-to-ergotaxio-vid.html",
+      "pubDate": "2026-11-10T06:21:42Z",
+      "date": "2026-11-10T06:21:42Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Ο Καλάμπρια κάνει… θραύση και ιταλικές ομάδες παραμονεύουν – Η στάση του Παναθηναϊκού»",
+      "link": "https://newspao.gr/podosfairo/790502_o-kalampria-kanei-thraysi-kai-italikes-omades-paramoneyoyn-i-stasi-toy-panathinaikoy.html",
+      "pubDate": "2026-11-10T05:37:45Z",
+      "date": "2026-11-10T05:37:45Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Ο Τσιριβέγια ίσως ανοίξει χώρο για έξτρα μεταγραφή στον Παναθηναϊκό»",
+      "link": "https://newspao.gr/podosfairo/790504_o-tsirivegia-isos-anoixei-choro-gia-extra-metagrafi-ston-panathinaiko.html",
+      "pubDate": "2026-11-10T05:17:44Z",
+      "date": "2026-11-10T05:17:44Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Διατεθειμένος για δύο μεταγραφές επιπέδου Τσάμπιονς Λιγκ ο Αλαφούζος»",
+      "link": "https://newspao.gr/podosfairo/790498_diatetheimenos-gia-dyo-metagrafes-epipedoy-tsampions-ligk-o-alafoyzos.html",
+      "pubDate": "2026-11-10T05:03:48Z",
+      "date": "2026-11-10T05:03:48Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Λέτο: «Θα ήθελα αυτόν τον παίκτη του Παναθηναϊκού στην ομάδα μου»",
+      "link": "https://newspao.gr/podosfairo/790512_leto-tha-ithela-ayton-ton-paikti-toy-panathinaikoy-stin-omada-moy.html",
+      "pubDate": "2026-11-09T23:24:40Z",
+      "date": "2026-11-09T23:24:40Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Ιακωβίδης: «Γι’ αυτό έγινα Παναθηναϊκός»",
+      "link": "https://newspao.gr/video/iakovidis-gi-039-ayto-egina-panathinaikos",
+      "pubDate": "2026-11-09T21:52:43Z",
+      "date": "2026-11-09T21:52:43Z",
+      "source": "NewsPao",
+      "color": "#007d7",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "«Απόδραση» στο Ισραήλ ο Χέιζ-Ντέιβις πριν το Παναθηναϊκός – Μπαρτσελόνα! (vid)",
+      "link": "https://trifilara.gr/apodrasi-sto-israil-o-cheiz-nteivis-prin-to-panathinaikos-bartselona-vid/?utm_source=rss&utm_medium=rss&utm_campaign=apodrasi-sto-israil-o-cheiz-nteivis-prin-to-panathinaikos-bartselona-vid",
+      "pubDate": "2026-11-09T21:27:17Z",
+      "date": "2026-11-09T21:27:17Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Απίστευτες θέσεις Ηρακλή για… διπλή κόκκινη σε Αντίνο, αποβολή Κοντούρη και οφσάιντ για Ντέσερς!",
+      "link": "https://trifilara.gr/apisteftes-theseis-irakli-gia-dipli-kokkini-se-antino-apovoli-kontouri-kai-ofsaint-gia-ntesers/?utm_source=rss&utm_medium=rss&utm_campaign=apisteftes-theseis-irakli-gia-dipli-kokkini-se-antino-apovoli-kontouri-kai-ofsaint-gia-ntesers",
+      "pubDate": "2026-11-09T19:07:49Z",
+      "date": "2026-11-09T19:07:49Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Ο Βαλέρι της ΚΕΔ «έδειξε» αποβολή Αντίνο με Ηρακλή! – Τι είπε για το πέναλτι της ΑΕΚ",
+      "link": "https://trifilara.gr/panathinaikos-o-valeri-tis-ked-edeixe-apovoli-antino-me-irakli-ti-eipe-gia-to-penalti-tis-aek/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-o-valeri-tis-ked-edeixe-apovoli-antino-me-irakli-ti-eipe-gia-to-penalti-tis-aek",
+      "pubDate": "2026-11-09T18:57:42Z",
+      "date": "2026-11-09T18:57:42Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Οριστικό: Μεγάλη απώλεια για τη Μπαρτσελόνα ενόψει ΟΑΚΑ και Παναθηναϊκού!",
+      "link": "https://trifilara.gr/oristiko-megali-apoleia-gia-ti-bartselona-enopsei-oaka-kai-panathinaikou/?utm_source=rss&utm_medium=rss&utm_campaign=oristiko-megali-apoleia-gia-ti-bartselona-enopsei-oaka-kai-panathinaikou",
+      "pubDate": "2026-11-09T18:13:06Z",
+      "date": "2026-11-09T18:13:06Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Έρευνα της ΔΕΑΒ για τους οπαδούς στο Καυτανζόγλειο – Έρχεται βαρύ πρόστιμο!",
+      "link": "https://trifilara.gr/panathinaikos-erevna-tis-deav-gia-tous-opadous-sto-kaftanzogleio-erchetai-vary-prostimo/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-erevna-tis-deav-gia-tous-opadous-sto-kaftanzogleio-erchetai-vary-prostimo",
+      "pubDate": "2026-11-09T17:43:37Z",
+      "date": "2026-11-09T17:43:37Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Χωρίς Αντίνο κόντρα στον Ατρόμητο – Η απόφαση για την τιμωρία του!",
+      "link": "https://trifilara.gr/panathinaikos-choris-antino-kontra-ston-atromito-i-apofasi-gia-tin-timoria-tou/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-choris-antino-kontra-ston-atromito-i-apofasi-gia-tin-timoria-tou",
+      "pubDate": "2026-11-09T14:51:28Z",
+      "date": "2026-11-09T14:51:28Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Μεταγραφικές επαφές στη Λισαβόνα – Ταξίδι Κοτσόλη και Γκούμα!",
+      "link": "https://trifilara.gr/panathinaikos-metagrafikes-epafes-sti-lisavona-taxidi-kotsoli-kai-gkouma/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-metagrafikes-epafes-sti-lisavona-taxidi-kotsoli-kai-gkouma",
+      "pubDate": "2026-11-09T14:15:26Z",
+      "date": "2026-11-09T14:15:26Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός – ΟΦΗ: Κυκλοφόρησαν τα εισιτήρια! – Οι τιμές τους",
+      "link": "https://trifilara.gr/panathinaikos-ofi-kykloforisan-ta-eisitiria-oi-times-tous/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-ofi-kykloforisan-ta-eisitiria-oi-times-tous",
+      "pubDate": "2026-11-09T12:02:15Z",
+      "date": "2026-11-09T12:02:15Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Ανατροπή στα προγνωστικά για τον τίτλο – Πρώτο φαβορί το «Τριφύλλι»!",
+      "link": "https://trifilara.gr/panathinaikos-anatropi-sta-prognostika-gia-ton-titlo-proto-favori-to-trifylli/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-anatropi-sta-prognostika-gia-ton-titlo-proto-favori-to-trifylli",
+      "pubDate": "2026-11-09T09:43:14Z",
+      "date": "2026-11-09T09:43:14Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Στο νοσοκομείο 29χρονος οπαδός μετά το ματς με τον Ηρακλή!",
+      "link": "https://trifilara.gr/panathinaikos-sto-nosokomeio-29chronos-opados-meta-to-mats-me-ton-irakli/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-sto-nosokomeio-29chronos-opados-meta-to-mats-me-ton-irakli",
+      "pubDate": "2026-11-09T09:32:57Z",
+      "date": "2026-11-09T09:32:57Z",
+      "source": "Trifilara",
+      "color": "#2062d",
+      "sport": "football",
+      "image": ""
+    }
+  ]
+}
