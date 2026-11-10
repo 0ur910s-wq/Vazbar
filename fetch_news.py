@@ -26,17 +26,34 @@ SOURCES = [
     {"name": "Sport24 PAO", "type": "rss", "url": "https://www.sport24.gr/feed/?tag=panathinaikos", "color": "#d1e2b", "sport": "football"},
 ]
 
-def fetch_with_proxy(target_url):
-    # Χρήση δημόσιου proxy για παράκαμψη των WAF/401 blocks
-    proxy_url = f"https://api.allorigins.win/raw?url={urllib.parse.quote(target_url)}"
-    req = urllib.request.Request(proxy_url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=15) as response:
+def fetch_with_proxies(target_url):
+    # Λίστα με διαφορετικούς δημόσιους proxy για εναλλακτική δοκιμή
+    encoded_url = urllib.parse.quote(target_url)
+    proxy_candidates = [
+        f"https://api.allorigins.win/raw?url={encoded_url}",
+        f"https://corsproxy.io/?{encoded_url}",
+        f"https://api.codetabs.com/v1/proxy?quest={encoded_url}"
+    ]
+    
+    for proxy_url in proxy_candidates:
+        try:
+            req = urllib.request.Request(proxy_url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=12) as response:
+                data = response.read()
+                if len(data) > 100:  # Βεβαιωνόμαστε ότι πήραμε περιεχόμενο
+                    return data
+        except Exception:
+            continue
+            
+    # Αν αποτύχουν όλοι, δοκιμάζουμε απευθείας
+    req = urllib.request.Request(target_url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=12) as response:
         return response.read()
 
 def fetch_rss_feed(source):
     articles = []
     try:
-        content = fetch_with_proxy(source["url"])
+        content = fetch_with_proxies(source["url"])
         feed = feedparser.parse(content)
         for entry in feed.entries[:5]:
             title = entry.get("title", "").strip()
@@ -74,7 +91,7 @@ def fetch_rss_feed(source):
 def fetch_html_site(source):
     articles = []
     try:
-        content_bytes = fetch_with_proxy(source["url"])
+        content_bytes = fetch_with_proxies(source["url"])
         html = content_bytes.decode('utf-8', errors='ignore')
         soup = bs4.BeautifulSoup(html, 'html.parser')
         
