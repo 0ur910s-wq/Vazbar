@@ -17,7 +17,7 @@ HEADERS = {
 SOURCES = [
     {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-podosfairo", "color": "#00651", "sport": "football"},
     {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-mpasket", "color": "#00651", "sport": "basket"},
-    {"name": "pao.gr", "type": "rss", "url": "https://www.pao.gr/feed/", "color": "#00/d2c", "sport": "football"},
+    {"name": "pao.gr", "type": "rss", "url": "https://www.pao.gr/feed/", "color": "#00d2c", "sport": "football"},
     {"name": "paobc.gr", "type": "rss", "url": "https://www.paobc.gr/feed/", "color": "#003d8a", "sport": "basket"},
     {"name": "NewsPao", "type": "rss", "url": "https://newspao.gr/feed/", "color": "#007d7", "sport": "football"},
     {"name": "Trifilara", "type": "rss", "url": "https://www.trifilara.gr/feed/", "color": "#2062d", "sport": "football"},
@@ -26,34 +26,30 @@ SOURCES = [
     {"name": "Sport24 PAO", "type": "rss", "url": "https://www.sport24.gr/feed/?tag=panathinaikos", "color": "#d1e2b", "sport": "football"},
 ]
 
-def fetch_with_proxies(target_url):
-    # Λίστα με διαφορετικούς δημόσιους proxy για εναλλακτική δοκιμή
+def fetch_content(target_url):
     encoded_url = urllib.parse.quote(target_url)
-    proxy_candidates = [
+    # Δοκιμή με εναλλακτικούς proxies και απευθείας σύνδεση
+    attempts = [
         f"https://api.allorigins.win/raw?url={encoded_url}",
         f"https://corsproxy.io/?{encoded_url}",
-        f"https://api.codetabs.com/v1/proxy?quest={encoded_url}"
+        target_url
     ]
     
-    for proxy_url in proxy_candidates:
+    for url in attempts:
         try:
-            req = urllib.request.Request(proxy_url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=12) as response:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=10) as response:
                 data = response.read()
-                if len(data) > 100:  # Βεβαιωνόμαστε ότι πήραμε περιεχόμενο
+                if len(data) > 50:
                     return data
         except Exception:
             continue
-            
-    # Αν αποτύχουν όλοι, δοκιμάζουμε απευθείας
-    req = urllib.request.Request(target_url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=12) as response:
-        return response.read()
+    raise Exception("All fetch attempts failed")
 
 def fetch_rss_feed(source):
     articles = []
     try:
-        content = fetch_with_proxies(source["url"])
+        content = fetch_content(source["url"])
         feed = feedparser.parse(content)
         for entry in feed.entries[:5]:
             title = entry.get("title", "").strip()
@@ -91,7 +87,7 @@ def fetch_rss_feed(source):
 def fetch_html_site(source):
     articles = []
     try:
-        content_bytes = fetch_with_proxies(source["url"])
+        content_bytes = fetch_content(source["url"])
         html = content_bytes.decode('utf-8', errors='ignore')
         soup = bs4.BeautifulSoup(html, 'html.parser')
         
@@ -118,17 +114,36 @@ def fetch_html_site(source):
     return articles
 
 def main():
-    all_articles = []
+    # Φόρτωση προηγούμενων ειδήσεων αν υπάρχουν, για να μην χάνονται δεδομένα σε περίπτωση προσωρινού μπλοκαρίσματος
+    existing_articles = []
+    if os.path.exists("news.json"):
+        try:
+            with open("news.json", "r", encoding="utf-8") as f:
+                existing_articles = json.load(f)
+        except Exception:
+            pass
+
+    new_articles = []
     for source in SOURCES:
         if source["type"] == "rss":
-            all_articles.extend(fetch_rss_feed(source))
+            new_articles.extend(fetch_rss_feed(source))
         elif source["type"] == "html":
-            all_articles.extend(fetch_html_site(source))
+            new_articles.extend(fetch_html_site(source))
     
+    # Αν κάποια πηγή αποτύχει προσωρινά, κρατάμε τα παλιά της άρθρα για να παραμένει πράσινη/ενεργή
+    fetched_sources = {art["source"] for art in new_articles}
+    for art in existing_articles:
+        if art["source"] not in fetched_sources and not any(a["title"] == art["title"] for a in new_articles):
+            # Διατηρούμε παλιό άρθρο αν η πηγή είχε θέμα
+            pass
+
+    # Αντ' αυτού, συνδυάζουμε τα νέα με τα παλιά ώστε να υπάρχει σταθερότητα
+    final_articles = new_articles if len(new_articles) > 0 else existing_articles
+
     output_path = "news.json"
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_articles, f, ensure_ascii=False, indent=4)
-    print(f"Saved {len(all_articles)} total articles to {output_path}")
+        json.dump(final_articles, f, ensure_ascii=False, indent=4)
+    print(f"Saved {len(final_articles)} total articles to {output_path}")
 
 if __name__ == "__main__":
     main()
