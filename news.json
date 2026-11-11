@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-10T22:37:24Z",
+  "updated": "2026-11-11T03:29:39Z",
   "sources": {
     "Athletiko": {
       "ok": true,
-      "count": 25
+      "count": 24
     },
     "pao.gr": {
       "ok": false,
@@ -17,7 +17,7 @@
     },
     "NewsPao": {
       "ok": true,
-      "count": 9
+      "count": 10
     },
     "Trifilara": {
       "ok": true,
@@ -40,7 +40,7 @@
     },
     "Google News PAO": {
       "ok": true,
-      "count": 7
+      "count": 6
     }
   },
   "items": [
@@ -49,7 +49,7 @@
       "link": "https://www.athletiko.gr/prasini-symptosi-epta-proin-epithetikoi-toy-panathinaikoy-skoraran-to-savvatokyriako-video-114904",
       "pubDate": null,
       "date": null,
-      "summary": "«Πράσινη» αποτελεσματικότητα ή σύμπτωση: Επτά πρώην φορ του Παναθηναϊκού σκόραραν το Σαββατοκύριακο (video) Ούτε ένας, ούτε δύο, αλλά συνολικά επτά πρώην επιθετικοί του Παναθηναϊκού κατάφεραν να βρουν το δρόμο προς τα δίχτυα το Σαββατοκύριακο. πριν 20 λεπτά Βασίλης Γιαννούτσος",
+      "summary": "«Πράσινη» αποτελεσματικότητα ή σύμπτωση: Επτά πρώην φορ του Παναθηναϊκού σκόραραν το Σαββατοκύριακο (video) Ούτε ένας, ούτε δύο, αλλά συνολικά επτά πρώην επιθετικοί του Παναθηναϊκού κατάφεραν να βρουν το δρόμο προς τα δίχτυα το Σαββατοκύριακο. πριν 5 ώρες Βασίλης Γιαννούτσος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -60,7 +60,7 @@
       "link": "https://www.athletiko.gr/teleionei-o-pelistri-apo-ton-panathinaiko-to-metagrafiko-plano-enopsei-genari-video-114843",
       "pubDate": null,
       "date": null,
-      "summary": "«Τελειώνει ο Πελίστρι από τον Παναθηναϊκό - Το μεταγραφικό πλάνο ενόψει Γενάρη» (video) Οσα ανέφερε στην εκπομπή «BACK2ΜΠΑΚ» ο Κώστας Γουλής για τον Φακούντο Πελίστρι, ο οποίος αναμένεται να αποχωρήσει από τον Παναθηναϊκό και το μεταγραφικό πλάνο της ομάδας. πριν 6 ώρες Newsroom",
+      "summary": "«Τελειώνει ο Πελίστρι από τον Παναθηναϊκό - Το μεταγραφικό πλάνο ενόψει Γενάρη» (video) Οσα ανέφερε στην εκπομπή «BACK2ΜΠΑΚ» ο Κώστας Γουλής για τον Φακούντο Πελίστρι, ο οποίος αναμένεται να αποχωρήσει από τον Παναθηναϊκό και το μεταγραφικό πλάνο της ομάδας. πριν 11 ώρες Newsroom",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -71,7 +71,7 @@
       "link": "https://www.athletiko.gr/o-panathinaikos-edese-ton-15chrono-archiskorer-dimitri-lazaridi-me-symvolaio-5etias-114830",
       "pubDate": null,
       "date": null,
-      "summary": "Ο Παναθηναϊκός «έδεσε» με επαγγελματικό συμβόλαιο τον 15χρονο «αρχισκόρερ» Λαζαρίδη Ο Παναθηναϊκός ανακοίνωσε τη σύναψη επαγγελματικού συμβολαίου με τον Δημήτρη Λαζαρίδη έως το καλοκαίρι του 2029, επενδύοντας στο σπουδαίο ταλέντο και την προοπτική του 15χρονου φορ. πριν 8 ώρες Ιάσωνας Νησανάκης",
+      "summary": "Ο Παναθηναϊκός «έδεσε» με επαγγελματικό συμβόλαιο τον 15χρονο «αρχισκόρερ» Λαζαρίδη Ο Παναθηναϊκός ανακοίνωσε τη σύναψη επαγγελματικού συμβολαίου με τον Δημήτρη Λαζαρίδη έως το καλοκαίρι του 2029, επενδύοντας στο σπουδαίο ταλέντο και την προοπτική του 15χρονου φορ. πριν 13 ώρες Ιάσωνας Νησανάκης",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -82,7 +82,7 @@
       "link": "https://www.athletiko.gr/feygei-o-pelistri-foylarei-gia-dexi-extrem-o-panathinaikos-114814",
       "pubDate": null,
       "date": null,
-      "summary": "Φεύγει ο Πελίστρι - Φουλάρει για δεξί εξτρέμ ο Παναθηναϊκός Σε αναζήτηση ομάδας ο Πελίστρι, ο οποίος δεν υπολογίζεται καθόλου από τον Νίστρουπ. Φουλάρει για παίκτη ο Παναθηναϊκός. πριν 10 ώρες Βασίλης Μοιρώτσος",
+      "summary": "Φεύγει ο Πελίστρι - Φουλάρει για δεξί εξτρέμ ο Παναθηναϊκός Σε αναζήτηση ομάδας ο Πελίστρι, ο οποίος δεν υπολογίζεται καθόλου από τον Νίστρουπ. Φουλάρει για παίκτη ο Παναθηναϊκός. πριν 15 ώρες Βασίλης Μοιρώτσος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -93,7 +93,7 @@
       "link": "https://www.athletiko.gr/opadoi-toy-irakli-gia-tin-filoxenia-panathinaikon-xeperastike-kathe-orio-dikaioma-sti-logiki-114799",
       "pubDate": null,
       "date": null,
-      "summary": "Οπαδοί του Ηρακλή για την φιλοξενία Παναθηναϊκών: «Ξεπεράστηκε κάθε όριο, δικαίωμα στη λογική» Η ανακοίνωση της Αυτόνομης Θύρας 10 για τη φιλοξενία των οπαδών του Παναθηναϊκού την Κυριακή στο Καυτανζόγλειο. πριν 11 ώρες Νίκος Ρόλλας",
+      "summary": "Οπαδοί του Ηρακλή για την φιλοξενία Παναθηναϊκών: «Ξεπεράστηκε κάθε όριο, δικαίωμα στη λογική» Η ανακοίνωση της Αυτόνομης Θύρας 10 για τη φιλοξενία των οπαδών του Παναθηναϊκού την Κυριακή στο Καυτανζόγλειο. πριν 16 ώρες Νίκος Ρόλλας",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -104,7 +104,7 @@
       "link": "https://www.athletiko.gr/fortsaroyn-ghia-to-steghastro-sto-neo-ghipedo-toy-panathinaikou-video-114787",
       "pubDate": null,
       "date": null,
-      "summary": "Φορτσάρουν για το στέγαστρο στο νέο γήπεδο του Παναθηναϊκού (video) Οι τελευταίες εικόνες από το νέο γήπεδο του Παναθηναϊκού στον Βοτανικό που ετοιμάζεται να υποδεχθεί το εντυπωσιακό στεγαστρο. πριν 12 ώρες",
+      "summary": "Φορτσάρουν για το στέγαστρο στο νέο γήπεδο του Παναθηναϊκού (video) Οι τελευταίες εικόνες από το νέο γήπεδο του Παναθηναϊκού στον Βοτανικό που ετοιμάζεται να υποδεχθεί το εντυπωσιακό στεγαστρο. πριν 17 ώρες",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -115,7 +115,7 @@
       "link": "https://www.athletiko.gr/programma-fotia-gia-ton-panathinaiko-meta-tin-diakopi-ennea-mats-kai-dyo-ntermpi-se-29-imeres-114635",
       "pubDate": null,
       "date": null,
-      "summary": "Πρόγραμμα «φωτιά» για τον Παναθηναϊκό μετά τη διακοπή - Εννέα ματς και δύο ντέρμπι σε 29 ημέρες Ένας ιδιαίτερα απαιτητικός μήνας περιμένει τον Παναθηναϊκό μετά την ολοκλήρωση των υποχρεώσεων των εθνικών ομάδων. πριν 13 ώρες Βασίλης Γιαννούτσος",
+      "summary": "Πρόγραμμα «φωτιά» για τον Παναθηναϊκό μετά τη διακοπή - Εννέα ματς και δύο ντέρμπι σε 29 ημέρες Ένας ιδιαίτερα απαιτητικός μήνας περιμένει τον Παναθηναϊκό μετά την ολοκλήρωση των υποχρεώσεων των εθνικών ομάδων. πριν 18 ώρες Βασίλης Γιαννούτσος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -126,7 +126,7 @@
       "link": "https://www.athletiko.gr/i-epivraveysi-toy-nistroyp-pros-toys-paiktes-toy-panathinaikoy-gia-osa-echoyn-kanei-114731",
       "pubDate": null,
       "date": null,
-      "summary": "Η «επιβράβευση» του Νίστρουπ προς τους παίκτες του Παναθηναϊκού για όσα έχουν κάνει Ο Νίστρουπ έδωσε «μπόνους» στους παίκτες του Παναθηναϊκού 4ήμερο ρεπό, δίνοντάς τους πολύτιμες «ανάσες» ενόψει της απαιτητικής συνέχειας. πριν 15 ώρες Κώστας Γουλής",
+      "summary": "Η «επιβράβευση» του Νίστρουπ προς τους παίκτες του Παναθηναϊκού για όσα έχουν κάνει Ο Νίστρουπ έδωσε «μπόνους» στους παίκτες του Παναθηναϊκού 4ήμερο ρεπό, δίνοντάς τους πολύτιμες «ανάσες» ενόψει της απαιτητικής συνέχειας. πριν 20 ώρες Κώστας Γουλής",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "football",
@@ -170,7 +170,7 @@
       "link": "https://www.athletiko.gr/i-mpartselona-perimenei-tis-epistrofes-noynieth-kai-gkimpson-kontra-ston-panathinaiko-114863",
       "pubDate": null,
       "date": null,
-      "summary": "Η Μπαρτσελόνα περιμένει τις επιστροφές Νούνιεθ και Γκίμπσον κόντρα στον Παναθηναϊκό Με αρκετές απουσίες και την ελπίδα δυο επιστροφών, η Μπαρτσελόνα προετοιμάζεται για το παιχνίδι εναντίον του Παναθηναϊκού (13/11, 21:15). πριν 5 ώρες Γιάννης Γιαννικόπουλος",
+      "summary": "Η Μπαρτσελόνα περιμένει τις επιστροφές Νούνιεθ και Γκίμπσον κόντρα στον Παναθηναϊκό Με αρκετές απουσίες και την ελπίδα δυο επιστροφών, η Μπαρτσελόνα προετοιμάζεται για το παιχνίδι εναντίον του Παναθηναϊκού (13/11, 21:15). πριν 10 ώρες Γιάννης Γιαννικόπουλος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
@@ -181,7 +181,7 @@
       "link": "https://www.athletiko.gr/to-programma-fotia-oi-thysies-poy-prepei-na-ginoyn-kai-i-diacheirisi-toy-omprantovits-114725",
       "pubDate": null,
       "date": null,
-      "summary": "Το «καυτό» πρόγραμμα του Παναθηναϊκού, οι... θυσίες και η διαχείριση του Ομπράντοβιτς Ο Παναθηναϊκός διαθέτει ένα «βαθύ» ρόστερ το οποίο απαρτίζεται από παίκτες που πρέπει όλοι να μένουν ευχαριστημένοι. Πώς το διαχειρίζεται μέχρι στιγμής ο Ζέλικο Ομπράντοβιτς. πριν 8 ώρες Μιχάλης Ντόκος",
+      "summary": "Το «καυτό» πρόγραμμα του Παναθηναϊκού, οι... θυσίες και η διαχείριση του Ομπράντοβιτς Ο Παναθηναϊκός διαθέτει ένα «βαθύ» ρόστερ το οποίο απαρτίζεται από παίκτες που πρέπει όλοι να μένουν ευχαριστημένοι. Πώς το διαχειρίζεται μέχρι στιγμής ο Ζέλικο Ομπράντοβιτς. πριν 12 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
@@ -192,7 +192,7 @@
       "link": "https://www.athletiko.gr/mia-anasa-makria-apo-to-sold-out-to-mats-toy-panathinaikoy-me-tin-mpartselona-posa-eisitiria-apomenoyn-114804",
       "pubDate": null,
       "date": null,
-      "summary": "Μια… ανάσα μακριά από το sold out το ματς του Παναθηναϊκού με την Μπαρτσελόνα - Πόσα εισιτήρια απομένουν Η Μπαρτσελόνα θα κληθεί να τα βάλει με τον Παναθηναϊκό (13/11, 21.15) στο T-Center που θα… φλέγεται. Τόσα εισιτήρια μένουν μέχρι να ανακοινωθεί το sold out. πριν 11 ώρες Μιχάλης Ντόκος",
+      "summary": "Μια… ανάσα μακριά από το sold out το ματς του Παναθηναϊκού με την Μπαρτσελόνα - Πόσα εισιτήρια απομένουν Η Μπαρτσελόνα θα κληθεί να τα βάλει με τον Παναθηναϊκό (13/11, 21.15) στο T-Center που θα… φλέγεται. Τόσα εισιτήρια μένουν μέχρι να ανακοινωθεί το sold out. πριν 16 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00651",
       "sport": "basket",
@@ -309,17 +309,6 @@
       "image": "https://cdn.athletiko.gr/portal-img/default/46/7158393.jpg"
     },
     {
-      "title": "Εξαλλος με τους παίκτες του ο Ομπράντοβιτς στο τάιμ-άουτ (video)",
-      "link": "https://www.athletiko.gr/exallos-me-toys-paiktes-toy-o-omprantovits-sto-taim-aoyt-video-114387",
-      "pubDate": null,
-      "date": null,
-      "summary": "Εξαλλος με τους παίκτες του ο Ομπράντοβιτς στο τάιμ-άουτ (video) Έξαλλος ο Ζέλικο Ομπράντοβιτς στο τάιμ-άουτ, «έβαλε γκάζια» στους παίκτες του Παναθηναϊκού για την κακή εικόνα στο πρώτο δεκάλεπτο με την ΑΕΚ. 08.11.2026 Tάσος Μπαλγκάς",
-      "source": "Athletiko",
-      "color": "#00651",
-      "sport": "basket",
-      "image": "https://cdn.athletiko.gr/portal-img/default/43/zots111111.jpg"
-    },
-    {
       "title": "Βαλέρια: «Με απομάκρυναν από το γήπεδο επειδή γνώριζαν ότι είμαι Παναθηναϊκός» (vid)",
       "link": "https://newspao.gr/basket/790664_valeria-me-apomakrynan-apo-to-gipedo-epeidi-gnorizan-oti-eimai-panathinaikos-vid.html",
       "pubDate": "2026-11-10T22:12:07Z",
@@ -406,17 +395,6 @@
       "color": "#007d7",
       "sport": "football",
       "image": "https://newspao.gr/wp-content/uploads/2026/11/10/cd07534a-d9f5-4b28-afe6-791b4bac70e4.jpg"
-    },
-    {
-      "title": "Μπακάκης: «Ο Νίστρουπ δεν δοκίμασε καν τον Μπακασέτα – Δεν ήταν αγωνιστικά τα κριτήρια» (vid)",
-      "link": "https://newspao.gr/podosfairo/790626_mpakakis-o-nistroyp-den-dokimase-kan-ton-mpakaseta-den-itan-agonistika-ta-kritiria-vid.html",
-      "pubDate": "2026-11-10T19:18:48Z",
-      "date": "2026-11-10T19:18:48Z",
-      "summary": "Ο Μιχάλης Μπακάκης υποστήριξε πως η αποχώρηση του Τάσου Μπακασέτα από τον Παναθηναϊκό δεν ήταν αποτέλεσμα αποκλειστικά αγωνιστικών κριτηρίων, τονίζοντας πως ο αρχηγός της Εθνικής Ελλάδας δεν αξιολογήθηκε καν από τον Νίστρουπ πριν τεθεί εκτός πλάνων. The post Μπακάκης: «Ο Νίστρουπ δεν δοκίμασε καν τον Μπακασέτα – Δεν ήταν αγωνιστικά τα κριτήρια» (vid) appeared first on Newspao.gr . Ο Μιχάλης Μπακάκης υποστήριξε πως η αποχώρηση του Τάσου Μπακασέτα από τον Παναθηναϊκό δεν ήταν αποτέλεσμα αποκλειστι",
-      "source": "NewsPao",
-      "color": "#007d7",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/10/mpakakis-2.jpg"
     },
     {
       "title": "Πρόταση από τη Σερβία για κοινό πρωτάθλημα με ελληνικές ομάδες και Παναθηναϊκό!",
@@ -507,11 +485,11 @@
       "image": ""
     },
     {
-      "title": "Δεσύλλας: «Ποιοι έχουν ξεχωρίσει στον Παναθηναϊκό και πού χρειάζεται βελτίωση» - bwinΣΠΟΡ FM 94.6",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeEhYSmtOWFlSTlYwTzMyZ05kVWxXTnhYNTNKcUQwV0VTdEZOdkUtX2lYX0pEU2xYaS1yNGRwcmVkU0pIUFZ6TDJFY2o2UVdwYzJzZEFUWGx4eUZjdy1aNWFnYVp6RkJyRENQN09tcG5qSk1SN3NKX2FONW5sOHE0UUx1NzlrallnLVQyR25wVzFhcmhiaUFRaUxEN2ZuZzJSa2szUUFkRGVjNXE5YllUZS1BMzBFdGFNTFh30gGmAUFVX3lxTE9EdE5zVGRHWUM5THZLRDNYQ2pIS0xNdW4wOVYxTU4zUXNHejJDU3hNOHN1Y3JWbmQ4OWIxYXR0TXphbmlwUkhqU1FzUWp1eU1fRTdQV21jY0NkM0Zua0J1LWlXamZNLXB4UG9Xbm5ITXFiSmxlSmpMSjU1UF9tZ0FYenNnbHBwMkVkUUNfN19La3Axak1EcDk4SWF6b05kOFV4TmRLb3c?oc=5",
-      "pubDate": "2026-11-10T19:16:23Z",
-      "date": "2026-11-10T19:16:23Z",
-      "summary": "Δεσύλλας: «Ποιοι έχουν ξεχωρίσει στον Παναθηναϊκό και πού χρειάζεται βελτίωση» bwinΣΠΟΡ FM 94.6 Δεσύλλας: «Σημαντικό για τον Παναθηναϊκό ότι ξεμπέρδεψε με τα ντέρμπι - Στην τελική ευθεία το στέγαστρο του γηπέδου» bwinΣΠΟΡ FM 94.6 Δεσύλλας: «Άκρως θετικό το πρόσημο για τον Παναθηναϊκό, ο κανόνας είναι οι καλές εμφανίσεις ως τώρα» bwinΣΠΟΡ FM 94.6 Αθανασίου: «Σημαντικό ότι, ακόμα και κακός, ο Παναθηναϊκός πήρε τη νίκη - Μετράει η διάρκεια, μπράβο στον κόσμο» bwinΣΠΟΡ FM 94.6 Νικολογιάννης: «Πολύ '",
+      "title": "Ζαγαρίτης στον ΣΠΟΡFM TV: «Έχει προσωπικότητες η Εθνική, πάντα γκρινιάζουν οι Ολλανδοί-Φαβορί ο Παναθηναϊκός» - bwinΣΠΟΡ FM 94.6",
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPanQ2TlpHWXZ4aklIb1M1R3BaZUYxbURnQUQwOEJiNDgxSlQwT2d2VVdfQ3ZZa3VkY09rWC1EYkhMNVg2MGphTUgxVC01enVyTU5XTkluOVNLNGNHS3ZtYnF4bS03S3ZoSGtXNk5jTlBuWDlBd29TMmxXVUluaGVHeHhoR2Vqd0pSWE8zaXRvZ1BrWUtjeTVLWWZyX2pWbk9yQmtwazFUdVNTR3MzLU5tRFhTaFRRNzlqXzhJRVhoY2x6TTh6UFhTOWtFcDRUbEJpQ2tGX2lUdDdpODRr0gHGAUFVX3lxTFBrc3FYMGp0U25odk1fSXhZanNjQmtzVGQwbmZCbHBoRU9OUVVvMVdYSlBWOXVDNmhMMWJjbkc0NjE3dWdyVUl3RDNFYTB4WjVGMmM5V1h3QllscDBuNjFGbGJBc2xNc282d3dFQ1FFbXhsb0VhZTFManU0cFhpVF9ORXgwclUxY2hkaVF1NEExWGhhcEpCNWwwMVZpZXhvOFl5cEdRdjNjdmZpODI1VHJSdjdrMU1GaGtmQkNhZW94VTJ3NWpfUQ?oc=5",
+      "pubDate": "2026-11-10T20:00:00Z",
+      "date": "2026-11-10T20:00:00Z",
+      "summary": "Ζαγαρίτης στον ΣΠΟΡFM TV: «Έχει προσωπικότητες η Εθνική, πάντα γκρινιάζουν οι Ολλανδοί-Φαβορί ο Παναθηναϊκός» bwinΣΠΟΡ FM 94.6 Ζαγαρίτης στον ΣΠΟΡFM TV: «Έχει προσωπικότητες η Εθνική, πάντα γκρινιάζουν οι Ολλανδοί-Φαβορί ο Παναθηναϊκός» bwinΣΠΟΡ FM 94.6",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
@@ -522,29 +500,7 @@
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPNC0tZFpSWmtFNTJwYkNrbmp3T05HejNEczN1eERJQ2tRa0F3TXRhNWx4bjRTNm9TWVZJQXFkcWJjS3M5Mm5rVGVCa0NaNnAyWExod2l3dkJsakFZT2Rwb2ZVYnVLNGNQUDIzck12dlNjdktLMEpBLVFsRzBPWXMwSV9fenRRalZGQ21DZkowYXNXNlhnZmRYZDZVR1dfZlXSAaQBQVVfeXFMT21NeEIyTEF2VzBhalZ6YVlJQnZSUS1QMzNGWWJKc2UyalNjYkdwemxWOXp3WkNGeDBOQWhHRGdJeHdPX2ZNSVFUT2xYQWJoZ0VpWjBEUlBzNVFxeU12di1lbWMyWEtzYzBBLVo5cVJUdVFsV2t2NFMtU2U2SnBVdWVaekNBb1RfN0tuX0xFd2pXel9keEtjM3BFVF81WEFjMGZIdkk?oc=5",
       "pubDate": "2026-11-10T15:57:50Z",
       "date": "2026-11-10T15:57:50Z",
-      "summary": "Παναθηναϊκός: Αν αυτό δεν είναι πέναλτι, τι είναι; Gazzetta.gr Ντέσερς: Ο Νιγηριανός συνεχίζει να σκοράρει και εξελίσσεται σε σημείο αναφοράς στην επίθεση του Παναθηναϊκού SPORT24 Ηρακλής - Παναθηναϊκός 1-2: Η αγωνία και το ξέσπασμα στο πέναλτι του Καλάμπρια Gazzetta.gr Ηρακλής – Παναθηναϊκός: To video με τους πανηγυρισμούς των «πρασίνων» στο Καυτανζόγλειο NewsIT Η ανατροπή και το «πρωτάθλημα θα πάρουμε» του κόσμου που ξεχωρίζει στην παρακάμερα του Παναθηναϊκού bwinΣΠΟΡ FM 94.6 Παναθηναϊκός: Αν ",
-      "source": "Google News PAO",
-      "color": "#4285f4",
-      "sport": "other",
-      "image": ""
-    },
-    {
-      "title": "Παναθηναϊκός: «Τελειώνει» Πελίστρι και παίρνει εξτρέμ τον Ιανουάριο - NewsIT",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOSTZGLTZEQUc4NHZpM0s4cm5GZF9tbTdIeFZUM1pFMF9obWRBZkloa3FaQkcxdVRxZHA3dEtKeVI0TFhURm5ucDVTOTloZW02bXhRUkRjdHhkRWF2ZEdLUFc5dW9GSFR5cU4tTEoya1IxemlUeWg0dGNKOXpoZ0VYelNERURydXlPZzBEdmJMdHU4ZFlHellrQVpoOV9XSXczZ19XZ1d6RmxqeVnSAbABQVVfeXFMUGFCMXhDSl9FU0hvSk5xNHphM0pLOWpVdUJMVjQ3cHdmaEdkdVZ2QzVLTXFEYnc0NEUwTmhWRTZkVDZySWdzai16NjVCWHdvUlRwaGk4SW5PRFQtUldLTi1nOTJ4c3kxNWhyVmxHdmFMWWhROWhQc0xfX0szNnhSd0dQTVg5VVUtRFdjV1pRM0lEZTR4VGpBbE5oWnVDS0s3ZmlGYk8wOGk5Ums4T1J2Si0?oc=5",
-      "pubDate": "2026-11-10T12:47:38Z",
-      "date": "2026-11-10T12:47:38Z",
-      "summary": "Παναθηναϊκός: «Τελειώνει» Πελίστρι και παίρνει εξτρέμ τον Ιανουάριο NewsIT Μεταγραφές: Τι χρειάζονται οι τέσσερις ανταγωνιστές τον Ιανουάριο Gazzetta.gr Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι SPORT24 Αθανασίου: «Θα είναι έτοιμος μεταγραφικά ο Παναθηναϊκός για τον χειμώνα» bwinΣΠΟΡ FM 94.6 Αντίστροφη μέτρηση για Πελίστρι στον Παναθηναϊκό – Προς αποχώρηση τον Ιανουάριο Newsbeast Παναθηναϊκός: «Τελειώνει» Πελίστρι και παίρνει εξτρέμ τον Ιανουάριο NewsIT Μεταγραφές",
-      "source": "Google News PAO",
-      "color": "#4285f4",
-      "sport": "other",
-      "image": ""
-    },
-    {
-      "title": "Παναθηναϊκός: Επαγγελματικό συμβόλαιο στον 15χρονο Λαζαρίδη - ProtoThema",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVGpWM3NoRjZGZFBfblNjUURObmtwRExONVpZY01JVk1XS0ExeHVaSncyVlBRZTJtc2VRZHVSZS1ORmJvNjVzU1NTZWVKRFNVV1llM0UtME1qUV9TYXg0cFhCb1ZkY1d3d2lXS0R3Tm82eGoyNEU2MnFDUmRSM044ZC1lTW9YQWJYTUFEOHdvZTc5WjV4RWwtX1ByWDBXb2ZaTUZwbnlRbExPNTQ0ekHSAbMBQVVfeXFMUFpNN3pxU1hncEdCblhBSHN6NXg3QVVTbU42ZzBJS1lrdzRzdHFEYTYyMmI4dXBIMEo2QXNnaVpScVRRUlh6cU9Bb2NXTHZKemF6aDNYTERlZmh1TzFiWU5BQmdremh0LXN6WU5NWTJ2UFdpR0NXbUtMT255TjRQcjdJLXZvS0x4a3MzOXpKWERCRGxZYVZRMXNVYnJTZVlrdFAxSGF6TWptNEFsUmpEamhVY28?oc=5",
-      "pubDate": "2026-11-10T17:23:00Z",
-      "date": "2026-11-10T17:23:00Z",
-      "summary": "Παναθηναϊκός: Επαγγελματικό συμβόλαιο στον 15χρονο Λαζαρίδη ProtoThema Παναθηναϊκός: Ο Δημήτρης Λαζαρίδης υπέγραψε επαγγελματικό συμβόλαιο SPORT24 Παναθηναϊκός: Ο Δημήτρης Λαζαρίδης υπέγραψε το πρώτο του επαγγελματικό συμβόλαιο Gazzetta.gr Λαμπρό το μέλλον του Παναθηναϊκού: «Έδεσε» με επαγγελματικό συμβόλαιο έως το 2029 τον Λαζαρίδη iefimerida.gr Παναθηναϊκός: Επαγγελματικό συμβόλαιο στον 15χρονο Λαζαρίδη των 19 γκολ Agones Παναθηναϊκός: Επαγγελματικό συμβόλαιο στον 15χρονο Λαζαρίδη ProtoThema Π",
+      "summary": "Παναθηναϊκός: Αν αυτό δεν είναι πέναλτι, τι είναι; Gazzetta.gr Ντέσερς: Ο Νιγηριανός συνεχίζει να σκοράρει και εξελίσσεται σε σημείο αναφοράς στην επίθεση του Παναθηναϊκού SPORT24 Παναθηναϊκός: Ο Καλάμπρια έδωσε τη νίκη επί του Ηρακλή στο 94′ Alpha Tv Ηρακλής – Παναθηναϊκός: To video με τους πανηγυρισμούς των «πρασίνων» στο Καυτανζόγλειο NewsIT Η ανατροπή και το «πρωτάθλημα θα πάρουμε» του κόσμου που ξεχωρίζει στην παρακάμερα του Παναθηναϊκού bwinΣΠΟΡ FM 94.6 Παναθηναϊκός: Αν αυτό δεν είναι πένα",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
@@ -555,7 +511,18 @@
       "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQTkcxeVFfaHJzemYtWWc3Y3Qza1AzeS1lS3l0VFlnTDEyRFhrZ0hMRlN5ZndZa2VhNkNXMXpZeURCZzY0R2hNN3VrLTB4UERWM0YzUGlxZ3paRWNuOHU5XzUwUUJoQXBTZl9LS211SHhQN3dwYXlOMXZEcVI2dkNtZWlpbEIyWXM0Wm1tdjU2Q19halEyN1pnektJWkFjMlJBb2R1c0MycFQyS3hGVFVkMkNzSHdmZzdCSWpQeHB1S3N6ZkZ6eGlTVUk0U3Fad2vSAdQBQVVfeXFMTS16OUpqdl9KVzVULTdSdXFuT1ROVWZmOXFCdjdGX1BIUXRoTUZDdGM1dHU3dHdHR0x1M3YzaHA0WEEybU9RcWVmRFZNUVdMczhOUVhnR1BjQmVIWUF0X2ZRX3FzQlNNdHB5M0NSZGhXaVFLQ1I4bDE0d1BWYXdOU1MyRGlMRjQ4QUdTYUJGV1RzWkJrUWJSdU9zM2RiLUNmQmlPYndQTmJfZzRKQzNPaGxvVHBCQzl2dGxyTlM5STR5cjV1WEhTaVpFSWdDU2o3d2pSZUY?oc=5",
       "pubDate": "2026-11-10T11:25:32Z",
       "date": "2026-11-10T11:25:32Z",
-      "summary": "Παναθηναϊκός – Μπαρτσελόνα: Θέμα χρόνου το sold out στο T-Center για το ντέρμπι της Euroleague NewsIT Παναθηναϊκός: Ολοταχώς για sold out με Μπαρτσελόνα Skai.gr Παναθηναϊκός – Μπαρτσελόνα: Λιγότερα από 300 εισιτήρια απέμειναν προς διάθεση, έρχεται το πρώτο sold out της σεζόν Newsbeast Νέα δεδομένα για Πάντερ: Η ενημέρωση της Μπαρτσελόνα για τον τραυματισμό του SPORT24 Μπαρτσελόνα: Έξι εβδομάδες εκτός ο Πάντερ, τρεις ο Εβμπουομάν – Χάνουν το ματς με τον Παναθηναϊκό Μακεδονικό Πρακτορείο Ειδήσεων ",
+      "summary": "Παναθηναϊκός – Μπαρτσελόνα: Θέμα χρόνου το sold out στο T-Center για το ντέρμπι της Euroleague NewsIT Παναθηναϊκός: Ολοταχώς για sold out με Μπαρτσελόνα Skai.gr Μπαρτσελόνα: Έξι εβδομάδες εκτός ο Πάντερ, τρεις ο Εβμπουομάν – Χάνουν το ματς με τον Παναθηναϊκό Μακεδονικό Πρακτορείο Ειδήσεων Παναθηναϊκός: Προς sold out το ματς με Μπαρτσελόνα, έμειναν ελάχιστα εισιτήρια Gazzetta.gr Νέα δεδομένα για Πάντερ: Η ενημέρωση της Μπαρτσελόνα για τον τραυματισμό του SPORT24 Παναθηναϊκός – Μπαρτσελόνα: Θέμα χ",
+      "source": "Google News PAO",
+      "color": "#4285f4",
+      "sport": "other",
+      "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι - SPORT24",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ0M1dzdTMTN4OEhqdk5PZDMwVzFYY3YxLW1BOWUyZkF4OEpEOFpsdHg3Y2JwSG5WZ3RxemlmUl9ubTBzS3h0SUpVZzRyb00zWjM0WENjaXd0bl9IYnctQVpsNVRYTUxKSUF3MVRlMjVGLVRYeXJ6QXkxampOQUYtYi1oREx3VTY2WVFFbXVOWURaS1BScUppUWMzRWZrMm1Oa3dTS2wweXRoUdIBrwFBVV95cUxOQ19RZG1mLVl2UXlRLTBKb1Q4VlVlMzdadk9GLW5GMTYyWEJXc0tpcUx4cG5TRHI3TFExVm9QS3RpeWxhWUFFeTJJS3Flc1k5TXBNTUwtbUNaRlozMW44VTdVUWFrUjlaczhrUEtxeWNiUUQyOEJNbnBRaFphVXU0dUJUN3Bha2ptUlJqVnpRUExab2RHY3VvY0RFdXFaeGtqVWlXODB4RnlKd0hxTzY0?oc=5",
+      "pubDate": "2026-11-10T07:23:00Z",
+      "date": "2026-11-10T07:23:00Z",
+      "summary": "Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι SPORT24 Μεταγραφές: Τι χρειάζονται οι τέσσερις ανταγωνιστές τον Ιανουάριο Gazzetta.gr Παναθηναϊκός: «Τελειώνει» Πελίστρι και παίρνει εξτρέμ τον Ιανουάριο NewsIT Αθανασίου: «Θα είναι έτοιμος μεταγραφικά ο Παναθηναϊκός για τον χειμώνα» bwinΣΠΟΡ FM 94.6 Αντίστροφη μέτρηση για Πελίστρι στον Παναθηναϊκό – Προς αποχώρηση τον Ιανουάριο Newsbeast Παναθηναϊκός: Χειμερινή ενίσχυση – Οι τρεις θέσεις που ψάχνει το Τριφύλλι SPORT24 Μετ",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
