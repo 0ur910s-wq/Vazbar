@@ -31,15 +31,11 @@ def is_panathinaikos(text):
     return bool(PANATHINAIKOS_RE.search(normalized))
 
 SOURCES = [
-    {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-podosfairo", "color": "#00651", "sport": "football"},
-    {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-mpasket", "color": "#00651", "sport": "basket"},
-    {"name": "pao.gr", "type": "rss", "url": "https://www.pao.gr/feed/", "color": "#00d2c", "sport": "football"},
-    {"name": "paobc.gr", "type": "rss", "url": "https://www.paobc.gr/feed/", "color": "#003d8a", "sport": "basket"},
-    {"name": "NewsPao", "type": "rss", "url": "https://newspao.gr/feed/", "color": "#007d7", "sport": "football"},
-    {"name": "Trifilara", "type": "rss", "url": "https://www.trifilara.gr/feed/", "color": "#2062d", "sport": "football"},
-    {"name": "SDNA PAO", "type": "rss", "url": "https://www.sdna.gr/rss/223/panathinaikos", "color": "#ffcc00", "sport": "football"},
-    {"name": "Gazzetta PAO", "type": "rss", "url": "https://www.gazzetta.gr/feed/tags/panathinaikos", "color": "#ff8808", "sport": "basket"},
-    {"name": "Sport24 PAO", "type": "rss", "url": "https://www.sport24.gr/feed/?tag=panathinaikos", "color": "#d1e2b", "sport": "football"},
+    {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-podosfairo", "color": "#00a651", "sport": "football"},
+    {"name": "Athletiko", "type": "html", "url": "https://www.athletiko.gr/panathinaikos-mpasket", "color": "#00a651", "sport": "basket"},
+    {"name": "NewsPao", "type": "rss", "url": "https://newspao.gr/feed/", "color": "#0a7d2e", "sport": "football"},
+    {"name": "Trifilara", "type": "rss", "url": "https://www.trifilara.gr/feed/", "color": "#2d8a2d", "sport": "football"},
+    {"name": "Gazzetta PAO", "type": "rss", "url": "https://www.gazzetta.gr/teams/panathinaikos/rss", "color": "#ff6b00", "sport": "basket"},
     {"name": "Google News PAO", "type": "rss", "url": "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnNHZ0pIVWlnQVAB?hl=el&gl=GR&ceid=GR%3Ael", "color": "#4285f4", "sport": "other", "title_only_filter": True},
 ]
 

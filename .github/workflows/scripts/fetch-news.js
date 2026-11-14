@@ -6,13 +6,10 @@ const fs = require("fs");
 // ΣΗΜΑΝΤΙΚΟ: έλεγξε/διόρθωσε τα URL με αυτά που έχεις στο index.html
 const FEEDS = [
   { name: "Athletiko",    url: "https://www.athletiko.gr/feed/",        onlyPao: false },
-  { name: "pao.gr",       url: "https://www.pao.gr/feed/",              onlyPao: true  },
-  { name: "paobc.gr",     url: "https://www.paobc.gr/feed/",            onlyPao: true  },
-  { name: "NewsPao",      url: "https://www.newspao.gr/feed/",          onlyPao: true  },
+  { name: "NewsPao",      url: "https://newspao.gr/feed/",              onlyPao: true  },
   { name: "Trifilara",    url: "https://www.trifilara.gr/feed/",        onlyPao: true  },
-  { name: "SDNA PAO",     url: "https://www.sdna.gr/rss.xml",           onlyPao: false },
-  { name: "Gazzetta PAO", url: "https://www.gazzetta.gr/rss",           onlyPao: false },
-  { name: "Sport24 PAO",  url: "https://www.sport24.gr/rss",            onlyPao: false },
+  { name: "Gazzetta PAO", url: "https://www.gazzetta.gr/teams/panathinaikos/rss", onlyPao: true },
+  { name: "Google News PAO", url: "https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnNHZ0pIVWlnQVAB?hl=el&gl=GR&ceid=GR%3Ael", onlyPao: false },
 ];
 
 const MAX_PER_FEED = 30;
