@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T08:33:45Z",
+  "updated": "2026-11-15T09:41:59Z",
   "sources": {
     "Athletiko": {
       "ok": true,
@@ -19,7 +19,7 @@
     },
     "Google News PAO": {
       "ok": true,
-      "count": 4
+      "count": 3
     }
   },
   "items": [
@@ -28,7 +28,7 @@
       "link": "https://www.athletiko.gr/pelistri-den-skeftomai-na-fygo-thelo-na-gino-protathlitis-me-ton-panathinaiko-115820",
       "pubDate": null,
       "date": null,
-      "summary": "Πελίστρι: «Δεν σκέφτομαι να φύγω, θέλω να γίνω πρωταθλητής με τον Παναθηναϊκό» Ο Φακούντο Πελίστρι μίλησε για τον περιορισμένο χρόνο συμμετοχής του στον Παναθηναϊκό, ξεκαθαρίζοντας πως θέλει να στεφθεί πρωταθλητής. πριν 11 ώρες Κώστας Γουλής",
+      "summary": "Πελίστρι: «Δεν σκέφτομαι να φύγω, θέλω να γίνω πρωταθλητής με τον Παναθηναϊκό» Ο Φακούντο Πελίστρι μίλησε για τον περιορισμένο χρόνο συμμετοχής του στον Παναθηναϊκό, ξεκαθαρίζοντας πως θέλει να στεφθεί πρωταθλητής. πριν 12 ώρες Κώστας Γουλής",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -39,7 +39,7 @@
       "link": "https://www.athletiko.gr/gensen-gia-panathinaiko-den-echo-milisei-me-ton-nistroyp-115741",
       "pubDate": null,
       "date": null,
-      "summary": "Γένσεν για Παναθηναϊκό: «Δεν έχω μιλήσει με τον Νίστρουπ» Ο Γένσεν διέψευσε κατηγορηματικά ότι μίλησε με τον Τζέικομπ Νίστρουπ για το ενδεχόμενο μεταγραφής του στο «τριφύλλι» το περασμένο καλοκαίρι. πριν 15 ώρες Ιάσωνας Νησανάκης",
+      "summary": "Γένσεν για Παναθηναϊκό: «Δεν έχω μιλήσει με τον Νίστρουπ» Ο Γένσεν διέψευσε κατηγορηματικά ότι μίλησε με τον Τζέικομπ Νίστρουπ για το ενδεχόμενο μεταγραφής του στο «τριφύλλι» το περασμένο καλοκαίρι. πριν 16 ώρες Ιάσωνας Νησανάκης",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -50,7 +50,7 @@
       "link": "https://www.athletiko.gr/ola-einai-anoichta-o-gensen-poy-apascholise-ton-panathinaiko-evale-foties-gia-to-mellon-toy-115685",
       "pubDate": null,
       "date": null,
-      "summary": "«Ολα είναι ανοιχτά» - Ο Γένσεν που απασχόλησε τον Παναθηναϊκό έβαλε «φωτιές» για το μέλλον του Ο Ματίας Γένσεν, ο οποίος βρέθηκε στο μεταγραφικό στόχαστρο του Παναθηναϊκού το περασμένο καλοκαίρι, μίλησε για το αβέβαιο μέλλον του στην Μπρέντφορντ. πριν 20 ώρες Κώστας Τόπας",
+      "summary": "«Ολα είναι ανοιχτά» - Ο Γένσεν που απασχόλησε τον Παναθηναϊκό έβαλε «φωτιές» για το μέλλον του Ο Ματίας Γένσεν, ο οποίος βρέθηκε στο μεταγραφικό στόχαστρο του Παναθηναϊκού το περασμένο καλοκαίρι, μίλησε για το αβέβαιο μέλλον του στην Μπρέντφορντ. πριν 21 ώρες Κώστας Τόπας",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -134,11 +134,22 @@
       "image": "https://cdn.athletiko.gr/portal-img/default/5/ghipedo.jpg"
     },
     {
+      "title": "Χωρίς Λεσόρ και Μπάντιο ο Παναθηναϊκός κόντρα στον Κολοσσό Ρόδου",
+      "link": "https://www.athletiko.gr/choris-lesor-kai-mpantio-o-panathinaikos-kontra-ston-kolosso-rodoy-115915",
+      "pubDate": null,
+      "date": null,
+      "summary": "Χωρίς Λεσόρ και Μπάντιο ο Παναθηναϊκός κόντρα στον Κολοσσό Ρόδου Εκτός επιλογών για το ματς με τον Κολοσσό Ρόδου έμειναν οι Ματίας Λεσόρ και Μπράνκου Μπάντιο. πριν 21 λεπτά Μιχάλης Ντόκος",
+      "source": "Athletiko",
+      "color": "#00a651",
+      "sport": "basket",
+      "image": "https://cdn.athletiko.gr/portal-img/default/45/7140991.jpg"
+    },
+    {
       "title": "Ο Μπαμ Αντεμπάγιο αποθέωσε τον Ναν: «Αδερφός μου για μια ζωή, είναι όμορφο να τον βλέπω να διαπρέπει»",
       "link": "https://www.athletiko.gr/o-mpam-antempagio-apotheose-ton-nan-aderfos-moy-gia-mia-zoi-einai-omorfo-na-ton-vlepo-na-diaprepei-115902",
       "pubDate": null,
       "date": null,
-      "summary": "Ο Μπαμ Αντεμπάγιο αποθέωσε τον Ναν: «Αδερφός μου για μια ζωή, είναι όμορφο να τον βλέπω να διαπρέπει» Τα λόγια του Μπαμ Αντεμπάγιο για τον Κέντρικ Ναν, μετά τη νίκη των Χιτ επί των Πίστονς, τονίζοντας πως ο άσος του Παναθηναϊκού είναι ένα στενό του πρόσωπο. πριν 40 λεπτά Γιάννης Γιαννικόπουλος",
+      "summary": "Ο Μπαμ Αντεμπάγιο αποθέωσε τον Ναν: «Αδερφός μου για μια ζωή, είναι όμορφο να τον βλέπω να διαπρέπει» Τα λόγια του Μπαμ Αντεμπάγιο για τον Κέντρικ Ναν, μετά τη νίκη των Χιτ επί των Πίστονς, τονίζοντας πως ο άσος του Παναθηναϊκού είναι ένα στενό του πρόσωπο. πριν 1 ώρα Γιάννης Γιαννικόπουλος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -149,7 +160,7 @@
       "link": "https://www.athletiko.gr/i-vathmologia-tis-gbl-meta-ti-niki-toy-paok-epi-tis-karditsas-kai-prin-toys-agones-ton-aionion-115723",
       "pubDate": null,
       "date": null,
-      "summary": "Η βαθμολογία της Stoiximan GBL με το 7-0 του ΠΑΟΚ Η κατάταξη του πρωταθλήματος έπειτα από τη νίκη του ΠΑΟΚ στην Καρδίτσα και πριν τα Κυριακάτικα (15/11) ματς Παναθηναϊκού και Ολυμπιακού. πριν 14 ώρες Μιχάλης Ντόκος",
+      "summary": "Η βαθμολογία της Stoiximan GBL με το 7-0 του ΠΑΟΚ Η κατάταξη του πρωταθλήματος έπειτα από τη νίκη του ΠΑΟΚ στην Καρδίτσα και πριν τα Κυριακάτικα (15/11) ματς Παναθηναϊκού και Ολυμπιακού. πριν 15 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -160,7 +171,7 @@
       "link": "https://www.athletiko.gr/sti-diathesi-toy-kosmoy-toy-panathinaikoy-ta-eisitiria-gia-to-paichnidi-me-ton-kolosso-rodoy-115671",
       "pubDate": null,
       "date": null,
-      "summary": "Στη διάθεση του κόσμου του Παναθηναϊκού τα εισιτήρια για το παιχνίδι με τον Κολοσσό Ρόδου Το T-Center ανοίγει τις πύλες του για πρώτη φορά τη φετινή σεζόν, στο πρωτάθλημα της Stoiximan GBL, με τον Παναθηναϊκό να υποδέχεται τον Κολοσσό Ρόδου. πριν 22 ώρες Μιχάλης Ντόκος",
+      "summary": "Στη διάθεση του κόσμου του Παναθηναϊκού τα εισιτήρια για το παιχνίδι με τον Κολοσσό Ρόδου Το T-Center ανοίγει τις πύλες του για πρώτη φορά τη φετινή σεζόν, στο πρωτάθλημα της Stoiximan GBL, με τον Παναθηναϊκό να υποδέχεται τον Κολοσσό Ρόδου. 14.11.2026 Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -277,6 +288,39 @@
       "image": "https://cdn.athletiko.gr/portal-img/default/46/5442014.jpg"
     },
     {
+      "title": "Παναθηναϊκός: Άραβες μπαίνουν στο παιχνίδι για Πελίστρι",
+      "link": "https://newspao.gr/podosfairo/791507_panathinaikos-araves-mpainoyn-sto-paichnidi-gia-pelistri.html",
+      "pubDate": "2026-11-15T09:38:54Z",
+      "date": "2026-11-15T09:38:54Z",
+      "summary": "Ο Παναθηναϊκός βλέπει να προκύπτει ενδιαφέρον για τον Φακούντο Πελίστρι και από την Αραβική Χερσόνησο, ενώ εξετάζεται σοβαρά το ενδεχόμενο παραχώρησής του. The post Παναθηναϊκός: Άραβες μπαίνουν στο παιχνίδι για Πελίστρι appeared first on Newspao.gr . Ο Παναθηναϊκός βλέπει να προκύπτει ενδιαφέρον για τον Φακούντο Πελίστρι και από την Αραβική Χερσόνησο, ενώ εξετάζεται σοβαρά το ενδεχόμενο παραχώρησής του. The post Παναθηναϊκός: Άραβες μπαίνουν στο παιχνίδι για Πελίστρι appeared first on Newspao.g",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2025/08/28/pellistri.jpg"
+    },
+    {
+      "title": "Οριστικό: Οι ξένοι που κόπηκαν από το Παναθηναϊκός-Κολοσσός",
+      "link": "https://newspao.gr/basket/791519_oristiko-oi-xenoi-poy-kopikan-apo-to-panathinaikos-kolossos.html",
+      "pubDate": "2026-11-15T09:02:50Z",
+      "date": "2026-11-15T09:02:50Z",
+      "summary": "Ο Ζέλικο Ομπράντοβιτς αποφάσισε να αφήσει εκτός τους Ματίας Λεσόρ και Μπράνκου Μπάντιο, διαμορφώνοντας την εξάδα ξένων του Παναθηναϊκού για τον Κολοσσό. The post Οριστικό: Οι ξένοι που κόπηκαν από το Παναθηναϊκός-Κολοσσός appeared first on Newspao.gr . Ο Ζέλικο Ομπράντοβιτς αποφάσισε να αφήσει εκτός τους Ματίας Λεσόρ και Μπράνκου Μπάντιο, διαμορφώνοντας την εξάδα ξένων του Παναθηναϊκού για τον Κολοσσό. The post Οριστικό: Οι ξένοι που κόπηκαν από το Παναθηναϊκός-Κολοσσός appeared first on Newspao",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/13/omadiki-panathinaikos-1-scaled.webp"
+    },
+    {
+      "title": "Παναθηναϊκός – Κολοσσός Ρόδου Live Streaming σήμερα 15/11/2026",
+      "link": "https://newspao.gr/live-streaming-panathinaikos-agones/791475_panathinaikos-kolossos-rodoy-live-streaming-simera-15-11-2026.html",
+      "pubDate": "2026-11-15T09:00:17Z",
+      "date": "2026-11-15T09:00:17Z",
+      "summary": "Ο Παναθηναϊκός υποδέχεται τον Κολοσσό Ρόδου για την 7η αγωνιστική της Stoiximan GBL. Πού θα δείτε ζωντανά το ματς. The post Παναθηναϊκός – Κολοσσός Ρόδου Live Streaming σήμερα 15/11/2026 appeared first on Newspao.gr . Ο Παναθηναϊκός υποδέχεται τον Κολοσσό Ρόδου για την 7η αγωνιστική της Stoiximan GBL. Πού θα δείτε ζωντανά το ματς. The post Παναθηναϊκός – Κολοσσός Ρόδου Live Streaming σήμερα 15/11/2026 appeared first on Newspao.gr .",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/14/2.png"
+    },
+    {
       "title": "Ποσά που ζαλίζουν! Πόσο κοστίζουν οι σουίτες στον Βοτανικό – Τα έσοδα του Παναθηναϊκού",
       "link": "https://newspao.gr/podosfairo/791515_posa-poy-zalizoyn-poso-kostizoyn-oi-soyites-ston-votaniko-ta-esoda-toy-panathinaikoy.html",
       "pubDate": "2026-11-15T08:32:12Z",
@@ -341,39 +385,6 @@
       "color": "#0a7d2e",
       "sport": "football",
       "image": "https://newspao.gr/wp-content/uploads/2026/11/14/3.png"
-    },
-    {
-      "title": "Παναθηναϊκός: Με «κάβα» 30 εκατομμυρίων μπαίνει στη νέα εποχή!",
-      "link": "https://newspao.gr/podosfairo/791486_panathinaikos-me-kava-30-ekatommyrion-mpainei-sti-nea-epochi.html",
-      "pubDate": "2026-11-14T22:35:05Z",
-      "date": "2026-11-14T22:35:05Z",
-      "summary": "Ο Παναθηναϊκός μπορεί να αποκτήσει μια ισχυρή οικονομική βάση από χορηγίες και τηλεοπτικά δικαιώματα, μειώνοντας την ανάγκη πρόσθετης χρηματοδότησης. The post Παναθηναϊκός: Με «κάβα» 30 εκατομμυρίων μπαίνει στη νέα εποχή! appeared first on Newspao.gr . Ο Παναθηναϊκός μπορεί να αποκτήσει μια ισχυρή οικονομική βάση από χορηγίες και τηλεοπτικά δικαιώματα, μειώνοντας την ανάγκη πρόσθετης χρηματοδότησης. The post Παναθηναϊκός: Με «κάβα» 30 εκατομμυρίων μπαίνει στη νέα εποχή! appeared first on Newspao",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/06/21/alafouzos.png"
-    },
-    {
-      "title": "Παναθηναϊκός – Ολυμπιακός 3-2 ΣΕΤ | HIGHLIGHTS",
-      "link": "https://newspao.gr/video/panathinaikos-olympiakos-3-2-set-highlights",
-      "pubDate": "2026-11-14T22:30:42Z",
-      "date": "2026-11-14T22:30:42Z",
-      "summary": "Ο Παναθηναϊκός έχει βρει τον τρόπο να κερδίζει τον Ολυμπιακό και το απέδειξε ξανά! Το Τριφύλλι επικράτησε με 3-2 σετ στο μεγάλο ντέρμπι της 4ης αγωνιστικής της Volley League, φτάνοντας σε ένα εντυπωσιακό επίτευγμα απέναντι στον μεγαλύτερο αντίπαλό του. The post Παναθηναϊκός – Ολυμπιακός 3-2 ΣΕΤ | HIGHLIGHTS appeared first on Newspao.gr . Ο Παναθηναϊκός έχει βρει τον τρόπο να κερδίζει τον Ολυμπιακό και το απέδειξε ξανά! Το Τριφύλλι επικράτησε με 3-2 σετ στο μεγάλο ντέρμπι της 4ης αγωνιστικής της ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": ""
-    },
-    {
-      "title": "Τι ώρα παίζει ο Παναθηναϊκός με τον Κολοσσό στο μπάσκετ σήμερα και σε ποιο κανάλι (15/11)",
-      "link": "https://newspao.gr/panathinaikos-simera/791462_ti-ora-paizei-o-panathinaikos-me-ton-kolosso-rodoy-sto-mpasket-simera-kai-se-poio-kanali-15-11.html",
-      "pubDate": "2026-11-14T22:30:36Z",
-      "date": "2026-11-14T22:30:36Z",
-      "summary": "Ο Παναθηναϊκός υποδέχεται τον Κολοσσό Ρόδου στο Telekom Center Athens για τη Stoiximan GBL. Η ώρα έναρξης και το κανάλι του αγώνα. The post Τι ώρα παίζει ο Παναθηναϊκός με τον Κολοσσό στο μπάσκετ σήμερα και σε ποιο κανάλι (15/11) appeared first on Newspao.gr . Ο Παναθηναϊκός υποδέχεται τον Κολοσσό Ρόδου στο Telekom Center Athens για τη Stoiximan GBL. Η ώρα έναρξης και το κανάλι του αγώνα. The post Τι ώρα παίζει ο Παναθηναϊκός με τον Κολοσσό στο μπάσκετ σήμερα και σε ποιο κανάλι (15/11) appeared ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/14/1.png"
     },
     {
       "title": "«Πράσινος» θρίαμβος σε ντέρμπι-θρίλερ με υπογραφή Γιάντσουκ!",
@@ -473,6 +484,17 @@
       "color": "#2d8a2d",
       "sport": "football",
       "image": ""
+    },
+    {
+      "title": "Παναθηναϊκός - Κολοσσός Ρόδου: Η εξάδα ξένων των «πρασίνων»",
+      "link": "https://www.gazzetta.gr/basketball/basket-league/2586665/panathinaikos-kolossos-rodoy-i-exada-xenon-ton-prasinon",
+      "pubDate": "2026-11-15T09:25:53Z",
+      "date": "2026-11-15T09:25:53Z",
+      "summary": "Χωρίς του Ματίας Λεσόρ και Μπράνκου Μπάντιο θα παραταχθεί ο Παναθηναϊκός ενόψει της αναμέτρησης κόντρα στον Κολοσσό Ρόδου (13:00, LIVE από το Gazzetta). Χωρίς του Ματίας Λεσόρ και Μπράνκου Μπάντιο θα παραταχθεί ο Παναθηναϊκός ενόψει της αναμέτρησης κόντρα στον Κολοσσό Ρόδου (13:00, LIVE από το Gazzetta).",
+      "source": "Gazzetta PAO",
+      "color": "#ff6b00",
+      "sport": "basket",
+      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-11/lessort-intime_0.jpg?itok=SlLEjz1S"
     },
     {
       "title": "Σπουδαία νίκη για τον Παναθηναϊκό όχι για το παρόν, αλλά κυρίως για το μέλλον...",
@@ -739,55 +761,33 @@
       "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-11/7164309.jpg?itok=n78GlPXj"
     },
     {
-      "title": "Σέκουλιτς: «Δεν είναι εύκολο να παίζεις σε αυτή την έδρα με αυτή την ομάδα»",
-      "link": "https://www.gazzetta.gr/basketball/euroleague/2586356/sekoylits-den-einai-eykolo-na-paizeis-se-ayti-tin-edra-me-ayti-tin",
-      "pubDate": "2026-11-13T21:53:07Z",
-      "date": "2026-11-13T21:53:07Z",
-      "summary": "Το δικό του σχόλιο για τη νίκη της Μπαρτσελόνα επί του Παναθηναϊκού έκανε ο Αλεξάντερ Σέκουλιτς. Το δικό του σχόλιο για τη νίκη της Μπαρτσελόνα επί του Παναθηναϊκού έκανε ο Αλεξάντερ Σέκουλιτς.",
-      "source": "Gazzetta PAO",
-      "color": "#ff6b00",
-      "sport": "basket",
-      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-11/sekulic-eurokinissi.jpg?itok=B7EhGi_J"
-    },
-    {
       "title": "Παναθηναϊκός – Ολυμπιακός 3-2: Οι «πράσινοι» πήραν το πρώτο αιώνιο ντέρμπι της Volley League μετά από θρίλερ στο τάι μπρέικ - ertnews.gr",
       "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPOEpVX0licVpJVjR6X3lDaDdtclV4bmlWc01LOXA4VGV5am56LUdlM1lkbkpuYTdpNEJrMjRGUllBYzFFc1d3U3RsdGhVN1FsUEh4a1Z6Wm9YaTVUbWFyd0xsLTRYT3lPQUhNZC1kcUdfWFhNV2JMZmlpQ1BiekNJUjRUVVNxeWQ0VGRsbEdXZHo4dWhHdGlJQnFLRnBfUFJka3c1anBZUDVtNl9NYURKZ20wWFVNMHZ5Zm9vWlNIU2FpNHptRUh0dkViSS1QMkdhbW82LTQyZU9hOEY0dWdPVEVwT2VSR29ZTkFaUNIB8gFBVV95cUxOX0Ria0FvdHVkUXBMLWJjYVFTTElZNm1PNmpkTXZsaS1temkydXhsZ0lSV21rN1g3RnBTRFlnY2FXclU0WVdIeUU4YllQQ0kwU1FjalFSUU8xcHlYN0Z1SFI3allMbjdUd3hhUUxMRzB2RHREalF6eDdRRVlIVUdaWk5hWncwdkU5aUpWMTBNemZWVVk0RjhGQldRUVZOOWFmWlMzR2UxOHRFVlhOU1M0NFpaUnhtTl9hb2VlU1VjYmJDbXd5VEFwR2RQVXJRUWRvS3F3RHFLV3ZIUGd6Y3d6c1JtTDQ4M0U2bW9mOEJBaGdEdw?oc=5",
       "pubDate": "2026-11-14T22:12:00Z",
       "date": "2026-11-14T22:12:00Z",
-      "summary": "Παναθηναϊκός – Ολυμπιακός 3-2: Οι «πράσινοι» πήραν το πρώτο αιώνιο ντέρμπι της Volley League μετά από θρίλερ στο τάι μπρέικ ertnews.gr Παναθηναϊκός – Ολυμπιακός 3-2: Η πράσινη κυριαρχία συνεχίστηκε στο κλειστό του Μετς, το τριφύλλι πήρε την ματσάρα με Νίλσεν και όπλο τους άσους SPORT24 Σπουδαία νίκη για τον Παναθηναϊκό όχι για το παρόν, αλλά κυρίως για το μέλλον... Gazzetta.gr e-Content Sys / CMS 5.0 Μακεδονικό Πρακτορείο Ειδήσεων Τριφυλλάρα, ομαδάρα! – Παναθηναϊκός Αθλητικός Όμιλος\" pao1908.com",
+      "summary": "Παναθηναϊκός – Ολυμπιακός 3-2: Οι «πράσινοι» πήραν το πρώτο αιώνιο ντέρμπι της Volley League μετά από θρίλερ στο τάι μπρέικ ertnews.gr Παναθηναϊκός – Ολυμπιακός 3-2: Η πράσινη κυριαρχία συνεχίστηκε στο κλειστό του Μετς, το τριφύλλι πήρε την ματσάρα με Νίλσεν και όπλο τους άσους SPORT24 e-Content Sys / CMS 5.0 Μακεδονικό Πρακτορείο Ειδήσεων Παναθηναϊκός – Ολυμπιακός 3-2: «Πράσινη» νίκη σε μια σπουδαία ματσάρα Gazzetta.gr Τριφυλλάρα, ομαδάρα! – Παναθηναϊκός Αθλητικός Όμιλος\" pao1908.com Παναθηναϊκ",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
       "image": ""
     },
     {
-      "title": "Παναθηναϊκός – Μπαρτσελόνα 74-76: Από τον… παράδεισο στην κόλαση μέσα σε ένα δεκάλεπτο - In.gr",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZlVuU2VLaTNaTmljTEk5OTJnVGdzT1BoOEVSempOWnhjZ29YWHNEV2o5ZExwMkxBR1RvRmRmcDctdlQ4eTl5T25hcmxJRVg4dTBzbW9sX3U1aUYxaWF1cGxYSGVHRWUxNlI2c0pBUGpOT3RHUmxmWHhRa2ZjaU52Qm85UkpDdGZ5OFM3dkJtRDV3cURNY1FSRkJsYUdaU1JWNkUxWWpZX29zdy14dGF1UkEzVWUxMXgtUm9CQdIBwgFBVV95cUxOazFLS2thbEJSNWJvVS10d2NzSGdCTU80QjRlVVllQVkwQ2VGOVB0dVpHTzg2d1MxXzltNzZtQUlGSWY1QjZ5Z1dyOUgxWkJOZ1RjYW5HTlJSd0NQNG1YSkFmNURFRlZwMW5ONGhOazJqaHZPSU5tTDBrMzcwb25MVVJoMENHdlltVmI3OHR4RHFrcEQzOW9YSVd1UEo5V3U5WmRHVjM4YnRueXltcjNJRFlVdHZxcWYza2tHMGRROHRDdw?oc=5",
-      "pubDate": "2026-11-14T06:21:38Z",
-      "date": "2026-11-14T06:21:38Z",
-      "summary": "Παναθηναϊκός – Μπαρτσελόνα 74-76: Από τον… παράδεισο στην κόλαση μέσα σε ένα δεκάλεπτο In.gr Παναθηναϊκός AKTOR: Τα δέκα λεπτά μπάσκετ δεν είναι αρκετά και ο νέος βασιλιάς ξεπροβάλλει SPORT24 Αυτοκτονία για Παναθηναϊκό στο ΟΑΚΑ, από το +14 στην ήττα η ναυτεμπορικη Το «τρενάκι του τρόμου», με ρυθμό (προσωρινά) εκτός ελέγχου Ομπράντοβιτς Kathimerini Οι παίκτες της Μπαρτσελόνα πέταξαν τον Ρόμπινσον στο glass floor του T-Center μετά τη νίκη κόντρα στον Παναθηναϊκό ProtoThema Παναθηναϊκός – Μπαρτσελό",
+      "title": "Παναθηναϊκός - Μπαρτσελόνα: Το κακό “πράσινο” 4ο δεκάλεπτο, οι εκτελεστές Ρόμπινσον-Μάρτιν και ο δημιουργός Χέ - Gazzetta.gr",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPa2lrdnZCVUNLcjRjeVVIY1NObEJQOHp1NmNZNjBUT3NjWXRleGNfdWFrLVY5ZDB4Y2xOSFpmaVZiWlZUUDRQN1dZd1dDTVRaV21FWnlvWV8waWlFaEtlSnZCNFRidkZiM0s2aEFXX0lGOG8wT2V4LXpmWGNYWXdFY2s0b3R4X0xmOGc1dXo3NEJYaHJVNVc0WUJvZlN2empqak91QlJRRmZFeDU4bXk4WjRGRUZHbWVDckpR0gHAAUFVX3lxTFB0MTgxaGRiZk9pVnVYRTh3TFdLeEtWR0dvaDJ3OE44Ukt0NGxhOUJuUURQclVKNmVnbUhoRlVvOEtZSW9nNzVhOVozZ0QwTU5aa2hOWjRYMjBKb014Y0FFR3N0UEZlak5KSVN6b2pRLVRwYzI3M2NaTldfLUpINl9FUVdzY1BRUlN6YlJDek5zMzJSNHdRYkdncUxvbGVFQ0JIUkJLQVphNVdqVnpwVHVSQTZ5VEtrZ1B1X1RQa1habg?oc=5",
+      "pubDate": "2026-11-14T09:54:01Z",
+      "date": "2026-11-14T09:54:01Z",
+      "summary": "Παναθηναϊκός - Μπαρτσελόνα: Το κακό “πράσινο” 4ο δεκάλεπτο, οι εκτελεστές Ρόμπινσον-Μάρτιν και ο δημιουργός Χέ Gazzetta.gr Παναθηναϊκός AKTOR: Τα δέκα λεπτά μπάσκετ δεν είναι αρκετά και ο νέος βασιλιάς ξεπροβάλλει SPORT24 Το «τρενάκι του τρόμου», με ρυθμό (προσωρινά) εκτός ελέγχου Ομπράντοβιτς Kathimerini Οι παίκτες της Μπαρτσελόνα πέταξαν τον Ρόμπινσον στο glass floor του T-Center μετά τη νίκη κόντρα στον Παναθηναϊκό ProtoThema \"Μπλάκ άουτ\" για τον Παναθηναϊκό στην 4η περίοδο Alpha Tv Παναθηναϊ",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
       "image": ""
     },
     {
-      "title": "Οι αθλητικές μεταδόσεις (14/11): Πού θα δούμε το Παναθηναϊκός – Ολυμπιακός στη Volley League και τα ματς του Nations League - In.gr",
-      "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOOG5IWFpXQzNlWDg2RGpfaGpMRzlvSUlrMEppUURTQzBmN2lFcVIwUlFPU0dRYnN1bXhrdFpWWU5tU0pONGtFeXlrQ09zdTBDU2FLVzAtcnNMQTRrVTd3UE03cml3U01PaTJNcWRGTnI3ZkRpWk9mOU1tV3dTVzdrdkVzTjBTNEpCQ0o3dUo2el9OWUFDQlJRVVNPMXQ0MnkwV2QzRDN5ME9vR29aUTd1X04wVndLcHFIVG9mLU1mNGx4WDFVU0ZsNDlPUUg1aEt6N3d1dlhBY3pxX2R0dThhd2RjZEtiZWN6eDV5TUk1YzRQQjlHRWlKa1dwd9IBgAJBVV95cUxOUm9ialIwY0hDalpQVVYtQ2hfbFltaGVCMVVtWWJNbnZmc1hBUFlrTjFzdWs1TjlIdGI2dWt0d25hczU0Z0RDWmE5Yk5jWWptUHRCcUFjZTY1LXE5SFN0TzVpR1IyQzFXVDd2TmZtMGdiXy1SS3pQcjlrTXNUZHVoMXZ1NzhjOEY5d2c1VUwzaVNfXzNoOS12dmVnUEdDTnRmVW9VeGlsc09JTjRWeUk4elJXTV92YVR4ZmNOcDV3ZEhyT3VlTmh3RnFRLS1VY095c0paTWlOWFFTaUw0Wl80WUlGb3BwZXowS0pDX05TMTB0dHlIZE1jTEVSOHJvdE9u?oc=5",
-      "pubDate": "2026-11-14T07:56:59Z",
-      "date": "2026-11-14T07:56:59Z",
-      "summary": "Οι αθλητικές μεταδόσεις (14/11): Πού θα δούμε το Παναθηναϊκός – Ολυμπιακός στη Volley League και τα ματς του Nations League In.gr Αθλητικές μεταδόσεις: Πού θα δείτε τα παιχνίδια σε Superbet League 2 και Nations League με το σπουδαίο ντέρμπι Ισπανία – Αγγλία SPORT24 Τηλεοπτικές και διαδικτυακές μεταδόσεις (14-17/11) Ελληνική Ομοσπονδία Καλαθοσφαίρισης Αθλητικές μεταδόσεις σήμερα: Το Άρης-Ολυμπιακός και οι σημαντικότερες αναμετρήσεις της ημέρας Gazzetta.gr Οι αθλητικές μεταδόσεις της ημέρας: Παναθ",
-      "source": "Google News PAO",
-      "color": "#4285f4",
-      "sport": "other",
-      "image": ""
-    },
-    {
-      "title": "«Χείμαρρος» κατά του Παναθηναϊκού και του Νίστρουπ ο Δημητριάδης - Οι φάσεις που θεωρεί ότι το «τριφύλλι» ευνοήθηκε - Agones",
-      "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNd040U0w5OWFNdWd0UXljMmtxM1UzcFgyVG9GQjRnQWU3cGNRODVIWGhFR1ZjQ25HRk1qZEVGRy1FTFp5SWFHTmdqWW1OMzB5TUktdmRSOVdNVlVWQUJFbTdmMWQxSHdiazVmUDc2eWJ2OUpfdHhqUnlBRlhBdWc3OGxiSnVJUUZ5MjJlbkJieWZEYUQ2WGxycG5ONlNjQzYwT19POEszTWU5TkMtbjVGYkhlcmI3dmhSOUVCcjZrZkNDaFkweFM0NXhlMWdCMDRYTHZVQ0c4S2ROdw?oc=5",
-      "pubDate": "2026-11-14T19:52:26Z",
-      "date": "2026-11-14T19:52:26Z",
-      "summary": "«Χείμαρρος» κατά του Παναθηναϊκού και του Νίστρουπ ο Δημητριάδης - Οι φάσεις που θεωρεί ότι το «τριφύλλι» ευνοήθηκε Agones Δημητριάδης: «Ευνοήθηκε σε 8 ματς ως τώρα ο Παναθηναϊκός - Τουλάχιστον 10 φάσεις υπέρ του» (vid) SDNA Δημητριάδης: «Ευνοήθηκε σε 8 ματς ο Παναθηναϊκός, τουλάχιστον 10 φάσεις – Έχετε να πείτε κάτι κύριε Νίστρουπ;» (vid) https://sport.news-24.gr/ «Χείμαρρος» κατά του Παναθηναϊκού και του Νίστρουπ ο Δημητριάδης - Οι φάσεις που θεωρεί ότι το «τριφύλλι» ευνοήθηκε Agones Δημητριάδ",
+      "title": "Με Άρης – Ολυμπιακός, Παναθηναϊκός – Κολοσσός για τη GBL, Nations League και Ροναλντίνιο οι αθλητικές μεταδόσεις της ημέρας - NewsIT",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPcDFQQkRualFqOFVTZHp3VjhaemdxX1ZfdVpNY05CVWpqQUVSYzcwNl93TjlZNnhaTHVXSTF2RG5OVEFsSVNmaDFpZ3ROSnYza0tOTE10UFZ1WU1vUFBsZjBLbnBwS2FCYk10WHNKMzh4MlB2c1k4VERpS2dDMlQ1YW1BZTFEUGhjN1ZrMk5Dd0J3Z2RTa3hULVJ4aHlMQUl5MDl1Z2NUa053UnhZT21oZHcyN2VQUWNOTXQzUXl2elYyRm1fZHpQd3ZsZW14UTZPcFZQbFFsSndkdE5xUVdsSnVvUm5JVFRCMGpHSkRDUG02d9IB9wFBVV95cUxOaC1qVnFsb3lKWTVOZnlpV0s2OEV6YVZGRThod0FlSVBESWdWU3hvLUFWamVPYjlISDJkdGZNNjNjRmg3UjQyRk8tMTJ0dkhaYl9NakhDbGFaSVBYbnVXUjZZM1NLOGdYeGFfZFhuaDlDMC1VbzBBWm8yanN3YXdFc1VLZWxMTW9odnJkV2dkdkpkTzl0Q1I5LTdqVENIQUV2X1owV0ZlWC1ZbXp5Q05NTkoxY3Y0aThHSk1QbGNFd3BGS3FqZ1pWbTlueUUwMWxXcVlZTXFER1JrUGI3R1RmUGd2aDREdnNqcEtXRXdvVXFNUVB4N3FJ?oc=5",
+      "pubDate": "2026-11-15T07:26:54Z",
+      "date": "2026-11-15T07:26:54Z",
+      "summary": "Με Άρης – Ολυμπιακός, Παναθηναϊκός – Κολοσσός για τη GBL, Nations League και Ροναλντίνιο οι αθλητικές μεταδόσεις της ημέρας NewsIT Αθλητικές μεταδόσεις: Πού θα δείτε τα παιχνίδια σε Superbet League 2 και Nations League με το σπουδαίο ντέρμπι Ισπανία – Αγγλία SPORT24 Τηλεοπτικές και διαδικτυακές μεταδόσεις (14-17/11) Ελληνική Ομοσπονδία Καλαθοσφαίρισης Αθλητικές μεταδόσεις σήμερα: Το Άρης-Ολυμπιακός και οι σημαντικότερες αναμετρήσεις της ημέρας Gazzetta.gr Οι αθλητικές μεταδόσεις της ημέρας: Πανα",
       "source": "Google News PAO",
       "color": "#4285f4",
       "sport": "other",
