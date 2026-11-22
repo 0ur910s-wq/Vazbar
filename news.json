@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22T01:44:53Z",
+  "updated": "2026-11-22T08:02:43Z",
   "sources": {
     "Athletiko": {
       "ok": true,
@@ -18,17 +18,29 @@
       "count": 30
     },
     "Google News PAO": {
-      "ok": true,
-      "count": 9
+      "ok": false,
+      "count": 0,
+      "msg": "All endpoints failed: https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnNHZ0pIVWlnQVAB?hl=el&gl=GR&ceid=GR%3Ael: HTTP 503 from https://news.google.com/rss/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRFp1ZEdvU0FtVnNHZ0pIVWlnQVAB?hl=el&gl=GR&ceid=GR%3Ael"
     }
   },
   "items": [
+    {
+      "title": "Πού θα δείτε Παναθηναϊκό, Ολυμπιακό, ΠΑΟΚ και όλα τα ματς της Stoiximan Super League",
+      "link": "https://www.athletiko.gr/poy-tha-deite-panathinaiko-olympiako-paok-kai-ola-ta-mats-tis-stoiximan-super-league-117293",
+      "pubDate": null,
+      "date": null,
+      "summary": "Πού θα δείτε Παναθηναϊκό, Ολυμπιακό, ΠΑΟΚ και όλα τα ματς της Stoiximan Super League Οι ώρες και τα κανάλια μετάδοσης των αναμετρήσεων της Κυριακής (22/11) για την 11η αγωνιστική της Stoiximan Super League. πριν 2 ώρες Newsroom",
+      "source": "Athletiko",
+      "color": "#00a651",
+      "sport": "football",
+      "image": "https://cdn.athletiko.gr/portal-img/default/47/5419579.jpg"
+    },
     {
       "title": "Νίστρουπ και Κοτσόλης στη Λεωφόρο για τα 60 χρόνια της Θύρας 13 - Η φοβερή ατάκα για το «διπλό» στο Καυτανζόγλειο",
       "link": "https://www.athletiko.gr/nistroyp-kai-kotsolis-sti-leoforo-gia-ta-60-chronia-tis-thyras-13-i-foveri-ataka-gia-to-diplo-sto-kaytanzogleio-117261",
       "pubDate": null,
       "date": null,
-      "summary": "Νίστρουπ και Κοτσόλης στη Λεωφόρο για τα 60 χρόνια της Θύρας 13 - Η φοβερή ατάκα για το «διπλό» στο Καυτανζόγλειο Ο προπονητής του Παναθηναϊκού, Τζέικομπ Νίστρουπ, και ο τεχνικός διευθυντής των «πρασίνων», Στέφανος Κοτσόλης, έδωσαν το «παρών» στη μεγάλη γιορτή της «Θύρας 13» στη Λεωφόρο. πριν 6 ώρες Newsroom",
+      "summary": "Νίστρουπ και Κοτσόλης στη Λεωφόρο για τα 60 χρόνια της Θύρας 13 - Η φοβερή ατάκα για το «διπλό» στο Καυτανζόγλειο Ο προπονητής του Παναθηναϊκού, Τζέικομπ Νίστρουπ, και ο τεχνικός διευθυντής των «πρασίνων», Στέφανος Κοτσόλης, έδωσαν το «παρών» στη μεγάλη γιορτή της «Θύρας 13» στη Λεωφόρο. πριν 13 ώρες Newsroom",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -39,7 +51,7 @@
       "link": "https://www.athletiko.gr/me-apoysies-alla-kai-epistrofes-o-ofi-kontra-ston-panathinaiko-117177",
       "pubDate": null,
       "date": null,
-      "summary": "Με απουσίες αλλά και επιστροφές ο ΟΦΗ κόντρα στον Παναθηναϊκό Ο ΟΦΗ ολοκλήρωσε την προετοιμασία του για το εκτός έδρας με τον Παναθηναϊκό και ο Χρήστος Κόντης ανακοίνωσε τους παίκτες που θα έχει στη διάθεσή του. πριν 13 ώρες Κώστας Τόπας",
+      "summary": "Με απουσίες αλλά και επιστροφές ο ΟΦΗ κόντρα στον Παναθηναϊκό Ο ΟΦΗ ολοκλήρωσε την προετοιμασία του για το εκτός έδρας με τον Παναθηναϊκό και ο Χρήστος Κόντης ανακοίνωσε τους παίκτες που θα έχει στη διάθεσή του. πριν 20 ώρες Κώστας Τόπας",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -50,7 +62,7 @@
       "link": "https://www.athletiko.gr/i-apostoli-toy-panathinaikoy-gia-to-paichnidi-me-ton-ofi-117176",
       "pubDate": null,
       "date": null,
-      "summary": "Η αποστολή του Παναθηναϊκού για το παιχνίδι με τον ΟΦΗ Αναλυτικά οι παίκτες που επέλεξε ο Τζέικομπ Νίστρουπ για την αναμέτρηση με τον ΟΦΗ, στην επανέναρξη της Stoiximan Super League. πριν 13 ώρες Ιάσωνας Νησανάκης",
+      "summary": "Η αποστολή του Παναθηναϊκού για το παιχνίδι με τον ΟΦΗ Αναλυτικά οι παίκτες που επέλεξε ο Τζέικομπ Νίστρουπ για την αναμέτρηση με τον ΟΦΗ, στην επανέναρξη της Stoiximan Super League. πριν 20 ώρες Ιάσωνας Νησανάκης",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -61,7 +73,7 @@
       "link": "https://www.athletiko.gr/omorfi-protovoylia-toy-panathinaikoy-oi-paiktes-epaixan-me-adespota-skylakia-prin-tin-proponisi-video-117164",
       "pubDate": null,
       "date": null,
-      "summary": "Όμορφη πρωτοβουλία του Παναθηναϊκού: Οι παίκτες έπαιξαν με αδέσποτα σκυλάκια πριν την προπόνηση (video) Σπουδαία κίνηση από την ΠΑΕ Παναθηναϊκός, καθώς οι «πράσινοι» φιλοξένησαν στον Κορωπί αδέσποτα σκυλάκια, τα οποία οι παίκτες αγκάλιασαν και έπαιξαν μαζί τους. πριν 14 ώρες Ιάσωνας Νησανάκης",
+      "summary": "Όμορφη πρωτοβουλία του Παναθηναϊκού: Οι παίκτες έπαιξαν με αδέσποτα σκυλάκια πριν την προπόνηση (video) Σπουδαία κίνηση από την ΠΑΕ Παναθηναϊκός, καθώς οι «πράσινοι» φιλοξένησαν στον Κορωπί αδέσποτα σκυλάκια, τα οποία οι παίκτες αγκάλιασαν και έπαιξαν μαζί τους. πριν 21 ώρες Ιάσωνας Νησανάκης",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -72,7 +84,7 @@
       "link": "https://www.athletiko.gr/poso-kostise-o-antino-ston-panathinaiko-posa-chrimata-pairnei-kai-oi-pente-eyropaikoi-mnistires-117142",
       "pubDate": null,
       "date": null,
-      "summary": "Πόσο κόστισε ο Αντίνο στον Παναθηναϊκό, πόσα χρήματα παίρνει και οι πέντε ευρωπαϊκοί «μνηστήρες» Με πέντε ευρωπαϊκές ομάδες να φέρονται να παρακολουθούν τον Σαντίνο Αντίνο, το Athletiko θυμίζει τα οικονομικά δεδομένα της μεταγραφής του στον Παναθηναϊκό. πριν 17 ώρες Κώστας Τόπας",
+      "summary": "Πόσο κόστισε ο Αντίνο στον Παναθηναϊκό, πόσα χρήματα παίρνει και οι πέντε ευρωπαϊκοί «μνηστήρες» Με πέντε ευρωπαϊκές ομάδες να φέρονται να παρακολουθούν τον Σαντίνο Αντίνο, το Athletiko θυμίζει τα οικονομικά δεδομένα της μεταγραφής του στον Παναθηναϊκό. 21.11.2026 Κώστας Τόπας",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "football",
@@ -145,22 +157,11 @@
       "image": "https://cdn.athletiko.gr/portal-img/default/44/7128556.jpg"
     },
     {
-      "title": "Το πρόγραμμα στο Superbet Κύπελλο Ελλάδας: Πότε διεξάγεται το Ολυμπιακός - Παναθηναϊκός",
-      "link": "https://www.athletiko.gr/to-programma-sto-superbet-kypello-elladas-pote-diexagetai-to-olympiakos-panathinaikos-117013",
-      "pubDate": null,
-      "date": null,
-      "summary": "Το πρόγραμμα στο Superbet Κύπελλο Ελλάδας: Πότε διεξάγεται το Ολυμπιακός - Παναθηναϊκός Η ΕΠΟ γνωστοποίησε τις ημερομηνίες των αγώνων για την 5η και τελευταία αγωνιστική της League Phase του Superbet Κυπέλλου Ελλάδας. 20.11.2026 Κώστας Τόπας",
-      "source": "Athletiko",
-      "color": "#00a651",
-      "sport": "football",
-      "image": "https://cdn.athletiko.gr/portal-img/default/47/5380081.jpg"
-    },
-    {
       "title": "ΚΑΕ Παναθηναϊκός για Θύρα 13: «Η δύναμή σου είναι μία - Μόνο ενωμένοι γράφουμε ιστορία»",
       "link": "https://www.athletiko.gr/kae-panathinaikos-gia-thyra-13-i-dynami-soy-einai-mia-mono-enomenoi-grafoyme-istoria-117298",
       "pubDate": null,
       "date": null,
-      "summary": "ΚΑΕ Παναθηναϊκός για Θύρα 13: «Η δύναμή σου είναι μία - Μόνο ενωμένοι γράφουμε ιστορία» H ανάρτηση της «πράσινης» ΚΑΕ για τα 60 χρόνια της Θύρας 13 και οι φωτογραφίες των πρωταγωνιστών στη Λεωφόρο. πριν 4 ώρες Μιχάλης Ντόκος",
+      "summary": "ΚΑΕ Παναθηναϊκός για Θύρα 13: «Η δύναμή σου είναι μία - Μόνο ενωμένοι γράφουμε ιστορία» H ανάρτηση της «πράσινης» ΚΑΕ για τα 60 χρόνια της Θύρας 13 και οι φωτογραφίες των πρωταγωνιστών στη Λεωφόρο. πριν 11 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -171,7 +172,7 @@
       "link": "https://www.athletiko.gr/omprantovits-sti-leoforo-gia-ti-thyra-13-o-ti-petychame-to-petychame-mazi-117290",
       "pubDate": null,
       "date": null,
-      "summary": "Ομπράντοβιτς στη Λεωφόρο για τη Θύρα 13: «Ο,τι πετύχαμε, το πετύχαμε μαζί» Τα όσα είπε ο Ζέλικο Ομπράντοβιτς στους φίλους του Παναθηναϊκού στη Λεωφόρο, για τα 60 χρόνια παρουσίας στα γήπεδα και ιστορίας της Θύρας 13. πριν 5 ώρες Μιχάλης Ντόκος",
+      "summary": "Ομπράντοβιτς στη Λεωφόρο για τη Θύρα 13: «Ο,τι πετύχαμε, το πετύχαμε μαζί» Τα όσα είπε ο Ζέλικο Ομπράντοβιτς στους φίλους του Παναθηναϊκού στη Λεωφόρο, για τα 60 χρόνια παρουσίας στα γήπεδα και ιστορίας της Θύρας 13. πριν 12 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -182,7 +183,7 @@
       "link": "https://www.athletiko.gr/sloykas-sti-giorti-tis-thyras-13-argisa-na-ertho-panathinaikos-sta-eykola-panathinaikara-sta-dyskola-117277",
       "pubDate": null,
       "date": null,
-      "summary": "Σλούκας στη γιορτή της Θύρας 13: «Αργησα να έρθω - Παναθηναϊκός στα εύκολα, Παναθηναϊκάρα στα δύσκολα» Ο Κώστας Σλούκας έδωσε το «παρών» στη γιορτή της Θύρας 13 στη Λεωφόρο για τα 60 χρόνια ιστορίας και μίλησε στον κόσμο που είχε μαζευτεί στο πέταλο των οργανωμένων. πριν 6 ώρες Μιχάλης Ντόκος",
+      "summary": "Σλούκας στη γιορτή της Θύρας 13: «Αργησα να έρθω - Παναθηναϊκός στα εύκολα, Παναθηναϊκάρα στα δύσκολα» Ο Κώστας Σλούκας έδωσε το «παρών» στη γιορτή της Θύρας 13 στη Λεωφόρο για τα 60 χρόνια ιστορίας και μίλησε στον κόσμο που είχε μαζευτεί στο πέταλο των οργανωμένων. πριν 12 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -193,7 +194,7 @@
       "link": "https://www.athletiko.gr/gi-ayto-einai-better-atomiki-proponisi-me-emfasi-sto-soyt-o-nan-meta-to-panathinaikos-maroysi-video-117270",
       "pubDate": null,
       "date": null,
-      "summary": "Στο T-Center ο Ναν και μετά το ματς με το Μαρούσι: Το video του Παναθηναϊκού με την έξτρα δουλειά στα σουτ Ο Κέντρικ Ναν έκανε έξτρα προπόνηση μετά την άνετη επικράτηση του «τριφυλλιού» επί του Αμαρουσίου (21/11, 85-72). Τα σουτ του Αμερικανού και το... λογοπαίγνιο στα social media της «πράσινης» ΚΑΕ. πριν 6 ώρες Μιχάλης Ντόκος",
+      "summary": "Στο T-Center ο Ναν και μετά το ματς με το Μαρούσι: Το video του Παναθηναϊκού με την έξτρα δουλειά στα σουτ Ο Κέντρικ Ναν έκανε έξτρα προπόνηση μετά την άνετη επικράτηση του «τριφυλλιού» επί του Αμαρουσίου (21/11, 85-72). Τα σουτ του Αμερικανού και το... λογοπαίγνιο στα social media της «πράσινης» ΚΑΕ. πριν 13 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -204,7 +205,7 @@
       "link": "https://www.athletiko.gr/omprantovits-sevastikame-to-maroysi-eimai-charoymenos-gia-toys-paiktes-moy-video-117252",
       "pubDate": null,
       "date": null,
-      "summary": "Ομπράντοβιτς: «Σεβαστήκαμε το Μαρούσι, είμαι χαρούμενος για τους παίκτες μου» (video) Τα όσα είπε ο Ζέλικο Ομπράντοβιτς μετά την άνετη επικράτηση του Παναθηναϊκού επί του Αμαρουσίου (21/11, 85-72). πριν 7 ώρες Μιχάλης Ντόκος",
+      "summary": "Ομπράντοβιτς: «Σεβαστήκαμε το Μαρούσι, είμαι χαρούμενος για τους παίκτες μου» (video) Τα όσα είπε ο Ζέλικο Ομπράντοβιτς μετά την άνετη επικράτηση του Παναθηναϊκού επί του Αμαρουσίου (21/11, 85-72). πριν 14 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -215,7 +216,7 @@
       "link": "https://www.athletiko.gr/me-to-myalo-sti-valenthia-ki-ektetameno-rotation-o-panathinaikos-kerdise-eykola-to-maroysi-sto-t-center-117226",
       "pubDate": null,
       "date": null,
-      "summary": "Με το μυαλό στη Βαλένθια κι εκτεταμένο rotation ο Παναθηναϊκός κέρδισε εύκολα το Μαρούσι στο Τ-Center Ο Ομπράντοβιτς «μοίρασε» χρόνο συμμετοχής σε πολλούς παίκτες και ο Παναθηναϊκός νίκησε το Μαρούσι (85-72) για το 7-1 στην GBL, τρεις μέρες πριν το απαιτητικό ματς με τη Βαλένθια για την EuroLeague. πριν 8 ώρες Μιχάλης Ντόκος",
+      "summary": "Με το μυαλό στη Βαλένθια κι εκτεταμένο rotation ο Παναθηναϊκός κέρδισε εύκολα το Μαρούσι στο Τ-Center Ο Ομπράντοβιτς «μοίρασε» χρόνο συμμετοχής σε πολλούς παίκτες και ο Παναθηναϊκός νίκησε το Μαρούσι (85-72) για το 7-1 στην GBL, τρεις μέρες πριν το απαιτητικό ματς με τη Βαλένθια για την EuroLeague. πριν 14 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -226,7 +227,7 @@
       "link": "https://www.athletiko.gr/time-out-o-omprantovits-meta-apo-tria-lepta-sto-panathinaikos-maroysi-117220",
       "pubDate": null,
       "date": null,
-      "summary": "Time-out ο Ομπράντοβιτς μετά από τρία λεπτά στο Παναθηναϊκός - Μαρούσι Ο Ζέλικο Ομπράντοβιτς δεν ήταν ευχαριστημένος με τη συμπεριφορά των παικτών του στο ξεκίνημα του ματς με το Μαρούσι και κάλεσε άμεσα time-out, προκειμένου να τους τα... χώσει! πριν 10 ώρες Μιχάλης Ντόκος",
+      "summary": "Time-out ο Ομπράντοβιτς μετά από τρία λεπτά στο Παναθηναϊκός - Μαρούσι Ο Ζέλικο Ομπράντοβιτς δεν ήταν ευχαριστημένος με τη συμπεριφορά των παικτών του στο ξεκίνημα του ματς με το Μαρούσι και κάλεσε άμεσα time-out, προκειμένου να τους τα... χώσει! πριν 16 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -237,7 +238,7 @@
       "link": "https://www.athletiko.gr/choris-cheiz-nteivis-kai-mpongka-o-panathinaikos-apenanti-sto-maroysi-117200",
       "pubDate": null,
       "date": null,
-      "summary": "Ξεκουράζει Σλούκα, Χέιζ-Ντέιβις και Μπόνγκα ο Ομπράντοβιτς - Η δωδεκάδα με Μαρούσι Ο Ζέλικο Ομπράντοβιτς άφησε εκτός 12άδας τους Νάιτζελ Χέιζ-Ντέιβις, Κώστα Σλούκα και Ίζακ Μπόνγκα για το ματς με το Μαρούσι (21/11, 17.30), για λόγους ξεκούρασης. πριν 11 ώρες Μιχάλης Ντόκος",
+      "summary": "Ξεκουράζει Σλούκα, Χέιζ-Ντέιβις και Μπόνγκα ο Ομπράντοβιτς - Η δωδεκάδα με Μαρούσι Ο Ζέλικο Ομπράντοβιτς άφησε εκτός 12άδας τους Νάιτζελ Χέιζ-Ντέιβις, Κώστα Σλούκα και Ίζακ Μπόνγκα για το ματς με το Μαρούσι (21/11, 17.30), για λόγους ξεκούρασης. πριν 17 ώρες Μιχάλης Ντόκος",
       "source": "Athletiko",
       "color": "#00a651",
       "sport": "basket",
@@ -275,6 +276,61 @@
       "color": "#00a651",
       "sport": "basket",
       "image": "https://cdn.athletiko.gr/portal-img/default/47/7172502.jpg"
+    },
+    {
+      "title": "Παναθηναϊκός: Η έκπληξη που ετοιμάζει η ΠΑΕ για τον κόσμο σήμερα στο ΟΑΚΑ!",
+      "link": "https://newspao.gr/podosfairo/793227_panathinaikos-i-ekplixi-poy-etoimazei-i-pae-gia-ton-kosmo-simera-sto-oaka.html",
+      "pubDate": "2026-11-22T07:17:28Z",
+      "date": "2026-11-22T07:17:28Z",
+      "summary": "Ξεχωριστές προετοιμασίες ενόψει του αγώνα με τον ΟΦΗ, με τη Θύρα 13 και την ΠΑΕ Παναθηναϊκός να ετοιμάζουν κάτι ιδιαίτερο. The post Παναθηναϊκός: Η έκπληξη που ετοιμάζει η ΠΑΕ για τον κόσμο σήμερα στο ΟΑΚΑ! appeared first on Newspao.gr . Ξεχωριστές προετοιμασίες ενόψει του αγώνα με τον ΟΦΗ, με τη Θύρα 13 και την ΠΑΕ Παναθηναϊκός να ετοιμάζουν κάτι ιδιαίτερο. The post Παναθηναϊκός: Η έκπληξη που ετοιμάζει η ΠΑΕ για τον κόσμο σήμερα στο ΟΑΚΑ! appeared first on Newspao.gr .",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/10/14/oaka-scaled.jpg"
+    },
+    {
+      "title": "Τα σενάρια για Αντίνο, οι πέντε ευρωπαϊκές ομάδες και η στάση του Παναθηναϊκoύ",
+      "link": "https://newspao.gr/podosfairo/793231_ta-senaria-gia-antino-oi-pente-eyropaikes-omades-kai-i-stasi-toy-panathinaikoy.html",
+      "pubDate": "2026-11-22T06:47:25Z",
+      "date": "2026-11-22T06:47:25Z",
+      "summary": "Πέντε ευρωπαϊκοί σύλλογοι φέρεται να παρακολουθούν την εξέλιξη του Σαντίνο Αντίνο, ωστόσο ο Παναθηναϊκός έχει ξεκάθαρη στάση ενόψει της μεταγραφικής περιόδου του Ιανουαρίου. The post Τα σενάρια για Αντίνο, οι πέντε ευρωπαϊκές ομάδες και η στάση του Παναθηναϊκoύ appeared first on Newspao.gr . Πέντε ευρωπαϊκοί σύλλογοι φέρεται να παρακολουθούν την εξέλιξη του Σαντίνο Αντίνο, ωστόσο ο Παναθηναϊκός έχει ξεκάθαρη στάση ενόψει της μεταγραφικής περιόδου του Ιανουαρίου. The post Τα σενάρια για Αντίνο, ο",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/02/11/6847745.jpg"
+    },
+    {
+      "title": "«Κερδίζει έδαφος στον Παναθηναϊκό ο Αμούζου – Τα 2 εκατ. ευρώ και οι ανταγωνιστές»",
+      "link": "https://newspao.gr/podosfairo/793221_kerdizei-edafos-ston-panathinaiko-o-amoyzoy-ta-2-ekat-eyro-kai-oi-antagonistes.html",
+      "pubDate": "2026-11-22T06:24:41Z",
+      "date": "2026-11-22T06:24:41Z",
+      "summary": "Ο Φράνσις Αμούζου φέρεται να βρίσκεται ψηλά στη μεταγραφική λίστα του Παναθηναϊκού για τον Ιανουάριο, με το συμβόλαιό του να εκπνέει στις 31 Δεκεμβρίου. The post «Κερδίζει έδαφος στον Παναθηναϊκό ο Αμούζου – Τα 2 εκατ. ευρώ και οι ανταγωνιστές» appeared first on Newspao.gr . Ο Φράνσις Αμούζου φέρεται να βρίσκεται ψηλά στη μεταγραφική λίστα του Παναθηναϊκού για τον Ιανουάριο, με το συμβόλαιό του να εκπνέει στις 31 Δεκεμβρίου. The post «Κερδίζει έδαφος στον Παναθηναϊκό ο Αμούζου – Τα 2 εκατ. ευρώ ",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/19/images.jpg"
+    },
+    {
+      "title": "Ενδεκάδα με τρεις για δύο θέσεις: Έτσι θα παίξει ο Παναθηναϊκός με ΟΦΗ",
+      "link": "https://newspao.gr/podosfairo/793216_endekada-me-treis-gia-dyo-theseis-etsi-tha-paixei-o-panathinaikos-me-ofi.html",
+      "pubDate": "2026-11-22T05:59:41Z",
+      "date": "2026-11-22T05:59:41Z",
+      "summary": "Αρκετά διλήμματα έχει ο Τζέικομπ Νίστρουπ για τη σημερινή αναμέτρηση με τον ΟΦΗ, με τις περισσότερες εκκρεμότητες να εντοπίζονται στη μεσαία γραμμή και την επίθεση. The post Ενδεκάδα με τρεις για δύο θέσεις: Έτσι θα παίξει ο Παναθηναϊκός με ΟΦΗ appeared first on Newspao.gr . Αρκετά διλήμματα έχει ο Τζέικομπ Νίστρουπ για τη σημερινή αναμέτρηση με τον ΟΦΗ, με τις περισσότερες εκκρεμότητες να εντοπίζονται στη μεσαία γραμμή και την επίθεση. The post Ενδεκάδα με τρεις για δύο θέσεις: Έτσι θα παίξει ο",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/05/omadiki-panathinaikos-scaled.webp"
+    },
+    {
+      "title": "Τι ώρα παίζει ο Παναθηναϊκός σήμερα (22/11) στο ποδόσφαιρο – Το κανάλι",
+      "link": "https://newspao.gr/panathinaikos-simera/793097_ti-ora-paizei-o-panathinaikos-simera-22-11-sto-podosfairo-to-kanali-me-ofi.html",
+      "pubDate": "2026-11-22T05:00:49Z",
+      "date": "2026-11-22T05:00:49Z",
+      "summary": "Ο Παναθηναϊκός αντιμετωπίζει τον ΟΦΗ, που έρχεται με επιστροφές στην αποστολή του. Πού θα δείτε το παιχνίδι της Κυριακής. The post Τι ώρα παίζει ο Παναθηναϊκός σήμερα (22/11) στο ποδόσφαιρο – Το κανάλι appeared first on Newspao.gr . Ο Παναθηναϊκός αντιμετωπίζει τον ΟΦΗ, που έρχεται με επιστροφές στην αποστολή του. Πού θα δείτε το παιχνίδι της Κυριακής. The post Τι ώρα παίζει ο Παναθηναϊκός σήμερα (22/11) στο ποδόσφαιρο – Το κανάλι appeared first on Newspao.gr .",
+      "source": "NewsPao",
+      "color": "#0a7d2e",
+      "sport": "football",
+      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/434197d6-a134-44c3-a528-d1b238feffc1.png"
     },
     {
       "title": "Η αποθέωση για Ομπράντοβιτς, Σλούκα και Διαμαντίδη στη γιορτή της Θύρας 13 – Οι ομιλίες (vids)",
@@ -332,59 +388,15 @@
       "image": "https://newspao.gr/wp-content/uploads/2026/07/22/stefanos-kotsolis-and-jacob-neestrup.jpg"
     },
     {
-      "title": "Transferfeed: Σενάριο μεγατόνων με Ματέο Κόβασιτς και Παναθηναϊκό! (pic)",
-      "link": "https://newspao.gr/podosfairo/793203_transferfeed-senario-megatonon-me-mateo-kovasits-kai-panathinaiko-pic.html",
-      "pubDate": "2026-11-21T20:30:49Z",
-      "date": "2026-11-21T20:30:49Z",
-      "summary": "Σύμφωνα με το TransferFeed, η περίπτωση του 32χρονου Κροάτη μέσου έχει προκαλέσει ενθουσιασμό στον Παναθηναϊκό, καθώς το συμβόλαιό του εκπνέει το καλοκαίρι. The post Transferfeed: Σενάριο μεγατόνων με Ματέο Κόβασιτς και Παναθηναϊκό! (pic) appeared first on Newspao.gr . Σύμφωνα με το TransferFeed, η περίπτωση του 32χρονου Κροάτη μέσου έχει προκαλέσει ενθουσιασμό στον Παναθηναϊκό, καθώς το συμβόλαιό του εκπνέει το καλοκαίρι. The post Transferfeed: Σενάριο μεγατόνων με Ματέο Κόβασιτς και Παναθηναϊκ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
+      "title": "Παναθηναϊκός – ΟΦΗ: Ώρα – Κανάλι – Μετάδοση – Επιστροφή στο ΟΑΚΑ με στόχο τα… κεκτημένα!",
+      "link": "https://trifilara.gr/panathinaikos-ofi-ora-kanali-metadosi-epistrofi-sto-oaka-me-stocho-ta-kektimena/?utm_source=rss&utm_medium=rss&utm_campaign=panathinaikos-ofi-ora-kanali-metadosi-epistrofi-sto-oaka-me-stocho-ta-kektimena",
+      "pubDate": "2026-11-22T03:06:29Z",
+      "date": "2026-11-22T03:06:29Z",
+      "summary": "Ο Παναθηναϊκός υποδέχεται τον ΟΦΗ στο ΟΑΚΑ για την 11η αγωνιστική της Super League, θέλοντας να συνεχίσει το νικηφόρο σερί του και να διατηρήσει το προβάδισμά του στη βαθμολογία. The post Παναθηναϊκός – ΟΦΗ: Ώρα – Κανάλι – Μετάδοση – Επιστροφή στο ΟΑΚΑ με στόχο τα… κεκτημένα! appeared first on Trifilara.gr . Ο Παναθηναϊκός υποδέχεται τον ΟΦΗ στο ΟΑΚΑ για την 11η αγωνιστική της Super League, θέλοντας να συνεχίσει το νικηφόρο σερί του και να διατηρήσει το προβάδισμά του στη βαθμολογία. The post Πα",
+      "source": "Trifilara",
+      "color": "#2d8a2d",
       "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/kovacic.jpg"
-    },
-    {
-      "title": "Αποθέωση για Ομπράντοβιτς στη Λεωφόρο – Το ξεχωριστό δώρο στη Θύρα 13",
-      "link": "https://newspao.gr/basket/793199_apotheosi-gia-omprantovits-sti-leoforo-to-xechoristo-doro-sti-thyra-13.html",
-      "pubDate": "2026-11-21T19:56:16Z",
-      "date": "2026-11-21T19:56:16Z",
-      "summary": "Ο Ζέλικο Ομπράντοβιτς γνώρισε την αποθέωση από χιλιάδες φίλους του Παναθηναϊκού στη Λεωφόρο, κατά την παρουσία του στη γιορτή της Θύρας 13 για τα 60 χρόνια ιστορίας της, ενώ τίμησε τους οργανωμένους οπαδούς προσφέροντάς τους μια ξεχωριστή πλακέτα με ένα συγκινητικό μήνυμα. The post Αποθέωση για Ομπράντοβιτς στη Λεωφόρο – Το ξεχωριστό δώρο στη Θύρα 13 appeared first on Newspao.gr . Ο Ζέλικο Ομπράντοβιτς γνώρισε την αποθέωση από χιλιάδες φίλους του Παναθηναϊκού στη Λεωφόρο, κατά την παρουσία του σ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/obradovic-29.jpg"
-    },
-    {
-      "title": "Παναθηναϊκός: Πέρασε από τη Βούλα και συνεχίζει αήττητος",
-      "link": "https://newspao.gr/erasitexnis/panathinaikos-volei-gynaikon/793196_panathinaikos-perase-apo-ti-voyla-kai-synechizei-aittitos.html",
-      "pubDate": "2026-11-21T19:43:28Z",
-      "date": "2026-11-21T19:43:28Z",
-      "summary": "Ο Παναθηναϊκός συνέχισε την εντυπωσιακή αήττητη πορεία του στη Volley League Γυναικών, καθώς επικράτησε με 3-1 σετ της Θέτιδας στη Βούλα, έκανε το 7/7 στο πρωτάθλημα και διατήρησε την κορυφή της βαθμολογίας. The post Παναθηναϊκός: Πέρασε από τη Βούλα και συνεχίζει αήττητος appeared first on Newspao.gr . Ο Παναθηναϊκός συνέχισε την εντυπωσιακή αήττητη πορεία του στη Volley League Γυναικών, καθώς επικράτησε με 3-1 σετ της Θέτιδας στη Βούλα, έκανε το 7/7 στο πρωτάθλημα και διατήρησε την κορυφή της ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/paovolley-10-1.jpg"
-    },
-    {
-      "title": "Παναθηναϊκός: Ο Φρανσίσκο ψάχνει επαγγελματία για να φτιάξει gaming room (pic)",
-      "link": "https://newspao.gr/basket/793192_panathinaikos-o-fransisko-psachnei-epaggelmatia-gia-na-ftiaxei-gaming-room-pic.html",
-      "pubDate": "2026-11-21T19:22:59Z",
-      "date": "2026-11-21T19:22:59Z",
-      "summary": "Ο Σιλβέν Φρανσίσκο αναζητά επαγγελματία για να αναλάβει τη δημιουργία του δικού του gaming room, με τον γκαρντ του Παναθηναϊκού AKTOR να απευθύνεται στους διαδικτυακούς του φίλους μέσω Instagram, επιστρατεύοντας και το χιούμορ του για τις απαιτήσεις της αγωνιστικής σεζόν. The post Παναθηναϊκός: Ο Φρανσίσκο ψάχνει επαγγελματία για να φτιάξει gaming room (pic) appeared first on Newspao.gr . Ο Σιλβέν Φρανσίσκο αναζητά επαγγελματία για να αναλάβει τη δημιουργία του δικού του gaming room, με τον γκαρ",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/francisco-14.jpg"
-    },
-    {
-      "title": "Σλούκας στα γενέθλια της Θύρας 13: «Παναθηναϊκός στα εύκολα, Παναθηναϊκάρα στα δύσκολα!»",
-      "link": "https://newspao.gr/basket/793189_sloykas-sta-genethlia-tis-thyras-13-panathinaikos-sta-eykola-panathinaikara-sta-dyskola.html",
-      "pubDate": "2026-11-21T19:15:28Z",
-      "date": "2026-11-21T19:15:28Z",
-      "summary": "Ο Κώστας Σλούκας έδωσε το «παρών» στη γιορτή της Θύρας 13 για τα 60 χρόνια ιστορίας της στη Λεωφόρο, ευχαρίστησε τους φίλους του Παναθηναϊκού για τη στήριξή τους και έστειλε το δικό του μήνυμα με άρωμα… Φραγκίσκου Αλβέρτη. The post Σλούκας στα γενέθλια της Θύρας 13: «Παναθηναϊκός στα εύκολα, Παναθηναϊκάρα στα δύσκολα!» appeared first on Newspao.gr . Ο Κώστας Σλούκας έδωσε το «παρών» στη γιορτή της Θύρας 13 για τα 60 χρόνια ιστορίας της στη Λεωφόρο, ευχαρίστησε τους φίλους του Παναθηναϊκού για τη",
-      "source": "NewsPao",
-      "color": "#0a7d2e",
-      "sport": "football",
-      "image": "https://newspao.gr/wp-content/uploads/2026/11/21/sloukas-19.jpg"
+      "image": ""
     },
     {
       "title": "Παναθηναϊκός: Στη Λεωφόρο Νίστρουπ- Κοτσόλης – Μίλησαν στη γιορτή της Θύρας 13!",
@@ -469,17 +481,6 @@
       "pubDate": "2026-11-21T17:01:46Z",
       "date": "2026-11-21T17:01:46Z",
       "summary": "Η ομάδα πόλο ανδρών του Παναθηναϊκού επικράτησε 12-13 του Πανιωνίου στη Νέα Σμύρνη στο πλαίσιο της ένατης αγωνιστικής της Waterpolo League. The post «Βούλιαξε» τον Πανιώνιο στη Νέα Σμύρνη ο Παναθηναϊκός, με υπογραφή Παπασηφάκη! appeared first on Trifilara.gr . Η ομάδα πόλο ανδρών του Παναθηναϊκού επικράτησε 12-13 του Πανιωνίου στη Νέα Σμύρνη στο πλαίσιο της ένατης αγωνιστικής της Waterpolo League. The post «Βούλιαξε» τον Πανιώνιο στη Νέα Σμύρνη ο Παναθηναϊκός, με υπογραφή Παπασηφάκη! appeared fi",
-      "source": "Trifilara",
-      "color": "#2d8a2d",
-      "sport": "football",
-      "image": ""
-    },
-    {
-      "title": "Έξαλλος ο Ομπράντοβιτς με την άμυνα του Παναθηναϊκού, σταμάτησε το παιχνίδι",
-      "link": "https://trifilara.gr/exallos-o-obrantovits-me-tin-amyna-tou-panathinaikou-stamatise-to-paichnidi/?utm_source=rss&utm_medium=rss&utm_campaign=exallos-o-obrantovits-me-tin-amyna-tou-panathinaikou-stamatise-to-paichnidi",
-      "pubDate": "2026-11-21T16:03:25Z",
-      "date": "2026-11-21T16:03:25Z",
-      "summary": "Δεν χρειάστηκε να περάσουν περισσότερα από τρία λεπτά για να χάσει την υπομονή του ο Ζέλικο Ομπράντοβιτς στην αναμέτρηση του Παναθηναϊκού με το Μαρούσι… The post Έξαλλος ο Ομπράντοβιτς με την άμυνα του Παναθηναϊκού, σταμάτησε το παιχνίδι appeared first on Trifilara.gr . Δεν χρειάστηκε να περάσουν περισσότερα από τρία λεπτά για να χάσει την υπομονή του ο Ζέλικο Ομπράντοβιτς στην αναμέτρηση του Παναθηναϊκού με το Μαρούσι… The post Έξαλλος ο Ομπράντοβιτς με την άμυνα του Παναθηναϊκού, σταμάτησε το ",
       "source": "Trifilara",
       "color": "#2d8a2d",
       "sport": "football",
@@ -726,17 +727,6 @@
       "color": "#ff6b00",
       "sport": "basket",
       "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-11/apostolakis_1.jpg?itok=pQkAUcBu"
-    },
-    {
-      "title": "Γιαμπουσέλε: «Μπορούμε να ανταγωνιστούμε ομάδες του ΝΒΑ»",
-      "link": "https://www.gazzetta.gr/basketball/euroleague/2588180/giampoysele-mporoyme-na-antagonistoyme-omades-toy-nba",
-      "pubDate": "2026-11-20T11:57:14Z",
-      "date": "2026-11-20T11:57:14Z",
-      "summary": "Σε συνέντευξη του, ο Γκέρσον Γιαμπουσέλε αναφέρθηκε στον ρόλο που έχει στον Παναθηναϊκό, ενώ επανέλαβε πως οι «πράσινοι» θα μπορούσαν να ανταγωνιστούν κάποιες ομάδες του ΝΒΑ. Σε συνέντευξη του, ο Γκέρσον Γιαμπουσέλε αναφέρθηκε στον ρόλο που έχει στον Παναθηναϊκό, ενώ επανέλαβε πως οι «πράσινοι» θα μπορούσαν να ανταγωνιστούν κάποιες ομάδες του ΝΒΑ.",
-      "source": "Gazzetta PAO",
-      "color": "#ff6b00",
-      "sport": "basket",
-      "image": "https://www.gazzetta.gr/sites/default/files/styles/article_main_image/public/2026-11/5445988_1.jpg?itok=wYYvwn5p"
     },
     {
       "title": "Βαθμολογία Stoiximan Super League: Η ΑΕΚ έπιασε τον Ολυμπιακό στη 2η θέση και μείωσε στους 4 από τον Παναθηναϊκό - ProtoThema",
